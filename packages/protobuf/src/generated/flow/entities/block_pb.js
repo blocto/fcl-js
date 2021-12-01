@@ -8,11 +8,11 @@
  */
 // GENERATED CODE -- DO NOT EDIT!
 
-var jspb = require('google-protobuf');
+var jspb = require('@blocto/google-protobuf');
 var goog = jspb;
-var global = Function('return this')();
+var global = {}
 
-var google_protobuf_timestamp_pb = require('google-protobuf/google/protobuf/timestamp_pb.js');
+var google_protobuf_timestamp_pb = require('@blocto/google-protobuf/google/protobuf/timestamp_pb.js');
 goog.object.extend(proto, google_protobuf_timestamp_pb);
 var flow_entities_collection_pb = require('../../flow/entities/collection_pb.js');
 goog.object.extend(proto, flow_entities_collection_pb);
@@ -29,7 +29,7 @@ goog.exportSymbol('proto.flow.entities.Block', null, global);
  * @extends {jspb.Message}
  * @constructor
  */
-proto.flow.entities.Block = function(opt_data) {
+proto.flow.entities.Block = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, proto.flow.entities.Block.repeatedFields_, null);
 };
 goog.inherits(proto.flow.entities.Block, jspb.Message);
@@ -46,55 +46,55 @@ if (goog.DEBUG && !COMPILED) {
  * @private {!Array<number>}
  * @const
  */
-proto.flow.entities.Block.repeatedFields_ = [5,6,7];
+proto.flow.entities.Block.repeatedFields_ = [5, 6, 7];
 
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * Optional fields that are not set will be set to undefined.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
- * @param {boolean=} opt_includeInstance Deprecated. whether to include the
- *     JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.flow.entities.Block.prototype.toObject = function(opt_includeInstance) {
-  return proto.flow.entities.Block.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Deprecated. Whether to include
- *     the JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.flow.entities.Block} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.flow.entities.Block.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    id: msg.getId_asB64(),
-    parentId: msg.getParentId_asB64(),
-    height: jspb.Message.getFieldWithDefault(msg, 3, 0),
-    timestamp: (f = msg.getTimestamp()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
-    collectionGuaranteesList: jspb.Message.toObjectList(msg.getCollectionGuaranteesList(),
-    flow_entities_collection_pb.CollectionGuarantee.toObject, includeInstance),
-    blockSealsList: jspb.Message.toObjectList(msg.getBlockSealsList(),
-    flow_entities_block_seal_pb.BlockSeal.toObject, includeInstance),
-    signaturesList: msg.getSignaturesList_asB64()
+  /**
+   * Creates an object representation of this proto.
+   * Field names that are reserved in JavaScript and will be renamed to pb_name.
+   * Optional fields that are not set will be set to undefined.
+   * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+   * For the list of reserved names please see:
+   *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+   * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+   *     JSPB instance for transitional soy proto support:
+   *     http://goto/soy-param-migration
+   * @return {!Object}
+   */
+  proto.flow.entities.Block.prototype.toObject = function (opt_includeInstance) {
+    return proto.flow.entities.Block.toObject(opt_includeInstance, this);
   };
 
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
+
+  /**
+   * Static version of the {@see toObject} method.
+   * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+   *     the JSPB instance for transitional soy proto support:
+   *     http://goto/soy-param-migration
+   * @param {!proto.flow.entities.Block} msg The msg instance to transform.
+   * @return {!Object}
+   * @suppress {unusedLocalVariables} f is only used for nested messages
+   */
+  proto.flow.entities.Block.toObject = function (includeInstance, msg) {
+    var f, obj = {
+      id: msg.getId_asB64(),
+      parentId: msg.getParentId_asB64(),
+      height: jspb.Message.getFieldWithDefault(msg, 3, 0),
+      timestamp: (f = msg.getTimestamp()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
+      collectionGuaranteesList: jspb.Message.toObjectList(msg.getCollectionGuaranteesList(),
+        flow_entities_collection_pb.CollectionGuarantee.toObject, includeInstance),
+      blockSealsList: jspb.Message.toObjectList(msg.getBlockSealsList(),
+        flow_entities_block_seal_pb.BlockSeal.toObject, includeInstance),
+      signaturesList: msg.getSignaturesList_asB64()
+    };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
+  };
 }
 
 
@@ -103,7 +103,7 @@ proto.flow.entities.Block.toObject = function(includeInstance, msg) {
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.flow.entities.Block}
  */
-proto.flow.entities.Block.deserializeBinary = function(bytes) {
+proto.flow.entities.Block.deserializeBinary = function (bytes) {
   var reader = new jspb.BinaryReader(bytes);
   var msg = new proto.flow.entities.Block;
   return proto.flow.entities.Block.deserializeBinaryFromReader(msg, reader);
@@ -117,47 +117,47 @@ proto.flow.entities.Block.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.flow.entities.Block}
  */
-proto.flow.entities.Block.deserializeBinaryFromReader = function(msg, reader) {
+proto.flow.entities.Block.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
     var field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setId(value);
-      break;
-    case 2:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setParentId(value);
-      break;
-    case 3:
-      var value = /** @type {number} */ (reader.readUint64());
-      msg.setHeight(value);
-      break;
-    case 4:
-      var value = new google_protobuf_timestamp_pb.Timestamp;
-      reader.readMessage(value,google_protobuf_timestamp_pb.Timestamp.deserializeBinaryFromReader);
-      msg.setTimestamp(value);
-      break;
-    case 5:
-      var value = new flow_entities_collection_pb.CollectionGuarantee;
-      reader.readMessage(value,flow_entities_collection_pb.CollectionGuarantee.deserializeBinaryFromReader);
-      msg.addCollectionGuarantees(value);
-      break;
-    case 6:
-      var value = new flow_entities_block_seal_pb.BlockSeal;
-      reader.readMessage(value,flow_entities_block_seal_pb.BlockSeal.deserializeBinaryFromReader);
-      msg.addBlockSeals(value);
-      break;
-    case 7:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.addSignatures(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {!Uint8Array} */ (reader.readBytes());
+        msg.setId(value);
+        break;
+      case 2:
+        var value = /** @type {!Uint8Array} */ (reader.readBytes());
+        msg.setParentId(value);
+        break;
+      case 3:
+        var value = /** @type {number} */ (reader.readUint64());
+        msg.setHeight(value);
+        break;
+      case 4:
+        var value = new google_protobuf_timestamp_pb.Timestamp;
+        reader.readMessage(value, google_protobuf_timestamp_pb.Timestamp.deserializeBinaryFromReader);
+        msg.setTimestamp(value);
+        break;
+      case 5:
+        var value = new flow_entities_collection_pb.CollectionGuarantee;
+        reader.readMessage(value, flow_entities_collection_pb.CollectionGuarantee.deserializeBinaryFromReader);
+        msg.addCollectionGuarantees(value);
+        break;
+      case 6:
+        var value = new flow_entities_block_seal_pb.BlockSeal;
+        reader.readMessage(value, flow_entities_block_seal_pb.BlockSeal.deserializeBinaryFromReader);
+        msg.addBlockSeals(value);
+        break;
+      case 7:
+        var value = /** @type {!Uint8Array} */ (reader.readBytes());
+        msg.addSignatures(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
@@ -168,7 +168,7 @@ proto.flow.entities.Block.deserializeBinaryFromReader = function(msg, reader) {
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.flow.entities.Block.prototype.serializeBinary = function() {
+proto.flow.entities.Block.prototype.serializeBinary = function () {
   var writer = new jspb.BinaryWriter();
   proto.flow.entities.Block.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
@@ -182,7 +182,7 @@ proto.flow.entities.Block.prototype.serializeBinary = function() {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.flow.entities.Block.serializeBinaryToWriter = function(message, writer) {
+proto.flow.entities.Block.serializeBinaryToWriter = function (message, writer) {
   var f = undefined;
   f = message.getId_asU8();
   if (f.length > 0) {
@@ -243,7 +243,7 @@ proto.flow.entities.Block.serializeBinaryToWriter = function(message, writer) {
  * optional bytes id = 1;
  * @return {!(string|Uint8Array)}
  */
-proto.flow.entities.Block.prototype.getId = function() {
+proto.flow.entities.Block.prototype.getId = function () {
   return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
@@ -253,9 +253,9 @@ proto.flow.entities.Block.prototype.getId = function() {
  * This is a type-conversion wrapper around `getId()`
  * @return {string}
  */
-proto.flow.entities.Block.prototype.getId_asB64 = function() {
+proto.flow.entities.Block.prototype.getId_asB64 = function () {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getId()));
+    this.getId()));
 };
 
 
@@ -266,9 +266,9 @@ proto.flow.entities.Block.prototype.getId_asB64 = function() {
  * This is a type-conversion wrapper around `getId()`
  * @return {!Uint8Array}
  */
-proto.flow.entities.Block.prototype.getId_asU8 = function() {
+proto.flow.entities.Block.prototype.getId_asU8 = function () {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getId()));
+    this.getId()));
 };
 
 
@@ -276,7 +276,7 @@ proto.flow.entities.Block.prototype.getId_asU8 = function() {
  * @param {!(string|Uint8Array)} value
  * @return {!proto.flow.entities.Block} returns this
  */
-proto.flow.entities.Block.prototype.setId = function(value) {
+proto.flow.entities.Block.prototype.setId = function (value) {
   return jspb.Message.setProto3BytesField(this, 1, value);
 };
 
@@ -285,7 +285,7 @@ proto.flow.entities.Block.prototype.setId = function(value) {
  * optional bytes parent_id = 2;
  * @return {!(string|Uint8Array)}
  */
-proto.flow.entities.Block.prototype.getParentId = function() {
+proto.flow.entities.Block.prototype.getParentId = function () {
   return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
@@ -295,9 +295,9 @@ proto.flow.entities.Block.prototype.getParentId = function() {
  * This is a type-conversion wrapper around `getParentId()`
  * @return {string}
  */
-proto.flow.entities.Block.prototype.getParentId_asB64 = function() {
+proto.flow.entities.Block.prototype.getParentId_asB64 = function () {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getParentId()));
+    this.getParentId()));
 };
 
 
@@ -308,9 +308,9 @@ proto.flow.entities.Block.prototype.getParentId_asB64 = function() {
  * This is a type-conversion wrapper around `getParentId()`
  * @return {!Uint8Array}
  */
-proto.flow.entities.Block.prototype.getParentId_asU8 = function() {
+proto.flow.entities.Block.prototype.getParentId_asU8 = function () {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getParentId()));
+    this.getParentId()));
 };
 
 
@@ -318,7 +318,7 @@ proto.flow.entities.Block.prototype.getParentId_asU8 = function() {
  * @param {!(string|Uint8Array)} value
  * @return {!proto.flow.entities.Block} returns this
  */
-proto.flow.entities.Block.prototype.setParentId = function(value) {
+proto.flow.entities.Block.prototype.setParentId = function (value) {
   return jspb.Message.setProto3BytesField(this, 2, value);
 };
 
@@ -327,7 +327,7 @@ proto.flow.entities.Block.prototype.setParentId = function(value) {
  * optional uint64 height = 3;
  * @return {number}
  */
-proto.flow.entities.Block.prototype.getHeight = function() {
+proto.flow.entities.Block.prototype.getHeight = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
@@ -336,7 +336,7 @@ proto.flow.entities.Block.prototype.getHeight = function() {
  * @param {number} value
  * @return {!proto.flow.entities.Block} returns this
  */
-proto.flow.entities.Block.prototype.setHeight = function(value) {
+proto.flow.entities.Block.prototype.setHeight = function (value) {
   return jspb.Message.setProto3IntField(this, 3, value);
 };
 
@@ -345,7 +345,7 @@ proto.flow.entities.Block.prototype.setHeight = function(value) {
  * optional google.protobuf.Timestamp timestamp = 4;
  * @return {?proto.google.protobuf.Timestamp}
  */
-proto.flow.entities.Block.prototype.getTimestamp = function() {
+proto.flow.entities.Block.prototype.getTimestamp = function () {
   return /** @type{?proto.google.protobuf.Timestamp} */ (
     jspb.Message.getWrapperField(this, google_protobuf_timestamp_pb.Timestamp, 4));
 };
@@ -355,7 +355,7 @@ proto.flow.entities.Block.prototype.getTimestamp = function() {
  * @param {?proto.google.protobuf.Timestamp|undefined} value
  * @return {!proto.flow.entities.Block} returns this
 */
-proto.flow.entities.Block.prototype.setTimestamp = function(value) {
+proto.flow.entities.Block.prototype.setTimestamp = function (value) {
   return jspb.Message.setWrapperField(this, 4, value);
 };
 
@@ -364,7 +364,7 @@ proto.flow.entities.Block.prototype.setTimestamp = function(value) {
  * Clears the message field making it undefined.
  * @return {!proto.flow.entities.Block} returns this
  */
-proto.flow.entities.Block.prototype.clearTimestamp = function() {
+proto.flow.entities.Block.prototype.clearTimestamp = function () {
   return this.setTimestamp(undefined);
 };
 
@@ -373,7 +373,7 @@ proto.flow.entities.Block.prototype.clearTimestamp = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.flow.entities.Block.prototype.hasTimestamp = function() {
+proto.flow.entities.Block.prototype.hasTimestamp = function () {
   return jspb.Message.getField(this, 4) != null;
 };
 
@@ -382,7 +382,7 @@ proto.flow.entities.Block.prototype.hasTimestamp = function() {
  * repeated CollectionGuarantee collection_guarantees = 5;
  * @return {!Array<!proto.flow.entities.CollectionGuarantee>}
  */
-proto.flow.entities.Block.prototype.getCollectionGuaranteesList = function() {
+proto.flow.entities.Block.prototype.getCollectionGuaranteesList = function () {
   return /** @type{!Array<!proto.flow.entities.CollectionGuarantee>} */ (
     jspb.Message.getRepeatedWrapperField(this, flow_entities_collection_pb.CollectionGuarantee, 5));
 };
@@ -392,7 +392,7 @@ proto.flow.entities.Block.prototype.getCollectionGuaranteesList = function() {
  * @param {!Array<!proto.flow.entities.CollectionGuarantee>} value
  * @return {!proto.flow.entities.Block} returns this
 */
-proto.flow.entities.Block.prototype.setCollectionGuaranteesList = function(value) {
+proto.flow.entities.Block.prototype.setCollectionGuaranteesList = function (value) {
   return jspb.Message.setRepeatedWrapperField(this, 5, value);
 };
 
@@ -402,7 +402,7 @@ proto.flow.entities.Block.prototype.setCollectionGuaranteesList = function(value
  * @param {number=} opt_index
  * @return {!proto.flow.entities.CollectionGuarantee}
  */
-proto.flow.entities.Block.prototype.addCollectionGuarantees = function(opt_value, opt_index) {
+proto.flow.entities.Block.prototype.addCollectionGuarantees = function (opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 5, opt_value, proto.flow.entities.CollectionGuarantee, opt_index);
 };
 
@@ -411,7 +411,7 @@ proto.flow.entities.Block.prototype.addCollectionGuarantees = function(opt_value
  * Clears the list making it empty but non-null.
  * @return {!proto.flow.entities.Block} returns this
  */
-proto.flow.entities.Block.prototype.clearCollectionGuaranteesList = function() {
+proto.flow.entities.Block.prototype.clearCollectionGuaranteesList = function () {
   return this.setCollectionGuaranteesList([]);
 };
 
@@ -420,7 +420,7 @@ proto.flow.entities.Block.prototype.clearCollectionGuaranteesList = function() {
  * repeated BlockSeal block_seals = 6;
  * @return {!Array<!proto.flow.entities.BlockSeal>}
  */
-proto.flow.entities.Block.prototype.getBlockSealsList = function() {
+proto.flow.entities.Block.prototype.getBlockSealsList = function () {
   return /** @type{!Array<!proto.flow.entities.BlockSeal>} */ (
     jspb.Message.getRepeatedWrapperField(this, flow_entities_block_seal_pb.BlockSeal, 6));
 };
@@ -430,7 +430,7 @@ proto.flow.entities.Block.prototype.getBlockSealsList = function() {
  * @param {!Array<!proto.flow.entities.BlockSeal>} value
  * @return {!proto.flow.entities.Block} returns this
 */
-proto.flow.entities.Block.prototype.setBlockSealsList = function(value) {
+proto.flow.entities.Block.prototype.setBlockSealsList = function (value) {
   return jspb.Message.setRepeatedWrapperField(this, 6, value);
 };
 
@@ -440,7 +440,7 @@ proto.flow.entities.Block.prototype.setBlockSealsList = function(value) {
  * @param {number=} opt_index
  * @return {!proto.flow.entities.BlockSeal}
  */
-proto.flow.entities.Block.prototype.addBlockSeals = function(opt_value, opt_index) {
+proto.flow.entities.Block.prototype.addBlockSeals = function (opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 6, opt_value, proto.flow.entities.BlockSeal, opt_index);
 };
 
@@ -449,7 +449,7 @@ proto.flow.entities.Block.prototype.addBlockSeals = function(opt_value, opt_inde
  * Clears the list making it empty but non-null.
  * @return {!proto.flow.entities.Block} returns this
  */
-proto.flow.entities.Block.prototype.clearBlockSealsList = function() {
+proto.flow.entities.Block.prototype.clearBlockSealsList = function () {
   return this.setBlockSealsList([]);
 };
 
@@ -458,7 +458,7 @@ proto.flow.entities.Block.prototype.clearBlockSealsList = function() {
  * repeated bytes signatures = 7;
  * @return {!(Array<!Uint8Array>|Array<string>)}
  */
-proto.flow.entities.Block.prototype.getSignaturesList = function() {
+proto.flow.entities.Block.prototype.getSignaturesList = function () {
   return /** @type {!(Array<!Uint8Array>|Array<string>)} */ (jspb.Message.getRepeatedField(this, 7));
 };
 
@@ -468,9 +468,9 @@ proto.flow.entities.Block.prototype.getSignaturesList = function() {
  * This is a type-conversion wrapper around `getSignaturesList()`
  * @return {!Array<string>}
  */
-proto.flow.entities.Block.prototype.getSignaturesList_asB64 = function() {
+proto.flow.entities.Block.prototype.getSignaturesList_asB64 = function () {
   return /** @type {!Array<string>} */ (jspb.Message.bytesListAsB64(
-      this.getSignaturesList()));
+    this.getSignaturesList()));
 };
 
 
@@ -481,9 +481,9 @@ proto.flow.entities.Block.prototype.getSignaturesList_asB64 = function() {
  * This is a type-conversion wrapper around `getSignaturesList()`
  * @return {!Array<!Uint8Array>}
  */
-proto.flow.entities.Block.prototype.getSignaturesList_asU8 = function() {
+proto.flow.entities.Block.prototype.getSignaturesList_asU8 = function () {
   return /** @type {!Array<!Uint8Array>} */ (jspb.Message.bytesListAsU8(
-      this.getSignaturesList()));
+    this.getSignaturesList()));
 };
 
 
@@ -491,7 +491,7 @@ proto.flow.entities.Block.prototype.getSignaturesList_asU8 = function() {
  * @param {!(Array<!Uint8Array>|Array<string>)} value
  * @return {!proto.flow.entities.Block} returns this
  */
-proto.flow.entities.Block.prototype.setSignaturesList = function(value) {
+proto.flow.entities.Block.prototype.setSignaturesList = function (value) {
   return jspb.Message.setField(this, 7, value || []);
 };
 
@@ -501,7 +501,7 @@ proto.flow.entities.Block.prototype.setSignaturesList = function(value) {
  * @param {number=} opt_index
  * @return {!proto.flow.entities.Block} returns this
  */
-proto.flow.entities.Block.prototype.addSignatures = function(value, opt_index) {
+proto.flow.entities.Block.prototype.addSignatures = function (value, opt_index) {
   return jspb.Message.addToRepeatedField(this, 7, value, opt_index);
 };
 
@@ -510,7 +510,7 @@ proto.flow.entities.Block.prototype.addSignatures = function(value, opt_index) {
  * Clears the list making it empty but non-null.
  * @return {!proto.flow.entities.Block} returns this
  */
-proto.flow.entities.Block.prototype.clearSignaturesList = function() {
+proto.flow.entities.Block.prototype.clearSignaturesList = function () {
   return this.setSignaturesList([]);
 };
 

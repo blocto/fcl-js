@@ -1,7 +1,7 @@
 // package: flow.entities
 // file: flow/entities/collection.proto
 
-import * as jspb from "google-protobuf";
+import * as jspb from "@blocto/google-protobuf";
 
 export class Collection extends jspb.Message {
   getId(): Uint8Array | string;

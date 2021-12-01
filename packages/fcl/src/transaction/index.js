@@ -10,7 +10,7 @@ import {
   SUBSCRIBE,
   UNSUBSCRIBE,
 } from "@onflow/util-actor"
-import {send as fclSend, decode, getTransactionStatus} from "@onflow/sdk"
+import { send as fclSend, decode, getTransactionStatus } from "@portto/sdk"
 
 const RATE = 2500
 const POLL = "POLL"

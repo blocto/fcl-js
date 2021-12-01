@@ -8,11 +8,11 @@
  */
 // GENERATED CODE -- DO NOT EDIT!
 
-var jspb = require('google-protobuf');
+var jspb = require('@blocto/google-protobuf');
 var goog = jspb;
-var global = Function('return this')();
+var global = {}
 
-var google_protobuf_timestamp_pb = require('google-protobuf/google/protobuf/timestamp_pb.js');
+var google_protobuf_timestamp_pb = require('@blocto/google-protobuf/google/protobuf/timestamp_pb.js');
 goog.object.extend(proto, google_protobuf_timestamp_pb);
 goog.exportSymbol('proto.flow.entities.BlockHeader', null, global);
 /**
@@ -25,7 +25,7 @@ goog.exportSymbol('proto.flow.entities.BlockHeader', null, global);
  * @extends {jspb.Message}
  * @constructor
  */
-proto.flow.entities.BlockHeader = function(opt_data) {
+proto.flow.entities.BlockHeader = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.flow.entities.BlockHeader, jspb.Message);
@@ -40,45 +40,45 @@ if (goog.DEBUG && !COMPILED) {
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * Optional fields that are not set will be set to undefined.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
- * @param {boolean=} opt_includeInstance Deprecated. whether to include the
- *     JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.flow.entities.BlockHeader.prototype.toObject = function(opt_includeInstance) {
-  return proto.flow.entities.BlockHeader.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Deprecated. Whether to include
- *     the JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.flow.entities.BlockHeader} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.flow.entities.BlockHeader.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    id: msg.getId_asB64(),
-    parentId: msg.getParentId_asB64(),
-    height: jspb.Message.getFieldWithDefault(msg, 3, 0),
-    timestamp: (f = msg.getTimestamp()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f)
+  /**
+   * Creates an object representation of this proto.
+   * Field names that are reserved in JavaScript and will be renamed to pb_name.
+   * Optional fields that are not set will be set to undefined.
+   * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+   * For the list of reserved names please see:
+   *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+   * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+   *     JSPB instance for transitional soy proto support:
+   *     http://goto/soy-param-migration
+   * @return {!Object}
+   */
+  proto.flow.entities.BlockHeader.prototype.toObject = function (opt_includeInstance) {
+    return proto.flow.entities.BlockHeader.toObject(opt_includeInstance, this);
   };
 
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
+
+  /**
+   * Static version of the {@see toObject} method.
+   * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+   *     the JSPB instance for transitional soy proto support:
+   *     http://goto/soy-param-migration
+   * @param {!proto.flow.entities.BlockHeader} msg The msg instance to transform.
+   * @return {!Object}
+   * @suppress {unusedLocalVariables} f is only used for nested messages
+   */
+  proto.flow.entities.BlockHeader.toObject = function (includeInstance, msg) {
+    var f, obj = {
+      id: msg.getId_asB64(),
+      parentId: msg.getParentId_asB64(),
+      height: jspb.Message.getFieldWithDefault(msg, 3, 0),
+      timestamp: (f = msg.getTimestamp()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f)
+    };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
+  };
 }
 
 
@@ -87,7 +87,7 @@ proto.flow.entities.BlockHeader.toObject = function(includeInstance, msg) {
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.flow.entities.BlockHeader}
  */
-proto.flow.entities.BlockHeader.deserializeBinary = function(bytes) {
+proto.flow.entities.BlockHeader.deserializeBinary = function (bytes) {
   var reader = new jspb.BinaryReader(bytes);
   var msg = new proto.flow.entities.BlockHeader;
   return proto.flow.entities.BlockHeader.deserializeBinaryFromReader(msg, reader);
@@ -101,33 +101,33 @@ proto.flow.entities.BlockHeader.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.flow.entities.BlockHeader}
  */
-proto.flow.entities.BlockHeader.deserializeBinaryFromReader = function(msg, reader) {
+proto.flow.entities.BlockHeader.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
     var field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setId(value);
-      break;
-    case 2:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setParentId(value);
-      break;
-    case 3:
-      var value = /** @type {number} */ (reader.readUint64());
-      msg.setHeight(value);
-      break;
-    case 4:
-      var value = new google_protobuf_timestamp_pb.Timestamp;
-      reader.readMessage(value,google_protobuf_timestamp_pb.Timestamp.deserializeBinaryFromReader);
-      msg.setTimestamp(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {!Uint8Array} */ (reader.readBytes());
+        msg.setId(value);
+        break;
+      case 2:
+        var value = /** @type {!Uint8Array} */ (reader.readBytes());
+        msg.setParentId(value);
+        break;
+      case 3:
+        var value = /** @type {number} */ (reader.readUint64());
+        msg.setHeight(value);
+        break;
+      case 4:
+        var value = new google_protobuf_timestamp_pb.Timestamp;
+        reader.readMessage(value, google_protobuf_timestamp_pb.Timestamp.deserializeBinaryFromReader);
+        msg.setTimestamp(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
@@ -138,7 +138,7 @@ proto.flow.entities.BlockHeader.deserializeBinaryFromReader = function(msg, read
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.flow.entities.BlockHeader.prototype.serializeBinary = function() {
+proto.flow.entities.BlockHeader.prototype.serializeBinary = function () {
   var writer = new jspb.BinaryWriter();
   proto.flow.entities.BlockHeader.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
@@ -152,7 +152,7 @@ proto.flow.entities.BlockHeader.prototype.serializeBinary = function() {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.flow.entities.BlockHeader.serializeBinaryToWriter = function(message, writer) {
+proto.flow.entities.BlockHeader.serializeBinaryToWriter = function (message, writer) {
   var f = undefined;
   f = message.getId_asU8();
   if (f.length > 0) {
@@ -190,7 +190,7 @@ proto.flow.entities.BlockHeader.serializeBinaryToWriter = function(message, writ
  * optional bytes id = 1;
  * @return {!(string|Uint8Array)}
  */
-proto.flow.entities.BlockHeader.prototype.getId = function() {
+proto.flow.entities.BlockHeader.prototype.getId = function () {
   return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
@@ -200,9 +200,9 @@ proto.flow.entities.BlockHeader.prototype.getId = function() {
  * This is a type-conversion wrapper around `getId()`
  * @return {string}
  */
-proto.flow.entities.BlockHeader.prototype.getId_asB64 = function() {
+proto.flow.entities.BlockHeader.prototype.getId_asB64 = function () {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getId()));
+    this.getId()));
 };
 
 
@@ -213,9 +213,9 @@ proto.flow.entities.BlockHeader.prototype.getId_asB64 = function() {
  * This is a type-conversion wrapper around `getId()`
  * @return {!Uint8Array}
  */
-proto.flow.entities.BlockHeader.prototype.getId_asU8 = function() {
+proto.flow.entities.BlockHeader.prototype.getId_asU8 = function () {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getId()));
+    this.getId()));
 };
 
 
@@ -223,7 +223,7 @@ proto.flow.entities.BlockHeader.prototype.getId_asU8 = function() {
  * @param {!(string|Uint8Array)} value
  * @return {!proto.flow.entities.BlockHeader} returns this
  */
-proto.flow.entities.BlockHeader.prototype.setId = function(value) {
+proto.flow.entities.BlockHeader.prototype.setId = function (value) {
   return jspb.Message.setProto3BytesField(this, 1, value);
 };
 
@@ -232,7 +232,7 @@ proto.flow.entities.BlockHeader.prototype.setId = function(value) {
  * optional bytes parent_id = 2;
  * @return {!(string|Uint8Array)}
  */
-proto.flow.entities.BlockHeader.prototype.getParentId = function() {
+proto.flow.entities.BlockHeader.prototype.getParentId = function () {
   return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
@@ -242,9 +242,9 @@ proto.flow.entities.BlockHeader.prototype.getParentId = function() {
  * This is a type-conversion wrapper around `getParentId()`
  * @return {string}
  */
-proto.flow.entities.BlockHeader.prototype.getParentId_asB64 = function() {
+proto.flow.entities.BlockHeader.prototype.getParentId_asB64 = function () {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getParentId()));
+    this.getParentId()));
 };
 
 
@@ -255,9 +255,9 @@ proto.flow.entities.BlockHeader.prototype.getParentId_asB64 = function() {
  * This is a type-conversion wrapper around `getParentId()`
  * @return {!Uint8Array}
  */
-proto.flow.entities.BlockHeader.prototype.getParentId_asU8 = function() {
+proto.flow.entities.BlockHeader.prototype.getParentId_asU8 = function () {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getParentId()));
+    this.getParentId()));
 };
 
 
@@ -265,7 +265,7 @@ proto.flow.entities.BlockHeader.prototype.getParentId_asU8 = function() {
  * @param {!(string|Uint8Array)} value
  * @return {!proto.flow.entities.BlockHeader} returns this
  */
-proto.flow.entities.BlockHeader.prototype.setParentId = function(value) {
+proto.flow.entities.BlockHeader.prototype.setParentId = function (value) {
   return jspb.Message.setProto3BytesField(this, 2, value);
 };
 
@@ -274,7 +274,7 @@ proto.flow.entities.BlockHeader.prototype.setParentId = function(value) {
  * optional uint64 height = 3;
  * @return {number}
  */
-proto.flow.entities.BlockHeader.prototype.getHeight = function() {
+proto.flow.entities.BlockHeader.prototype.getHeight = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
@@ -283,7 +283,7 @@ proto.flow.entities.BlockHeader.prototype.getHeight = function() {
  * @param {number} value
  * @return {!proto.flow.entities.BlockHeader} returns this
  */
-proto.flow.entities.BlockHeader.prototype.setHeight = function(value) {
+proto.flow.entities.BlockHeader.prototype.setHeight = function (value) {
   return jspb.Message.setProto3IntField(this, 3, value);
 };
 
@@ -292,7 +292,7 @@ proto.flow.entities.BlockHeader.prototype.setHeight = function(value) {
  * optional google.protobuf.Timestamp timestamp = 4;
  * @return {?proto.google.protobuf.Timestamp}
  */
-proto.flow.entities.BlockHeader.prototype.getTimestamp = function() {
+proto.flow.entities.BlockHeader.prototype.getTimestamp = function () {
   return /** @type{?proto.google.protobuf.Timestamp} */ (
     jspb.Message.getWrapperField(this, google_protobuf_timestamp_pb.Timestamp, 4));
 };
@@ -302,7 +302,7 @@ proto.flow.entities.BlockHeader.prototype.getTimestamp = function() {
  * @param {?proto.google.protobuf.Timestamp|undefined} value
  * @return {!proto.flow.entities.BlockHeader} returns this
 */
-proto.flow.entities.BlockHeader.prototype.setTimestamp = function(value) {
+proto.flow.entities.BlockHeader.prototype.setTimestamp = function (value) {
   return jspb.Message.setWrapperField(this, 4, value);
 };
 
@@ -311,7 +311,7 @@ proto.flow.entities.BlockHeader.prototype.setTimestamp = function(value) {
  * Clears the message field making it undefined.
  * @return {!proto.flow.entities.BlockHeader} returns this
  */
-proto.flow.entities.BlockHeader.prototype.clearTimestamp = function() {
+proto.flow.entities.BlockHeader.prototype.clearTimestamp = function () {
   return this.setTimestamp(undefined);
 };
 
@@ -320,7 +320,7 @@ proto.flow.entities.BlockHeader.prototype.clearTimestamp = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.flow.entities.BlockHeader.prototype.hasTimestamp = function() {
+proto.flow.entities.BlockHeader.prototype.hasTimestamp = function () {
   return jspb.Message.getField(this, 4) != null;
 };
 

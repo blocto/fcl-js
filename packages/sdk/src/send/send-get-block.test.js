@@ -1,10 +1,10 @@
-import {AccessAPI} from "@onflow/protobuf"
-import {sendGetBlock} from "./send-get-block.js"
-import {build} from "../build/build.js"
-import {getBlock} from "../build/build-get-block.js"
-import {atBlockId} from "../build/build-at-block-id.js"
-import {atBlockHeight} from "../build/build-at-block-height.js"
-import {resolve} from "../resolve/resolve.js"
+import { AccessAPI } from "@blocto/protobuf"
+import { sendGetBlock } from "./send-get-block.js"
+import { build } from "../build/build.js"
+import { getBlock } from "../build/build-get-block.js"
+import { atBlockId } from "../build/build-at-block-id.js"
+import { atBlockHeight } from "../build/build-at-block-height.js"
+import { resolve } from "../resolve/resolve.js"
 
 const jsonToUInt8Array = (json) => {
     var str = JSON.stringify(json, null, 0);
@@ -28,250 +28,250 @@ const strToUInt8Array = (str) => {
 };
 
 describe("Send Get Block", () => {
-  test("GetBlockByID", async () => {
-    const unaryMock = jest.fn();
+    test("GetBlockByID", async () => {
+        const unaryMock = jest.fn();
 
-    const dateNow = new Date(Date.now())
+        const dateNow = new Date(Date.now())
 
-    const returnedBlock = {
-        id: "a1b2c3",
-        parentId: "a1b2c3",
-        height: 123,
-        timestamp: dateNow.toISOString(),
-        collectionGuarantees: [],
-        blockSeals: [],
-        signatures: []
-    }
-
-    unaryMock.mockReturnValue({
-        getBlock: () => ({
-            getId_asU8: () => hexStrToUInt8Array("a1b2c3"),
-            getParentId_asU8: () => hexStrToUInt8Array("a1b2c3"),
-            getHeight: () => 123,
-            getTimestamp: () => ({
-                toDate: () => ({
-                    toISOString: () => dateNow.toISOString()
-                })
-            }),
-            getCollectionGuaranteesList: () => [],
-            getBlockSealsList: () => [],
-            getSignaturesList: () => []
-        })
-    });
-
-    const response = await sendGetBlock(
-        await resolve(
-            await build([
-                getBlock(),
-                atBlockId("a1b2c3")
-            ])
-        ),
-        {
-            unary: unaryMock,
-            node: "localhost:3000"
+        const returnedBlock = {
+            id: "a1b2c3",
+            parentId: "a1b2c3",
+            height: 123,
+            timestamp: dateNow.toISOString(),
+            collectionGuarantees: [],
+            blockSeals: [],
+            signatures: []
         }
-    )
 
-    expect(unaryMock.mock.calls.length).toEqual(1)
+        unaryMock.mockReturnValue({
+            getBlock: () => ({
+                getId_asU8: () => hexStrToUInt8Array("a1b2c3"),
+                getParentId_asU8: () => hexStrToUInt8Array("a1b2c3"),
+                getHeight: () => 123,
+                getTimestamp: () => ({
+                    toDate: () => ({
+                        toISOString: () => dateNow.toISOString()
+                    })
+                }),
+                getCollectionGuaranteesList: () => [],
+                getBlockSealsList: () => [],
+                getSignaturesList: () => []
+            })
+        });
 
-    const unaryMockArgs = unaryMock.mock.calls[0]
+        const response = await sendGetBlock(
+            await resolve(
+                await build([
+                    getBlock(),
+                    atBlockId("a1b2c3")
+                ])
+            ),
+            {
+                unary: unaryMock,
+                node: "localhost:3000"
+            }
+        )
 
-    expect(unaryMockArgs.length).toEqual(3)
+        expect(unaryMock.mock.calls.length).toEqual(1)
 
-    const unaryType = unaryMock.mock.calls[0][1]
+        const unaryMockArgs = unaryMock.mock.calls[0]
 
-    expect(unaryType).toEqual(AccessAPI.GetBlockByID)
+        expect(unaryMockArgs.length).toEqual(3)
 
-    const unaryMockRequest = unaryMock.mock.calls[0][2]
-    const unaryMockBlockId = unaryMockRequest.getId()
+        const unaryType = unaryMock.mock.calls[0][1]
 
-    expect(unaryMockBlockId).not.toBeUndefined()
+        expect(unaryType).toEqual(AccessAPI.GetBlockByID)
 
-    expect(response.block).toEqual(returnedBlock)
-  })
+        const unaryMockRequest = unaryMock.mock.calls[0][2]
+        const unaryMockBlockId = unaryMockRequest.getId()
 
-  test("GetBlockByHeight", async () => {
-    const unaryMock = jest.fn();
+        expect(unaryMockBlockId).not.toBeUndefined()
 
-    const dateNow = new Date(Date.now())
+        expect(response.block).toEqual(returnedBlock)
+    })
 
-    const returnedBlock = {
-        id: "a1b2c3",
-        parentId: "a1b2c3",
-        height: 123,
-        timestamp: dateNow.toISOString(),
-        collectionGuarantees: [],
-        blockSeals: [],
-        signatures: []
-    }
+    test("GetBlockByHeight", async () => {
+        const unaryMock = jest.fn();
 
-    unaryMock.mockReturnValue({
-        getBlock: () => ({
-            getId_asU8: () => hexStrToUInt8Array("a1b2c3"),
-            getParentId_asU8: () => hexStrToUInt8Array("a1b2c3"),
-            getHeight: () => 123,
-            getTimestamp: () => ({
-                toDate: () => ({
-                    toISOString: () => dateNow.toISOString()
-                })
-            }),
-            getCollectionGuaranteesList: () => [],
-            getBlockSealsList: () => [],
-            getSignaturesList: () => []
-        })
-    });
+        const dateNow = new Date(Date.now())
 
-    const response = await sendGetBlock(
-        await resolve(
-            await build([
-                getBlock(),
-                atBlockHeight(123)
-            ])
-        ),
-        {
-            unary: unaryMock,
-            node: "localhost:3000"
+        const returnedBlock = {
+            id: "a1b2c3",
+            parentId: "a1b2c3",
+            height: 123,
+            timestamp: dateNow.toISOString(),
+            collectionGuarantees: [],
+            blockSeals: [],
+            signatures: []
         }
-    )
 
-    expect(unaryMock.mock.calls.length).toEqual(1)
+        unaryMock.mockReturnValue({
+            getBlock: () => ({
+                getId_asU8: () => hexStrToUInt8Array("a1b2c3"),
+                getParentId_asU8: () => hexStrToUInt8Array("a1b2c3"),
+                getHeight: () => 123,
+                getTimestamp: () => ({
+                    toDate: () => ({
+                        toISOString: () => dateNow.toISOString()
+                    })
+                }),
+                getCollectionGuaranteesList: () => [],
+                getBlockSealsList: () => [],
+                getSignaturesList: () => []
+            })
+        });
 
-    const unaryMockArgs = unaryMock.mock.calls[0]
+        const response = await sendGetBlock(
+            await resolve(
+                await build([
+                    getBlock(),
+                    atBlockHeight(123)
+                ])
+            ),
+            {
+                unary: unaryMock,
+                node: "localhost:3000"
+            }
+        )
 
-    expect(unaryMockArgs.length).toEqual(3)
+        expect(unaryMock.mock.calls.length).toEqual(1)
 
-    const unaryType = unaryMock.mock.calls[0][1]
+        const unaryMockArgs = unaryMock.mock.calls[0]
 
-    expect(unaryType).toEqual(AccessAPI.GetBlockByHeight)
+        expect(unaryMockArgs.length).toEqual(3)
 
-    const unaryMockRequest = unaryMock.mock.calls[0][2]
-    const unaryMockBlockHeight = unaryMockRequest.getHeight()
+        const unaryType = unaryMock.mock.calls[0][1]
 
-    expect(unaryMockBlockHeight).not.toBeUndefined()
+        expect(unaryType).toEqual(AccessAPI.GetBlockByHeight)
 
-    expect(response.block).toEqual(returnedBlock)
-  })
+        const unaryMockRequest = unaryMock.mock.calls[0][2]
+        const unaryMockBlockHeight = unaryMockRequest.getHeight()
 
-  test("GetLatestBlock - isSealed = false", async () => {
-    const unaryMock = jest.fn();
+        expect(unaryMockBlockHeight).not.toBeUndefined()
 
-    const dateNow = new Date(Date.now())
+        expect(response.block).toEqual(returnedBlock)
+    })
 
-    const returnedBlock = {
-        id: "a1b2c3",
-        parentId: "a1b2c3",
-        height: 123,
-        timestamp: dateNow.toISOString(),
-        collectionGuarantees: [],
-        blockSeals: [],
-        signatures: []
-    }
+    test("GetLatestBlock - isSealed = false", async () => {
+        const unaryMock = jest.fn();
 
-    unaryMock.mockReturnValue({
-        getBlock: () => ({
-            getId_asU8: () => hexStrToUInt8Array("a1b2c3"),
-            getParentId_asU8: () => hexStrToUInt8Array("a1b2c3"),
-            getHeight: () => 123,
-            getTimestamp: () => ({
-                toDate: () => ({
-                    toISOString: () => dateNow.toISOString()
-                })
-            }),
-            getCollectionGuaranteesList: () => [],
-            getBlockSealsList: () => [],
-            getSignaturesList: () => []
-        })
-    });
+        const dateNow = new Date(Date.now())
 
-    const response = await sendGetBlock(
-        await resolve(
-            await build([
-                getBlock()
-            ])
-        ),
-        {
-            unary: unaryMock,
-            node: "localhost:3000"
+        const returnedBlock = {
+            id: "a1b2c3",
+            parentId: "a1b2c3",
+            height: 123,
+            timestamp: dateNow.toISOString(),
+            collectionGuarantees: [],
+            blockSeals: [],
+            signatures: []
         }
-    )
 
-    expect(unaryMock.mock.calls.length).toEqual(1)
+        unaryMock.mockReturnValue({
+            getBlock: () => ({
+                getId_asU8: () => hexStrToUInt8Array("a1b2c3"),
+                getParentId_asU8: () => hexStrToUInt8Array("a1b2c3"),
+                getHeight: () => 123,
+                getTimestamp: () => ({
+                    toDate: () => ({
+                        toISOString: () => dateNow.toISOString()
+                    })
+                }),
+                getCollectionGuaranteesList: () => [],
+                getBlockSealsList: () => [],
+                getSignaturesList: () => []
+            })
+        });
 
-    const unaryMockArgs = unaryMock.mock.calls[0]
+        const response = await sendGetBlock(
+            await resolve(
+                await build([
+                    getBlock()
+                ])
+            ),
+            {
+                unary: unaryMock,
+                node: "localhost:3000"
+            }
+        )
 
-    expect(unaryMockArgs.length).toEqual(3)
+        expect(unaryMock.mock.calls.length).toEqual(1)
 
-    const unaryType = unaryMock.mock.calls[0][1]
+        const unaryMockArgs = unaryMock.mock.calls[0]
 
-    expect(unaryType).toEqual(AccessAPI.GetLatestBlock)
+        expect(unaryMockArgs.length).toEqual(3)
 
-    const unaryMockRequest = unaryMock.mock.calls[0][2]
-    const unaryMockIsSealed = unaryMockRequest.getIsSealed()
+        const unaryType = unaryMock.mock.calls[0][1]
 
-    expect(unaryMockIsSealed).toBe(false)
+        expect(unaryType).toEqual(AccessAPI.GetLatestBlock)
 
-    expect(response.block).toEqual(returnedBlock)
-  })
+        const unaryMockRequest = unaryMock.mock.calls[0][2]
+        const unaryMockIsSealed = unaryMockRequest.getIsSealed()
 
-  test("GetLatestBlock - isSealed = true", async () => {
-    const unaryMock = jest.fn();
+        expect(unaryMockIsSealed).toBe(false)
 
-    const dateNow = new Date(Date.now())
+        expect(response.block).toEqual(returnedBlock)
+    })
 
-    const returnedBlock = {
-        id: "a1b2c3",
-        parentId: "a1b2c3",
-        height: 123,
-        timestamp: dateNow.toISOString(),
-        collectionGuarantees: [],
-        blockSeals: [],
-        signatures: []
-    }
+    test("GetLatestBlock - isSealed = true", async () => {
+        const unaryMock = jest.fn();
 
-    unaryMock.mockReturnValue({
-        getBlock: () => ({
-            getId_asU8: () => hexStrToUInt8Array("a1b2c3"),
-            getParentId_asU8: () => hexStrToUInt8Array("a1b2c3"),
-            getHeight: () => 123,
-            getTimestamp: () => ({
-                toDate: () => ({
-                    toISOString: () => dateNow.toISOString()
-                })
-            }),
-            getCollectionGuaranteesList: () => [],
-            getBlockSealsList: () => [],
-            getSignaturesList: () => []
-        })
-    });
+        const dateNow = new Date(Date.now())
 
-    const response = await sendGetBlock(
-        await resolve(
-            await build([
-                getBlock(true)
-            ])
-        ),
-        {
-            unary: unaryMock,
-            node: "localhost:3000"
+        const returnedBlock = {
+            id: "a1b2c3",
+            parentId: "a1b2c3",
+            height: 123,
+            timestamp: dateNow.toISOString(),
+            collectionGuarantees: [],
+            blockSeals: [],
+            signatures: []
         }
-    )
 
-    expect(unaryMock.mock.calls.length).toEqual(1)
+        unaryMock.mockReturnValue({
+            getBlock: () => ({
+                getId_asU8: () => hexStrToUInt8Array("a1b2c3"),
+                getParentId_asU8: () => hexStrToUInt8Array("a1b2c3"),
+                getHeight: () => 123,
+                getTimestamp: () => ({
+                    toDate: () => ({
+                        toISOString: () => dateNow.toISOString()
+                    })
+                }),
+                getCollectionGuaranteesList: () => [],
+                getBlockSealsList: () => [],
+                getSignaturesList: () => []
+            })
+        });
 
-    const unaryMockArgs = unaryMock.mock.calls[0]
+        const response = await sendGetBlock(
+            await resolve(
+                await build([
+                    getBlock(true)
+                ])
+            ),
+            {
+                unary: unaryMock,
+                node: "localhost:3000"
+            }
+        )
 
-    expect(unaryMockArgs.length).toEqual(3)
+        expect(unaryMock.mock.calls.length).toEqual(1)
 
-    const unaryType = unaryMock.mock.calls[0][1]
+        const unaryMockArgs = unaryMock.mock.calls[0]
 
-    expect(unaryType).toEqual(AccessAPI.GetLatestBlock)
+        expect(unaryMockArgs.length).toEqual(3)
 
-    const unaryMockRequest = unaryMock.mock.calls[0][2]
-    const unaryMockIsSealed = unaryMockRequest.getIsSealed()
+        const unaryType = unaryMock.mock.calls[0][1]
 
-    expect(unaryMockIsSealed).toBe(true)
+        expect(unaryType).toEqual(AccessAPI.GetLatestBlock)
 
-    expect(response.block).toEqual(returnedBlock)
-  })
+        const unaryMockRequest = unaryMock.mock.calls[0][2]
+        const unaryMockIsSealed = unaryMockRequest.getIsSealed()
+
+        expect(unaryMockIsSealed).toBe(true)
+
+        expect(response.block).toEqual(returnedBlock)
+    })
 
 })

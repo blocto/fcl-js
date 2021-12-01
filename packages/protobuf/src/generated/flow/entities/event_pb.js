@@ -8,9 +8,9 @@
  */
 // GENERATED CODE -- DO NOT EDIT!
 
-var jspb = require('google-protobuf');
+var jspb = require('@blocto/google-protobuf');
 var goog = jspb;
-var global = Function('return this')();
+var global = {}
 
 goog.exportSymbol('proto.flow.entities.Event', null, global);
 /**
@@ -23,7 +23,7 @@ goog.exportSymbol('proto.flow.entities.Event', null, global);
  * @extends {jspb.Message}
  * @constructor
  */
-proto.flow.entities.Event = function(opt_data) {
+proto.flow.entities.Event = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.flow.entities.Event, jspb.Message);
@@ -38,46 +38,46 @@ if (goog.DEBUG && !COMPILED) {
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * Optional fields that are not set will be set to undefined.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
- * @param {boolean=} opt_includeInstance Deprecated. whether to include the
- *     JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.flow.entities.Event.prototype.toObject = function(opt_includeInstance) {
-  return proto.flow.entities.Event.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Deprecated. Whether to include
- *     the JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.flow.entities.Event} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.flow.entities.Event.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    type: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    transactionId: msg.getTransactionId_asB64(),
-    transactionIndex: jspb.Message.getFieldWithDefault(msg, 3, 0),
-    eventIndex: jspb.Message.getFieldWithDefault(msg, 4, 0),
-    payload: msg.getPayload_asB64()
+  /**
+   * Creates an object representation of this proto.
+   * Field names that are reserved in JavaScript and will be renamed to pb_name.
+   * Optional fields that are not set will be set to undefined.
+   * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+   * For the list of reserved names please see:
+   *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+   * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+   *     JSPB instance for transitional soy proto support:
+   *     http://goto/soy-param-migration
+   * @return {!Object}
+   */
+  proto.flow.entities.Event.prototype.toObject = function (opt_includeInstance) {
+    return proto.flow.entities.Event.toObject(opt_includeInstance, this);
   };
 
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
+
+  /**
+   * Static version of the {@see toObject} method.
+   * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+   *     the JSPB instance for transitional soy proto support:
+   *     http://goto/soy-param-migration
+   * @param {!proto.flow.entities.Event} msg The msg instance to transform.
+   * @return {!Object}
+   * @suppress {unusedLocalVariables} f is only used for nested messages
+   */
+  proto.flow.entities.Event.toObject = function (includeInstance, msg) {
+    var f, obj = {
+      type: jspb.Message.getFieldWithDefault(msg, 1, ""),
+      transactionId: msg.getTransactionId_asB64(),
+      transactionIndex: jspb.Message.getFieldWithDefault(msg, 3, 0),
+      eventIndex: jspb.Message.getFieldWithDefault(msg, 4, 0),
+      payload: msg.getPayload_asB64()
+    };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
+  };
 }
 
 
@@ -86,7 +86,7 @@ proto.flow.entities.Event.toObject = function(includeInstance, msg) {
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.flow.entities.Event}
  */
-proto.flow.entities.Event.deserializeBinary = function(bytes) {
+proto.flow.entities.Event.deserializeBinary = function (bytes) {
   var reader = new jspb.BinaryReader(bytes);
   var msg = new proto.flow.entities.Event;
   return proto.flow.entities.Event.deserializeBinaryFromReader(msg, reader);
@@ -100,36 +100,36 @@ proto.flow.entities.Event.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.flow.entities.Event}
  */
-proto.flow.entities.Event.deserializeBinaryFromReader = function(msg, reader) {
+proto.flow.entities.Event.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
     var field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setType(value);
-      break;
-    case 2:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setTransactionId(value);
-      break;
-    case 3:
-      var value = /** @type {number} */ (reader.readUint32());
-      msg.setTransactionIndex(value);
-      break;
-    case 4:
-      var value = /** @type {number} */ (reader.readUint32());
-      msg.setEventIndex(value);
-      break;
-    case 5:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setPayload(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setType(value);
+        break;
+      case 2:
+        var value = /** @type {!Uint8Array} */ (reader.readBytes());
+        msg.setTransactionId(value);
+        break;
+      case 3:
+        var value = /** @type {number} */ (reader.readUint32());
+        msg.setTransactionIndex(value);
+        break;
+      case 4:
+        var value = /** @type {number} */ (reader.readUint32());
+        msg.setEventIndex(value);
+        break;
+      case 5:
+        var value = /** @type {!Uint8Array} */ (reader.readBytes());
+        msg.setPayload(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
@@ -140,7 +140,7 @@ proto.flow.entities.Event.deserializeBinaryFromReader = function(msg, reader) {
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.flow.entities.Event.prototype.serializeBinary = function() {
+proto.flow.entities.Event.prototype.serializeBinary = function () {
   var writer = new jspb.BinaryWriter();
   proto.flow.entities.Event.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
@@ -154,7 +154,7 @@ proto.flow.entities.Event.prototype.serializeBinary = function() {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.flow.entities.Event.serializeBinaryToWriter = function(message, writer) {
+proto.flow.entities.Event.serializeBinaryToWriter = function (message, writer) {
   var f = undefined;
   f = message.getType();
   if (f.length > 0) {
@@ -198,7 +198,7 @@ proto.flow.entities.Event.serializeBinaryToWriter = function(message, writer) {
  * optional string type = 1;
  * @return {string}
  */
-proto.flow.entities.Event.prototype.getType = function() {
+proto.flow.entities.Event.prototype.getType = function () {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
@@ -207,7 +207,7 @@ proto.flow.entities.Event.prototype.getType = function() {
  * @param {string} value
  * @return {!proto.flow.entities.Event} returns this
  */
-proto.flow.entities.Event.prototype.setType = function(value) {
+proto.flow.entities.Event.prototype.setType = function (value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -216,7 +216,7 @@ proto.flow.entities.Event.prototype.setType = function(value) {
  * optional bytes transaction_id = 2;
  * @return {!(string|Uint8Array)}
  */
-proto.flow.entities.Event.prototype.getTransactionId = function() {
+proto.flow.entities.Event.prototype.getTransactionId = function () {
   return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
@@ -226,9 +226,9 @@ proto.flow.entities.Event.prototype.getTransactionId = function() {
  * This is a type-conversion wrapper around `getTransactionId()`
  * @return {string}
  */
-proto.flow.entities.Event.prototype.getTransactionId_asB64 = function() {
+proto.flow.entities.Event.prototype.getTransactionId_asB64 = function () {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getTransactionId()));
+    this.getTransactionId()));
 };
 
 
@@ -239,9 +239,9 @@ proto.flow.entities.Event.prototype.getTransactionId_asB64 = function() {
  * This is a type-conversion wrapper around `getTransactionId()`
  * @return {!Uint8Array}
  */
-proto.flow.entities.Event.prototype.getTransactionId_asU8 = function() {
+proto.flow.entities.Event.prototype.getTransactionId_asU8 = function () {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getTransactionId()));
+    this.getTransactionId()));
 };
 
 
@@ -249,7 +249,7 @@ proto.flow.entities.Event.prototype.getTransactionId_asU8 = function() {
  * @param {!(string|Uint8Array)} value
  * @return {!proto.flow.entities.Event} returns this
  */
-proto.flow.entities.Event.prototype.setTransactionId = function(value) {
+proto.flow.entities.Event.prototype.setTransactionId = function (value) {
   return jspb.Message.setProto3BytesField(this, 2, value);
 };
 
@@ -258,7 +258,7 @@ proto.flow.entities.Event.prototype.setTransactionId = function(value) {
  * optional uint32 transaction_index = 3;
  * @return {number}
  */
-proto.flow.entities.Event.prototype.getTransactionIndex = function() {
+proto.flow.entities.Event.prototype.getTransactionIndex = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
@@ -267,7 +267,7 @@ proto.flow.entities.Event.prototype.getTransactionIndex = function() {
  * @param {number} value
  * @return {!proto.flow.entities.Event} returns this
  */
-proto.flow.entities.Event.prototype.setTransactionIndex = function(value) {
+proto.flow.entities.Event.prototype.setTransactionIndex = function (value) {
   return jspb.Message.setProto3IntField(this, 3, value);
 };
 
@@ -276,7 +276,7 @@ proto.flow.entities.Event.prototype.setTransactionIndex = function(value) {
  * optional uint32 event_index = 4;
  * @return {number}
  */
-proto.flow.entities.Event.prototype.getEventIndex = function() {
+proto.flow.entities.Event.prototype.getEventIndex = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
 };
 
@@ -285,7 +285,7 @@ proto.flow.entities.Event.prototype.getEventIndex = function() {
  * @param {number} value
  * @return {!proto.flow.entities.Event} returns this
  */
-proto.flow.entities.Event.prototype.setEventIndex = function(value) {
+proto.flow.entities.Event.prototype.setEventIndex = function (value) {
   return jspb.Message.setProto3IntField(this, 4, value);
 };
 
@@ -294,7 +294,7 @@ proto.flow.entities.Event.prototype.setEventIndex = function(value) {
  * optional bytes payload = 5;
  * @return {!(string|Uint8Array)}
  */
-proto.flow.entities.Event.prototype.getPayload = function() {
+proto.flow.entities.Event.prototype.getPayload = function () {
   return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
 };
 
@@ -304,9 +304,9 @@ proto.flow.entities.Event.prototype.getPayload = function() {
  * This is a type-conversion wrapper around `getPayload()`
  * @return {string}
  */
-proto.flow.entities.Event.prototype.getPayload_asB64 = function() {
+proto.flow.entities.Event.prototype.getPayload_asB64 = function () {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getPayload()));
+    this.getPayload()));
 };
 
 
@@ -317,9 +317,9 @@ proto.flow.entities.Event.prototype.getPayload_asB64 = function() {
  * This is a type-conversion wrapper around `getPayload()`
  * @return {!Uint8Array}
  */
-proto.flow.entities.Event.prototype.getPayload_asU8 = function() {
+proto.flow.entities.Event.prototype.getPayload_asU8 = function () {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getPayload()));
+    this.getPayload()));
 };
 
 
@@ -327,7 +327,7 @@ proto.flow.entities.Event.prototype.getPayload_asU8 = function() {
  * @param {!(string|Uint8Array)} value
  * @return {!proto.flow.entities.Event} returns this
  */
-proto.flow.entities.Event.prototype.setPayload = function(value) {
+proto.flow.entities.Event.prototype.setPayload = function (value) {
   return jspb.Message.setProto3BytesField(this, 5, value);
 };
 

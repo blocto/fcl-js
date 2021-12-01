@@ -8,9 +8,9 @@
  */
 // GENERATED CODE -- DO NOT EDIT!
 
-var jspb = require('google-protobuf');
+var jspb = require('@blocto/google-protobuf');
 var goog = jspb;
-var global = Function('return this')();
+var global = {}
 
 goog.exportSymbol('proto.flow.entities.Collection', null, global);
 goog.exportSymbol('proto.flow.entities.CollectionGuarantee', null, global);
@@ -24,7 +24,7 @@ goog.exportSymbol('proto.flow.entities.CollectionGuarantee', null, global);
  * @extends {jspb.Message}
  * @constructor
  */
-proto.flow.entities.Collection = function(opt_data) {
+proto.flow.entities.Collection = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, proto.flow.entities.Collection.repeatedFields_, null);
 };
 goog.inherits(proto.flow.entities.Collection, jspb.Message);
@@ -45,7 +45,7 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.flow.entities.CollectionGuarantee = function(opt_data) {
+proto.flow.entities.CollectionGuarantee = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, proto.flow.entities.CollectionGuarantee.repeatedFields_, null);
 };
 goog.inherits(proto.flow.entities.CollectionGuarantee, jspb.Message);
@@ -67,43 +67,43 @@ proto.flow.entities.Collection.repeatedFields_ = [2];
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * Optional fields that are not set will be set to undefined.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
- * @param {boolean=} opt_includeInstance Deprecated. whether to include the
- *     JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.flow.entities.Collection.prototype.toObject = function(opt_includeInstance) {
-  return proto.flow.entities.Collection.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Deprecated. Whether to include
- *     the JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.flow.entities.Collection} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.flow.entities.Collection.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    id: msg.getId_asB64(),
-    transactionIdsList: msg.getTransactionIdsList_asB64()
+  /**
+   * Creates an object representation of this proto.
+   * Field names that are reserved in JavaScript and will be renamed to pb_name.
+   * Optional fields that are not set will be set to undefined.
+   * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+   * For the list of reserved names please see:
+   *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+   * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+   *     JSPB instance for transitional soy proto support:
+   *     http://goto/soy-param-migration
+   * @return {!Object}
+   */
+  proto.flow.entities.Collection.prototype.toObject = function (opt_includeInstance) {
+    return proto.flow.entities.Collection.toObject(opt_includeInstance, this);
   };
 
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
+
+  /**
+   * Static version of the {@see toObject} method.
+   * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+   *     the JSPB instance for transitional soy proto support:
+   *     http://goto/soy-param-migration
+   * @param {!proto.flow.entities.Collection} msg The msg instance to transform.
+   * @return {!Object}
+   * @suppress {unusedLocalVariables} f is only used for nested messages
+   */
+  proto.flow.entities.Collection.toObject = function (includeInstance, msg) {
+    var f, obj = {
+      id: msg.getId_asB64(),
+      transactionIdsList: msg.getTransactionIdsList_asB64()
+    };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
+  };
 }
 
 
@@ -112,7 +112,7 @@ proto.flow.entities.Collection.toObject = function(includeInstance, msg) {
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.flow.entities.Collection}
  */
-proto.flow.entities.Collection.deserializeBinary = function(bytes) {
+proto.flow.entities.Collection.deserializeBinary = function (bytes) {
   var reader = new jspb.BinaryReader(bytes);
   var msg = new proto.flow.entities.Collection;
   return proto.flow.entities.Collection.deserializeBinaryFromReader(msg, reader);
@@ -126,24 +126,24 @@ proto.flow.entities.Collection.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.flow.entities.Collection}
  */
-proto.flow.entities.Collection.deserializeBinaryFromReader = function(msg, reader) {
+proto.flow.entities.Collection.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
     var field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setId(value);
-      break;
-    case 2:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.addTransactionIds(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {!Uint8Array} */ (reader.readBytes());
+        msg.setId(value);
+        break;
+      case 2:
+        var value = /** @type {!Uint8Array} */ (reader.readBytes());
+        msg.addTransactionIds(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
@@ -154,7 +154,7 @@ proto.flow.entities.Collection.deserializeBinaryFromReader = function(msg, reade
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.flow.entities.Collection.prototype.serializeBinary = function() {
+proto.flow.entities.Collection.prototype.serializeBinary = function () {
   var writer = new jspb.BinaryWriter();
   proto.flow.entities.Collection.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
@@ -168,7 +168,7 @@ proto.flow.entities.Collection.prototype.serializeBinary = function() {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.flow.entities.Collection.serializeBinaryToWriter = function(message, writer) {
+proto.flow.entities.Collection.serializeBinaryToWriter = function (message, writer) {
   var f = undefined;
   f = message.getId_asU8();
   if (f.length > 0) {
@@ -191,7 +191,7 @@ proto.flow.entities.Collection.serializeBinaryToWriter = function(message, write
  * optional bytes id = 1;
  * @return {!(string|Uint8Array)}
  */
-proto.flow.entities.Collection.prototype.getId = function() {
+proto.flow.entities.Collection.prototype.getId = function () {
   return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
@@ -201,9 +201,9 @@ proto.flow.entities.Collection.prototype.getId = function() {
  * This is a type-conversion wrapper around `getId()`
  * @return {string}
  */
-proto.flow.entities.Collection.prototype.getId_asB64 = function() {
+proto.flow.entities.Collection.prototype.getId_asB64 = function () {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getId()));
+    this.getId()));
 };
 
 
@@ -214,9 +214,9 @@ proto.flow.entities.Collection.prototype.getId_asB64 = function() {
  * This is a type-conversion wrapper around `getId()`
  * @return {!Uint8Array}
  */
-proto.flow.entities.Collection.prototype.getId_asU8 = function() {
+proto.flow.entities.Collection.prototype.getId_asU8 = function () {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getId()));
+    this.getId()));
 };
 
 
@@ -224,7 +224,7 @@ proto.flow.entities.Collection.prototype.getId_asU8 = function() {
  * @param {!(string|Uint8Array)} value
  * @return {!proto.flow.entities.Collection} returns this
  */
-proto.flow.entities.Collection.prototype.setId = function(value) {
+proto.flow.entities.Collection.prototype.setId = function (value) {
   return jspb.Message.setProto3BytesField(this, 1, value);
 };
 
@@ -233,7 +233,7 @@ proto.flow.entities.Collection.prototype.setId = function(value) {
  * repeated bytes transaction_ids = 2;
  * @return {!(Array<!Uint8Array>|Array<string>)}
  */
-proto.flow.entities.Collection.prototype.getTransactionIdsList = function() {
+proto.flow.entities.Collection.prototype.getTransactionIdsList = function () {
   return /** @type {!(Array<!Uint8Array>|Array<string>)} */ (jspb.Message.getRepeatedField(this, 2));
 };
 
@@ -243,9 +243,9 @@ proto.flow.entities.Collection.prototype.getTransactionIdsList = function() {
  * This is a type-conversion wrapper around `getTransactionIdsList()`
  * @return {!Array<string>}
  */
-proto.flow.entities.Collection.prototype.getTransactionIdsList_asB64 = function() {
+proto.flow.entities.Collection.prototype.getTransactionIdsList_asB64 = function () {
   return /** @type {!Array<string>} */ (jspb.Message.bytesListAsB64(
-      this.getTransactionIdsList()));
+    this.getTransactionIdsList()));
 };
 
 
@@ -256,9 +256,9 @@ proto.flow.entities.Collection.prototype.getTransactionIdsList_asB64 = function(
  * This is a type-conversion wrapper around `getTransactionIdsList()`
  * @return {!Array<!Uint8Array>}
  */
-proto.flow.entities.Collection.prototype.getTransactionIdsList_asU8 = function() {
+proto.flow.entities.Collection.prototype.getTransactionIdsList_asU8 = function () {
   return /** @type {!Array<!Uint8Array>} */ (jspb.Message.bytesListAsU8(
-      this.getTransactionIdsList()));
+    this.getTransactionIdsList()));
 };
 
 
@@ -266,7 +266,7 @@ proto.flow.entities.Collection.prototype.getTransactionIdsList_asU8 = function()
  * @param {!(Array<!Uint8Array>|Array<string>)} value
  * @return {!proto.flow.entities.Collection} returns this
  */
-proto.flow.entities.Collection.prototype.setTransactionIdsList = function(value) {
+proto.flow.entities.Collection.prototype.setTransactionIdsList = function (value) {
   return jspb.Message.setField(this, 2, value || []);
 };
 
@@ -276,7 +276,7 @@ proto.flow.entities.Collection.prototype.setTransactionIdsList = function(value)
  * @param {number=} opt_index
  * @return {!proto.flow.entities.Collection} returns this
  */
-proto.flow.entities.Collection.prototype.addTransactionIds = function(value, opt_index) {
+proto.flow.entities.Collection.prototype.addTransactionIds = function (value, opt_index) {
   return jspb.Message.addToRepeatedField(this, 2, value, opt_index);
 };
 
@@ -285,7 +285,7 @@ proto.flow.entities.Collection.prototype.addTransactionIds = function(value, opt
  * Clears the list making it empty but non-null.
  * @return {!proto.flow.entities.Collection} returns this
  */
-proto.flow.entities.Collection.prototype.clearTransactionIdsList = function() {
+proto.flow.entities.Collection.prototype.clearTransactionIdsList = function () {
   return this.setTransactionIdsList([]);
 };
 
@@ -301,43 +301,43 @@ proto.flow.entities.CollectionGuarantee.repeatedFields_ = [2];
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * Optional fields that are not set will be set to undefined.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
- * @param {boolean=} opt_includeInstance Deprecated. whether to include the
- *     JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.flow.entities.CollectionGuarantee.prototype.toObject = function(opt_includeInstance) {
-  return proto.flow.entities.CollectionGuarantee.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Deprecated. Whether to include
- *     the JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.flow.entities.CollectionGuarantee} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.flow.entities.CollectionGuarantee.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    collectionId: msg.getCollectionId_asB64(),
-    signaturesList: msg.getSignaturesList_asB64()
+  /**
+   * Creates an object representation of this proto.
+   * Field names that are reserved in JavaScript and will be renamed to pb_name.
+   * Optional fields that are not set will be set to undefined.
+   * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+   * For the list of reserved names please see:
+   *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+   * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+   *     JSPB instance for transitional soy proto support:
+   *     http://goto/soy-param-migration
+   * @return {!Object}
+   */
+  proto.flow.entities.CollectionGuarantee.prototype.toObject = function (opt_includeInstance) {
+    return proto.flow.entities.CollectionGuarantee.toObject(opt_includeInstance, this);
   };
 
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
+
+  /**
+   * Static version of the {@see toObject} method.
+   * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+   *     the JSPB instance for transitional soy proto support:
+   *     http://goto/soy-param-migration
+   * @param {!proto.flow.entities.CollectionGuarantee} msg The msg instance to transform.
+   * @return {!Object}
+   * @suppress {unusedLocalVariables} f is only used for nested messages
+   */
+  proto.flow.entities.CollectionGuarantee.toObject = function (includeInstance, msg) {
+    var f, obj = {
+      collectionId: msg.getCollectionId_asB64(),
+      signaturesList: msg.getSignaturesList_asB64()
+    };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
+  };
 }
 
 
@@ -346,7 +346,7 @@ proto.flow.entities.CollectionGuarantee.toObject = function(includeInstance, msg
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.flow.entities.CollectionGuarantee}
  */
-proto.flow.entities.CollectionGuarantee.deserializeBinary = function(bytes) {
+proto.flow.entities.CollectionGuarantee.deserializeBinary = function (bytes) {
   var reader = new jspb.BinaryReader(bytes);
   var msg = new proto.flow.entities.CollectionGuarantee;
   return proto.flow.entities.CollectionGuarantee.deserializeBinaryFromReader(msg, reader);
@@ -360,24 +360,24 @@ proto.flow.entities.CollectionGuarantee.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.flow.entities.CollectionGuarantee}
  */
-proto.flow.entities.CollectionGuarantee.deserializeBinaryFromReader = function(msg, reader) {
+proto.flow.entities.CollectionGuarantee.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
     var field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setCollectionId(value);
-      break;
-    case 2:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.addSignatures(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {!Uint8Array} */ (reader.readBytes());
+        msg.setCollectionId(value);
+        break;
+      case 2:
+        var value = /** @type {!Uint8Array} */ (reader.readBytes());
+        msg.addSignatures(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
@@ -388,7 +388,7 @@ proto.flow.entities.CollectionGuarantee.deserializeBinaryFromReader = function(m
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.flow.entities.CollectionGuarantee.prototype.serializeBinary = function() {
+proto.flow.entities.CollectionGuarantee.prototype.serializeBinary = function () {
   var writer = new jspb.BinaryWriter();
   proto.flow.entities.CollectionGuarantee.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
@@ -402,7 +402,7 @@ proto.flow.entities.CollectionGuarantee.prototype.serializeBinary = function() {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.flow.entities.CollectionGuarantee.serializeBinaryToWriter = function(message, writer) {
+proto.flow.entities.CollectionGuarantee.serializeBinaryToWriter = function (message, writer) {
   var f = undefined;
   f = message.getCollectionId_asU8();
   if (f.length > 0) {
@@ -425,7 +425,7 @@ proto.flow.entities.CollectionGuarantee.serializeBinaryToWriter = function(messa
  * optional bytes collection_id = 1;
  * @return {!(string|Uint8Array)}
  */
-proto.flow.entities.CollectionGuarantee.prototype.getCollectionId = function() {
+proto.flow.entities.CollectionGuarantee.prototype.getCollectionId = function () {
   return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
@@ -435,9 +435,9 @@ proto.flow.entities.CollectionGuarantee.prototype.getCollectionId = function() {
  * This is a type-conversion wrapper around `getCollectionId()`
  * @return {string}
  */
-proto.flow.entities.CollectionGuarantee.prototype.getCollectionId_asB64 = function() {
+proto.flow.entities.CollectionGuarantee.prototype.getCollectionId_asB64 = function () {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getCollectionId()));
+    this.getCollectionId()));
 };
 
 
@@ -448,9 +448,9 @@ proto.flow.entities.CollectionGuarantee.prototype.getCollectionId_asB64 = functi
  * This is a type-conversion wrapper around `getCollectionId()`
  * @return {!Uint8Array}
  */
-proto.flow.entities.CollectionGuarantee.prototype.getCollectionId_asU8 = function() {
+proto.flow.entities.CollectionGuarantee.prototype.getCollectionId_asU8 = function () {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getCollectionId()));
+    this.getCollectionId()));
 };
 
 
@@ -458,7 +458,7 @@ proto.flow.entities.CollectionGuarantee.prototype.getCollectionId_asU8 = functio
  * @param {!(string|Uint8Array)} value
  * @return {!proto.flow.entities.CollectionGuarantee} returns this
  */
-proto.flow.entities.CollectionGuarantee.prototype.setCollectionId = function(value) {
+proto.flow.entities.CollectionGuarantee.prototype.setCollectionId = function (value) {
   return jspb.Message.setProto3BytesField(this, 1, value);
 };
 
@@ -467,7 +467,7 @@ proto.flow.entities.CollectionGuarantee.prototype.setCollectionId = function(val
  * repeated bytes signatures = 2;
  * @return {!(Array<!Uint8Array>|Array<string>)}
  */
-proto.flow.entities.CollectionGuarantee.prototype.getSignaturesList = function() {
+proto.flow.entities.CollectionGuarantee.prototype.getSignaturesList = function () {
   return /** @type {!(Array<!Uint8Array>|Array<string>)} */ (jspb.Message.getRepeatedField(this, 2));
 };
 
@@ -477,9 +477,9 @@ proto.flow.entities.CollectionGuarantee.prototype.getSignaturesList = function()
  * This is a type-conversion wrapper around `getSignaturesList()`
  * @return {!Array<string>}
  */
-proto.flow.entities.CollectionGuarantee.prototype.getSignaturesList_asB64 = function() {
+proto.flow.entities.CollectionGuarantee.prototype.getSignaturesList_asB64 = function () {
   return /** @type {!Array<string>} */ (jspb.Message.bytesListAsB64(
-      this.getSignaturesList()));
+    this.getSignaturesList()));
 };
 
 
@@ -490,9 +490,9 @@ proto.flow.entities.CollectionGuarantee.prototype.getSignaturesList_asB64 = func
  * This is a type-conversion wrapper around `getSignaturesList()`
  * @return {!Array<!Uint8Array>}
  */
-proto.flow.entities.CollectionGuarantee.prototype.getSignaturesList_asU8 = function() {
+proto.flow.entities.CollectionGuarantee.prototype.getSignaturesList_asU8 = function () {
   return /** @type {!Array<!Uint8Array>} */ (jspb.Message.bytesListAsU8(
-      this.getSignaturesList()));
+    this.getSignaturesList()));
 };
 
 
@@ -500,7 +500,7 @@ proto.flow.entities.CollectionGuarantee.prototype.getSignaturesList_asU8 = funct
  * @param {!(Array<!Uint8Array>|Array<string>)} value
  * @return {!proto.flow.entities.CollectionGuarantee} returns this
  */
-proto.flow.entities.CollectionGuarantee.prototype.setSignaturesList = function(value) {
+proto.flow.entities.CollectionGuarantee.prototype.setSignaturesList = function (value) {
   return jspb.Message.setField(this, 2, value || []);
 };
 
@@ -510,7 +510,7 @@ proto.flow.entities.CollectionGuarantee.prototype.setSignaturesList = function(v
  * @param {number=} opt_index
  * @return {!proto.flow.entities.CollectionGuarantee} returns this
  */
-proto.flow.entities.CollectionGuarantee.prototype.addSignatures = function(value, opt_index) {
+proto.flow.entities.CollectionGuarantee.prototype.addSignatures = function (value, opt_index) {
   return jspb.Message.addToRepeatedField(this, 2, value, opt_index);
 };
 
@@ -519,7 +519,7 @@ proto.flow.entities.CollectionGuarantee.prototype.addSignatures = function(value
  * Clears the list making it empty but non-null.
  * @return {!proto.flow.entities.CollectionGuarantee} returns this
  */
-proto.flow.entities.CollectionGuarantee.prototype.clearSignaturesList = function() {
+proto.flow.entities.CollectionGuarantee.prototype.clearSignaturesList = function () {
   return this.setSignaturesList([]);
 };
 

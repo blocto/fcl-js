@@ -1,5 +1,5 @@
-import {config} from "@onflow/sdk"
-import {invariant} from "@onflow/util-invariant"
+import { config } from "@portto/sdk"
+import { invariant } from "@onflow/util-invariant"
 
 const isServerSide = () => typeof window === "undefined"
 
@@ -44,5 +44,5 @@ export async function buildAuthnConfig() {
 
   const appDomainTag = await config.get("fcl.appDomainTag")
 
-  return {discoveryWallet, discoveryWalletMethod, appDomainTag}
+  return { discoveryWallet, discoveryWalletMethod, appDomainTag }
 }

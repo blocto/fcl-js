@@ -1,7 +1,7 @@
-import {invariant} from "@onflow/util-invariant"
-import {GetCollectionByIDRequest, AccessAPI} from "@onflow/protobuf"
-import {response} from "../response/response.js"
-import {unary as defaultUnary} from "./unary"
+import { invariant } from "@onflow/util-invariant"
+import { GetCollectionByIDRequest, AccessAPI } from "@blocto/protobuf"
+import { response } from "../response/response.js"
+import { unary as defaultUnary } from "./unary"
 
 const u8ToHex = u8 => Buffer.from(u8).toString("hex")
 const hexBuffer = hex => Buffer.from(hex, "hex")

@@ -1,8 +1,8 @@
-import {AccessAPI} from "@onflow/protobuf"
-import {sendGetCollection} from "./send-get-collection.js"
-import {build} from "../build/build.js"
-import {getCollection} from "../build/build-get-collection.js"
-import {resolve} from "../resolve/resolve.js"
+import { AccessAPI } from "@blocto/protobuf"
+import { sendGetCollection } from "./send-get-collection.js"
+import { build } from "../build/build.js"
+import { getCollection } from "../build/build-get-collection.js"
+import { resolve } from "../resolve/resolve.js"
 
 const jsonToUInt8Array = (json) => {
     var str = JSON.stringify(json, null, 0);
@@ -27,52 +27,52 @@ const strToUInt8Array = (str) => {
 
 
 describe("Send Get Collection", () => {
-  test("GetCollection", async () => {
-    const unaryMock = jest.fn();
+    test("GetCollection", async () => {
+        const unaryMock = jest.fn();
 
-    const returnedCollection = {
-        id: "a1b2c3",
-        transactionIds: ["a1b2c3"]
-    }
-
-    unaryMock.mockReturnValue({
-        getCollection: () => ({
-            getId_asU8: () => hexStrToUInt8Array("a1b2c3"),
-            getTransactionIdsList: () => ([
-                hexStrToUInt8Array("a1b2c3")
-            ]),
-        })
-    });
-
-    const response = await sendGetCollection(
-        await resolve(
-            await build([
-                getCollection("a1b2c3"),
-            ])
-        ),
-        {
-            unary: unaryMock,
-            node: "localhost:3000"
+        const returnedCollection = {
+            id: "a1b2c3",
+            transactionIds: ["a1b2c3"]
         }
-    )
 
-    expect(unaryMock.mock.calls.length).toEqual(1)
+        unaryMock.mockReturnValue({
+            getCollection: () => ({
+                getId_asU8: () => hexStrToUInt8Array("a1b2c3"),
+                getTransactionIdsList: () => ([
+                    hexStrToUInt8Array("a1b2c3")
+                ]),
+            })
+        });
 
-    const unaryMockArgs = unaryMock.mock.calls[0]
+        const response = await sendGetCollection(
+            await resolve(
+                await build([
+                    getCollection("a1b2c3"),
+                ])
+            ),
+            {
+                unary: unaryMock,
+                node: "localhost:3000"
+            }
+        )
 
-    expect(unaryMockArgs.length).toEqual(3)
+        expect(unaryMock.mock.calls.length).toEqual(1)
 
-    const unaryType = unaryMock.mock.calls[0][1]
+        const unaryMockArgs = unaryMock.mock.calls[0]
 
-    expect(unaryType).toEqual(AccessAPI.GetCollectionByID)
+        expect(unaryMockArgs.length).toEqual(3)
 
-    const unaryMockRequest = unaryMock.mock.calls[0][2]
-    const unaryMockCollectionId = unaryMockRequest.getId()
+        const unaryType = unaryMock.mock.calls[0][1]
 
-    expect(unaryMockCollectionId).not.toBeUndefined()
+        expect(unaryType).toEqual(AccessAPI.GetCollectionByID)
 
-    expect(response.collection.id).toBe(returnedCollection.id)
-    expect(response.collection.transactionIds[0]).toBe(returnedCollection.transactionIds[0])
-  })
+        const unaryMockRequest = unaryMock.mock.calls[0][2]
+        const unaryMockCollectionId = unaryMockRequest.getId()
+
+        expect(unaryMockCollectionId).not.toBeUndefined()
+
+        expect(response.collection.id).toBe(returnedCollection.id)
+        expect(response.collection.transactionIds[0]).toBe(returnedCollection.transactionIds[0])
+    })
 
 })

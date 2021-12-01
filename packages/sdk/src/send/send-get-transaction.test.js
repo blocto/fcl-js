@@ -1,8 +1,8 @@
-import {AccessAPI} from "@onflow/protobuf"
-import {sendGetTransaction} from "./send-get-transaction.js"
-import {build} from "../build/build.js"
-import {getTransaction} from "../build/build-get-transaction.js"
-import {resolve} from "../resolve/resolve.js"
+import { AccessAPI } from "@blocto/protobuf"
+import { sendGetTransaction } from "./send-get-transaction.js"
+import { build } from "../build/build.js"
+import { getTransaction } from "../build/build-get-transaction.js"
+import { resolve } from "../resolve/resolve.js"
 
 const jsonToUInt8Array = (json) => {
     var str = JSON.stringify(json, null, 0);
@@ -27,71 +27,71 @@ const strToUInt8Array = (str) => {
 
 
 describe("Get Transaction", () => {
-  test("GetTransactionResult", async () => {
-    const unaryMock = jest.fn();
+    test("GetTransactionResult", async () => {
+        const unaryMock = jest.fn();
 
-    const returnedTransaction = {
-        script: "Cadence Code",
-        args: [],
-        referenceBlockId: "a1b2c3",
-        gasLimit: 123,
-        proposalKey: {
-            address: "1654653399040a61",
-            keyId: 1,
-            sequenceNumber: 1
-        },
-        payer: "1654653399040a61",
-        authorizers: [],
-        payloadSignatures: [],
-        envelopeSignatures: []
-    }
-
-    unaryMock.mockReturnValue({
-        getTransaction: () => ({
-            getScript_asU8: () => strToUInt8Array("Cadence Code"),
-            getArgumentsList: () => ([]),
-            getReferenceBlockId_asU8: () => hexStrToUInt8Array("a1b2c3"),
-            getGasLimit: () => 123,
-            getProposalKey: () => ({
-                getAddress_asU8: () => hexStrToUInt8Array("1654653399040a61"),
-                getKeyId: () => 1,
-                getSequenceNumber: () => 1,
-            }),
-            getPayer_asU8: () => hexStrToUInt8Array("1654653399040a61"),
-            getAuthorizersList: () => ([]),
-            getPayloadSignaturesList: () => ([]),
-            getEnvelopeSignaturesList: () => ([])
-        })
-    });
-
-    const response = await sendGetTransaction(
-        await resolve(
-            await build([
-                getTransaction("MyTxID"),
-            ])
-        ),
-        {
-            unary: unaryMock,
-            node: "localhost:3000"
+        const returnedTransaction = {
+            script: "Cadence Code",
+            args: [],
+            referenceBlockId: "a1b2c3",
+            gasLimit: 123,
+            proposalKey: {
+                address: "1654653399040a61",
+                keyId: 1,
+                sequenceNumber: 1
+            },
+            payer: "1654653399040a61",
+            authorizers: [],
+            payloadSignatures: [],
+            envelopeSignatures: []
         }
-    )
 
-    expect(unaryMock.mock.calls.length).toEqual(1)
+        unaryMock.mockReturnValue({
+            getTransaction: () => ({
+                getScript_asU8: () => strToUInt8Array("Cadence Code"),
+                getArgumentsList: () => ([]),
+                getReferenceBlockId_asU8: () => hexStrToUInt8Array("a1b2c3"),
+                getGasLimit: () => 123,
+                getProposalKey: () => ({
+                    getAddress_asU8: () => hexStrToUInt8Array("1654653399040a61"),
+                    getKeyId: () => 1,
+                    getSequenceNumber: () => 1,
+                }),
+                getPayer_asU8: () => hexStrToUInt8Array("1654653399040a61"),
+                getAuthorizersList: () => ([]),
+                getPayloadSignaturesList: () => ([]),
+                getEnvelopeSignaturesList: () => ([])
+            })
+        });
 
-    const unaryMockArgs = unaryMock.mock.calls[0]
+        const response = await sendGetTransaction(
+            await resolve(
+                await build([
+                    getTransaction("MyTxID"),
+                ])
+            ),
+            {
+                unary: unaryMock,
+                node: "localhost:3000"
+            }
+        )
 
-    expect(unaryMockArgs.length).toEqual(3)
+        expect(unaryMock.mock.calls.length).toEqual(1)
 
-    const unaryType = unaryMock.mock.calls[0][1]
+        const unaryMockArgs = unaryMock.mock.calls[0]
 
-    expect(unaryType).toEqual(AccessAPI.GetTransaction)
+        expect(unaryMockArgs.length).toEqual(3)
 
-    const unaryMockRequest = unaryMock.mock.calls[0][2]
-    const unaryMockId = unaryMockRequest.getId()
+        const unaryType = unaryMock.mock.calls[0][1]
 
-    expect(unaryMockId).not.toBeUndefined()
+        expect(unaryType).toEqual(AccessAPI.GetTransaction)
 
-    expect(response.transaction).toStrictEqual(returnedTransaction)
-  })
+        const unaryMockRequest = unaryMock.mock.calls[0][2]
+        const unaryMockId = unaryMockRequest.getId()
+
+        expect(unaryMockId).not.toBeUndefined()
+
+        expect(response.transaction).toStrictEqual(returnedTransaction)
+    })
 
 })

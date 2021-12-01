@@ -1,7 +1,7 @@
 // package: flow.entities
 // file: flow/entities/block_seal.proto
 
-import * as jspb from "google-protobuf";
+import * as jspb from "@blocto/google-protobuf";
 
 export class BlockSeal extends jspb.Message {
   getBlockId(): Uint8Array | string;

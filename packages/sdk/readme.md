@@ -16,7 +16,7 @@ This package is working and in active development, breaking changes may happen.
 ## Install
 
 ```bash
-npm install --save @onflow/sdk
+npm install --save @portto/sdk
 ```
 
 ## Flow JS-SDK
@@ -50,7 +50,7 @@ The Flow JS-SDK exposes what we call a _build_ function, and a suite of _builder
 Example 1
     : Building an Execute Script Interaction
 ```javascript
-import * as sdk from "@onflow/sdk"
+import * as sdk from "@portto/sdk"
 
 const interaction = await sdk.build([
    sdk.script`
@@ -66,7 +66,7 @@ In Example 1, we're composing an Execute Script Interaction, because we have bui
 Example 2
     : Building an Execute Get Account Interaction
 ```javascript
-import * as sdk from "@onflow/sdk"
+import * as sdk from "@portto/sdk"
 
 const interaction = await sdk.build([
    sdk.getAccount("123ABC456DEF")
@@ -92,7 +92,7 @@ The Address for an Authorization corresponds to the address for the Flow Account
 Example 3
     : Building a Transaction Interaction
 ```javascript
-import * as sdk from "@onflow/sdk"
+import * as sdk from "@portto/sdk"
 
 const signingFunction = (...) => {
     ...
@@ -120,7 +120,7 @@ This is where the _Resolve_ phase comes in. Resolve takes your built interaction
 Example 4
     : Building an Execute Script Interaction
 ```javascript
-import * as sdk from "@onflow/sdk"
+import * as sdk from "@portto/sdk"
 import * as types from "@onflow/types"
 
 const builtInteraction = await sdk.build([
@@ -143,7 +143,7 @@ In Example 4 we Build an Execute Script Interaction by using the script builder 
 Example 5
     : Building a Transaction Interaction
 ```javascript
-import * as sdk from "@onflow/sdk"
+import * as sdk from "@portto/sdk"
 import * as types from "@onflow/types"
 
 const signingFunction = (...) => {
@@ -180,7 +180,7 @@ Once an Interaction has been _Built_ and, if necessary, _Resolved_ it can then b
 Example 6
     : Sending an Execute Script Interaction
 ```javascript
-import * as sdk from "@onflow/sdk"
+import * as sdk from "@portto/sdk"
 import * as types from "@onflow/types"
 
 const builtInteraction = await sdk.build([
@@ -220,7 +220,7 @@ For the available Interaction types, decoding responses for them produces values
 Example 7
     : Decoding an Execute Script Interaction
 ```javascript
-import * as sdk from "@onflow/sdk"
+import * as sdk from "@portto/sdk"
 import * as types from "@onflow/types"
 
 const builtInteraction = await sdk.build([
@@ -258,7 +258,7 @@ Custom Decoders are declared by passing a configuration object of key value pair
 Example 8
     : Using a Custom Decoder to decode an Execute Script interaction.
 ```javascript
-import * as sdk from "@onflow/sdk"
+import * as sdk from "@portto/sdk"
 import * as types from "@onflow/types"
 
 const builtInteraction = await sdk.build([
@@ -312,7 +312,7 @@ In Example 8 we declare an Execute Script interaction with Cadence code that ret
 Building a interaction produces an unresolved interaction. For example, to build a transaction interaction you must call `sdk.build([...])`, and pass in the sequence of builders you want to use to compose that transaction interaction. The example below highlights one way to build a transaction interaction:
 
 ```javascript
-import * as sdk from "@onflow/sdk"
+import * as sdk from "@portto/sdk"
 import * as types from "@onflow/types"
 const builtTxIx = await sdk.build([
   sdk.transaction`transaction(msg: String) { prepare(acct: AuthAccount) {} execute { log(msg) } }`,
@@ -328,7 +328,7 @@ const builtTxIx = await sdk.build([
 Once a transaction interaction is built, it's still not quite ready to be sent to the Access Node. To further prepare it to be ready to be sent to the Access Node, you must resolve it by piping it through a series of resolvers. Resolvers are functions that consume an interaction and attempt to fill in or prepare any missing pieces of it to get it ready to be sent to the Access API. The example below highlights one way to resolve a transaction interaction:
 
 ```javascript
-import * as sdk from "@onflow/sdk"
+import * as sdk from "@portto/sdk"
 const resolvedTxIx = await sdk.pipe(builtTxIx, [
   sdk.resolve([
     sdk.resolveArguments,
@@ -346,7 +346,7 @@ const resolvedTxIx = await sdk.pipe(builtTxIx, [
 Now that your transction interaction is resolved, it can be sent to an Access Node! To send it to an Access Node, you must call `sdk.send(...)` with that interaction, and a configuration object. To specify which Access Node to send your request to, you specify it in the _node_ parameter of the config object. For example, the code below shows how to send your transaction interaction to the Flow Emulator running on _localhost:8080_:
 
 ```javascript
-import * as sdk from "@onflow/sdk"
+import * as sdk from "@portto/sdk"
 const response = await sdk.send(resolvedTxIx, { node: "http://localhost:8080" })
 ```
 
@@ -359,7 +359,7 @@ Please reference the provided example project `react-simple` for example code.
 As an extension, it is possible to insert a pre-check process before sending a transaction. To do this, use `sdk.preSendCheck(...)`. This argument is an arbitrary async function that receives a voucher object containing information about the transaction before it is sent. Within this, you can call `sdk.voucherToTxId(voucher)` to get the txId. Furthermore, you can call any API to record this txId before sending the transaction. If an error is thrown in this, the transaction sending process will be aborted.
 
 ```javascript
-import * as sdk from "@onflow/sdk"
+import * as sdk from "@portto/sdk"
 const response = await sdk.send(
   await sdk.resolve(
     await sdk.build([
@@ -383,7 +383,7 @@ const response = await sdk.send(
 ### GetAccount Usage
 
 ```javascript
-import * as sdk from "@onflow/sdk"
+import * as sdk from "@portto/sdk"
 const response = await sdk.send(await sdk.build([
   sdk.getAccount(addr)
 ]), { node: "http://localhost:8080" })
@@ -392,7 +392,7 @@ const response = await sdk.send(await sdk.build([
 ### GetEvents Usage
 
 ```javascript
-import * as sdk from "@onflow/sdk"
+import * as sdk from "@portto/sdk"
 const response = await sdk.send(await sdk.build([
   sdk.getEvents(eventType, startBlock, endBlock),
 ]), { node: "http://localhost:8080" })
@@ -401,7 +401,7 @@ const response = await sdk.send(await sdk.build([
 ### GetLatestBlock Usage
 
 ```javascript
-import * as sdk from "@onflow/sdk"
+import * as sdk from "@portto/sdk"
 const response = await sdk.send(await sdk.build([
   sdk.getLatestBlock()
 ]), { node: "http://localhost:8080" })
@@ -410,7 +410,7 @@ const response = await sdk.send(await sdk.build([
 ### GetTransactionStatus Usage
 
 ```javascript
-import * as sdk from "@onflow/sdk"
+import * as sdk from "@portto/sdk"
 const response = await sdk.send(await sdk.build([
   sdk.getTransactionStatus(txId)
 ]), { node: "http://localhost:8080" })
@@ -419,7 +419,7 @@ const response = await sdk.send(await sdk.build([
 ### Ping Usage
 
 ```javascript
-import * as sdk from "@onflow/sdk"
+import * as sdk from "@portto/sdk"
 const response = await sdk.send(await sdk.build([
   sdk.ping()
 ]), { node: "http://localhost:8080" })
@@ -428,7 +428,7 @@ const response = await sdk.send(await sdk.build([
 ### Script Usage
 
 ```javascript
-import * as sdk from "@onflow/sdk"
+import * as sdk from "@portto/sdk"
 import * as types from "@onflow/types"
 const response = await sdk.send(await sdk.pipe(await sdk.build([
   sdk.args([sdk.arg("Hello Flow!", types.String)]),
@@ -449,7 +449,7 @@ const response = await sdk.send(await sdk.pipe(await sdk.build([
 ### Transaction Usage
 
 ```javascript
-import * as sdk from "@onflow/sdk"
+import * as sdk from "@portto/sdk"
 import * as types from "@onflow/types"
 const response = await sdk.send(await sdk.pipe(await sdk.build([
   sdk.transaction`transaction(msg: String) { prepare(acct: AuthAccount) {} execute { log(msg) } }`,

@@ -1,4 +1,4 @@
-import * as pb_1 from "google-protobuf";
+import * as pb_1 from "@blocto/google-protobuf";
 import * as grpc_1 from "grpc";
 export namespace execution {
     export class PingRequest extends pb_1.Message {

@@ -1,7 +1,7 @@
 // package: flow.execution
 // file: flow/execution/execution.proto
 
-import * as jspb from "google-protobuf";
+import * as jspb from "@blocto/google-protobuf";
 import * as flow_entities_account_pb from "../../flow/entities/account_pb";
 import * as flow_entities_event_pb from "../../flow/entities/event_pb";
 

@@ -8,9 +8,9 @@
  */
 // GENERATED CODE -- DO NOT EDIT!
 
-var jspb = require('google-protobuf');
+var jspb = require('@blocto/google-protobuf');
 var goog = jspb;
-var global = Function('return this')();
+var global = {}
 
 goog.exportSymbol('proto.flow.entities.Account', null, global);
 goog.exportSymbol('proto.flow.entities.AccountKey', null, global);
@@ -24,7 +24,7 @@ goog.exportSymbol('proto.flow.entities.AccountKey', null, global);
  * @extends {jspb.Message}
  * @constructor
  */
-proto.flow.entities.Account = function(opt_data) {
+proto.flow.entities.Account = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, proto.flow.entities.Account.repeatedFields_, null);
 };
 goog.inherits(proto.flow.entities.Account, jspb.Message);
@@ -45,7 +45,7 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.flow.entities.AccountKey = function(opt_data) {
+proto.flow.entities.AccountKey = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.flow.entities.AccountKey, jspb.Message);
@@ -67,47 +67,47 @@ proto.flow.entities.Account.repeatedFields_ = [4];
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * Optional fields that are not set will be set to undefined.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
- * @param {boolean=} opt_includeInstance Deprecated. whether to include the
- *     JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.flow.entities.Account.prototype.toObject = function(opt_includeInstance) {
-  return proto.flow.entities.Account.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Deprecated. Whether to include
- *     the JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.flow.entities.Account} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.flow.entities.Account.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    address: msg.getAddress_asB64(),
-    balance: jspb.Message.getFieldWithDefault(msg, 2, 0),
-    code: msg.getCode_asB64(),
-    keysList: jspb.Message.toObjectList(msg.getKeysList(),
-    proto.flow.entities.AccountKey.toObject, includeInstance),
-    contractsMap: (f = msg.getContractsMap()) ? f.toObject(includeInstance, undefined) : []
+  /**
+   * Creates an object representation of this proto.
+   * Field names that are reserved in JavaScript and will be renamed to pb_name.
+   * Optional fields that are not set will be set to undefined.
+   * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+   * For the list of reserved names please see:
+   *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+   * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+   *     JSPB instance for transitional soy proto support:
+   *     http://goto/soy-param-migration
+   * @return {!Object}
+   */
+  proto.flow.entities.Account.prototype.toObject = function (opt_includeInstance) {
+    return proto.flow.entities.Account.toObject(opt_includeInstance, this);
   };
 
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
+
+  /**
+   * Static version of the {@see toObject} method.
+   * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+   *     the JSPB instance for transitional soy proto support:
+   *     http://goto/soy-param-migration
+   * @param {!proto.flow.entities.Account} msg The msg instance to transform.
+   * @return {!Object}
+   * @suppress {unusedLocalVariables} f is only used for nested messages
+   */
+  proto.flow.entities.Account.toObject = function (includeInstance, msg) {
+    var f, obj = {
+      address: msg.getAddress_asB64(),
+      balance: jspb.Message.getFieldWithDefault(msg, 2, 0),
+      code: msg.getCode_asB64(),
+      keysList: jspb.Message.toObjectList(msg.getKeysList(),
+        proto.flow.entities.AccountKey.toObject, includeInstance),
+      contractsMap: (f = msg.getContractsMap()) ? f.toObject(includeInstance, undefined) : []
+    };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
+  };
 }
 
 
@@ -116,7 +116,7 @@ proto.flow.entities.Account.toObject = function(includeInstance, msg) {
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.flow.entities.Account}
  */
-proto.flow.entities.Account.deserializeBinary = function(bytes) {
+proto.flow.entities.Account.deserializeBinary = function (bytes) {
   var reader = new jspb.BinaryReader(bytes);
   var msg = new proto.flow.entities.Account;
   return proto.flow.entities.Account.deserializeBinaryFromReader(msg, reader);
@@ -130,39 +130,39 @@ proto.flow.entities.Account.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.flow.entities.Account}
  */
-proto.flow.entities.Account.deserializeBinaryFromReader = function(msg, reader) {
+proto.flow.entities.Account.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
     var field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setAddress(value);
-      break;
-    case 2:
-      var value = /** @type {number} */ (reader.readUint64());
-      msg.setBalance(value);
-      break;
-    case 3:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setCode(value);
-      break;
-    case 4:
-      var value = new proto.flow.entities.AccountKey;
-      reader.readMessage(value,proto.flow.entities.AccountKey.deserializeBinaryFromReader);
-      msg.addKeys(value);
-      break;
-    case 5:
-      var value = msg.getContractsMap();
-      reader.readMessage(value, function(message, reader) {
-        jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readBytes, null, "", "");
-         });
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {!Uint8Array} */ (reader.readBytes());
+        msg.setAddress(value);
+        break;
+      case 2:
+        var value = /** @type {number} */ (reader.readUint64());
+        msg.setBalance(value);
+        break;
+      case 3:
+        var value = /** @type {!Uint8Array} */ (reader.readBytes());
+        msg.setCode(value);
+        break;
+      case 4:
+        var value = new proto.flow.entities.AccountKey;
+        reader.readMessage(value, proto.flow.entities.AccountKey.deserializeBinaryFromReader);
+        msg.addKeys(value);
+        break;
+      case 5:
+        var value = msg.getContractsMap();
+        reader.readMessage(value, function (message, reader) {
+          jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readBytes, null, "", "");
+        });
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
@@ -173,7 +173,7 @@ proto.flow.entities.Account.deserializeBinaryFromReader = function(msg, reader) 
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.flow.entities.Account.prototype.serializeBinary = function() {
+proto.flow.entities.Account.prototype.serializeBinary = function () {
   var writer = new jspb.BinaryWriter();
   proto.flow.entities.Account.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
@@ -187,7 +187,7 @@ proto.flow.entities.Account.prototype.serializeBinary = function() {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.flow.entities.Account.serializeBinaryToWriter = function(message, writer) {
+proto.flow.entities.Account.serializeBinaryToWriter = function (message, writer) {
   var f = undefined;
   f = message.getAddress_asU8();
   if (f.length > 0) {
@@ -229,7 +229,7 @@ proto.flow.entities.Account.serializeBinaryToWriter = function(message, writer) 
  * optional bytes address = 1;
  * @return {!(string|Uint8Array)}
  */
-proto.flow.entities.Account.prototype.getAddress = function() {
+proto.flow.entities.Account.prototype.getAddress = function () {
   return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
@@ -239,9 +239,9 @@ proto.flow.entities.Account.prototype.getAddress = function() {
  * This is a type-conversion wrapper around `getAddress()`
  * @return {string}
  */
-proto.flow.entities.Account.prototype.getAddress_asB64 = function() {
+proto.flow.entities.Account.prototype.getAddress_asB64 = function () {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getAddress()));
+    this.getAddress()));
 };
 
 
@@ -252,9 +252,9 @@ proto.flow.entities.Account.prototype.getAddress_asB64 = function() {
  * This is a type-conversion wrapper around `getAddress()`
  * @return {!Uint8Array}
  */
-proto.flow.entities.Account.prototype.getAddress_asU8 = function() {
+proto.flow.entities.Account.prototype.getAddress_asU8 = function () {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getAddress()));
+    this.getAddress()));
 };
 
 
@@ -262,7 +262,7 @@ proto.flow.entities.Account.prototype.getAddress_asU8 = function() {
  * @param {!(string|Uint8Array)} value
  * @return {!proto.flow.entities.Account} returns this
  */
-proto.flow.entities.Account.prototype.setAddress = function(value) {
+proto.flow.entities.Account.prototype.setAddress = function (value) {
   return jspb.Message.setProto3BytesField(this, 1, value);
 };
 
@@ -271,7 +271,7 @@ proto.flow.entities.Account.prototype.setAddress = function(value) {
  * optional uint64 balance = 2;
  * @return {number}
  */
-proto.flow.entities.Account.prototype.getBalance = function() {
+proto.flow.entities.Account.prototype.getBalance = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
@@ -280,7 +280,7 @@ proto.flow.entities.Account.prototype.getBalance = function() {
  * @param {number} value
  * @return {!proto.flow.entities.Account} returns this
  */
-proto.flow.entities.Account.prototype.setBalance = function(value) {
+proto.flow.entities.Account.prototype.setBalance = function (value) {
   return jspb.Message.setProto3IntField(this, 2, value);
 };
 
@@ -289,7 +289,7 @@ proto.flow.entities.Account.prototype.setBalance = function(value) {
  * optional bytes code = 3;
  * @return {!(string|Uint8Array)}
  */
-proto.flow.entities.Account.prototype.getCode = function() {
+proto.flow.entities.Account.prototype.getCode = function () {
   return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
@@ -299,9 +299,9 @@ proto.flow.entities.Account.prototype.getCode = function() {
  * This is a type-conversion wrapper around `getCode()`
  * @return {string}
  */
-proto.flow.entities.Account.prototype.getCode_asB64 = function() {
+proto.flow.entities.Account.prototype.getCode_asB64 = function () {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getCode()));
+    this.getCode()));
 };
 
 
@@ -312,9 +312,9 @@ proto.flow.entities.Account.prototype.getCode_asB64 = function() {
  * This is a type-conversion wrapper around `getCode()`
  * @return {!Uint8Array}
  */
-proto.flow.entities.Account.prototype.getCode_asU8 = function() {
+proto.flow.entities.Account.prototype.getCode_asU8 = function () {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getCode()));
+    this.getCode()));
 };
 
 
@@ -322,7 +322,7 @@ proto.flow.entities.Account.prototype.getCode_asU8 = function() {
  * @param {!(string|Uint8Array)} value
  * @return {!proto.flow.entities.Account} returns this
  */
-proto.flow.entities.Account.prototype.setCode = function(value) {
+proto.flow.entities.Account.prototype.setCode = function (value) {
   return jspb.Message.setProto3BytesField(this, 3, value);
 };
 
@@ -331,7 +331,7 @@ proto.flow.entities.Account.prototype.setCode = function(value) {
  * repeated AccountKey keys = 4;
  * @return {!Array<!proto.flow.entities.AccountKey>}
  */
-proto.flow.entities.Account.prototype.getKeysList = function() {
+proto.flow.entities.Account.prototype.getKeysList = function () {
   return /** @type{!Array<!proto.flow.entities.AccountKey>} */ (
     jspb.Message.getRepeatedWrapperField(this, proto.flow.entities.AccountKey, 4));
 };
@@ -341,7 +341,7 @@ proto.flow.entities.Account.prototype.getKeysList = function() {
  * @param {!Array<!proto.flow.entities.AccountKey>} value
  * @return {!proto.flow.entities.Account} returns this
 */
-proto.flow.entities.Account.prototype.setKeysList = function(value) {
+proto.flow.entities.Account.prototype.setKeysList = function (value) {
   return jspb.Message.setRepeatedWrapperField(this, 4, value);
 };
 
@@ -351,7 +351,7 @@ proto.flow.entities.Account.prototype.setKeysList = function(value) {
  * @param {number=} opt_index
  * @return {!proto.flow.entities.AccountKey}
  */
-proto.flow.entities.Account.prototype.addKeys = function(opt_value, opt_index) {
+proto.flow.entities.Account.prototype.addKeys = function (opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 4, opt_value, proto.flow.entities.AccountKey, opt_index);
 };
 
@@ -360,7 +360,7 @@ proto.flow.entities.Account.prototype.addKeys = function(opt_value, opt_index) {
  * Clears the list making it empty but non-null.
  * @return {!proto.flow.entities.Account} returns this
  */
-proto.flow.entities.Account.prototype.clearKeysList = function() {
+proto.flow.entities.Account.prototype.clearKeysList = function () {
   return this.setKeysList([]);
 };
 
@@ -371,9 +371,9 @@ proto.flow.entities.Account.prototype.clearKeysList = function() {
  * empty, instead returning `undefined`
  * @return {!jspb.Map<string,!(string|Uint8Array)>}
  */
-proto.flow.entities.Account.prototype.getContractsMap = function(opt_noLazyCreate) {
+proto.flow.entities.Account.prototype.getContractsMap = function (opt_noLazyCreate) {
   return /** @type {!jspb.Map<string,!(string|Uint8Array)>} */ (
-      jspb.Message.getMapField(this, 5, opt_noLazyCreate,
+    jspb.Message.getMapField(this, 5, opt_noLazyCreate,
       null));
 };
 
@@ -382,57 +382,58 @@ proto.flow.entities.Account.prototype.getContractsMap = function(opt_noLazyCreat
  * Clears values from the map. The map will be non-null.
  * @return {!proto.flow.entities.Account} returns this
  */
-proto.flow.entities.Account.prototype.clearContractsMap = function() {
+proto.flow.entities.Account.prototype.clearContractsMap = function () {
   this.getContractsMap().clear();
-  return this;};
+  return this;
+};
 
 
 
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * Optional fields that are not set will be set to undefined.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
- * @param {boolean=} opt_includeInstance Deprecated. whether to include the
- *     JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.flow.entities.AccountKey.prototype.toObject = function(opt_includeInstance) {
-  return proto.flow.entities.AccountKey.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Deprecated. Whether to include
- *     the JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.flow.entities.AccountKey} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.flow.entities.AccountKey.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    index: jspb.Message.getFieldWithDefault(msg, 1, 0),
-    publicKey: msg.getPublicKey_asB64(),
-    signAlgo: jspb.Message.getFieldWithDefault(msg, 3, 0),
-    hashAlgo: jspb.Message.getFieldWithDefault(msg, 4, 0),
-    weight: jspb.Message.getFieldWithDefault(msg, 5, 0),
-    sequenceNumber: jspb.Message.getFieldWithDefault(msg, 6, 0),
-    revoked: jspb.Message.getBooleanFieldWithDefault(msg, 7, false)
+  /**
+   * Creates an object representation of this proto.
+   * Field names that are reserved in JavaScript and will be renamed to pb_name.
+   * Optional fields that are not set will be set to undefined.
+   * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+   * For the list of reserved names please see:
+   *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+   * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+   *     JSPB instance for transitional soy proto support:
+   *     http://goto/soy-param-migration
+   * @return {!Object}
+   */
+  proto.flow.entities.AccountKey.prototype.toObject = function (opt_includeInstance) {
+    return proto.flow.entities.AccountKey.toObject(opt_includeInstance, this);
   };
 
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
+
+  /**
+   * Static version of the {@see toObject} method.
+   * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+   *     the JSPB instance for transitional soy proto support:
+   *     http://goto/soy-param-migration
+   * @param {!proto.flow.entities.AccountKey} msg The msg instance to transform.
+   * @return {!Object}
+   * @suppress {unusedLocalVariables} f is only used for nested messages
+   */
+  proto.flow.entities.AccountKey.toObject = function (includeInstance, msg) {
+    var f, obj = {
+      index: jspb.Message.getFieldWithDefault(msg, 1, 0),
+      publicKey: msg.getPublicKey_asB64(),
+      signAlgo: jspb.Message.getFieldWithDefault(msg, 3, 0),
+      hashAlgo: jspb.Message.getFieldWithDefault(msg, 4, 0),
+      weight: jspb.Message.getFieldWithDefault(msg, 5, 0),
+      sequenceNumber: jspb.Message.getFieldWithDefault(msg, 6, 0),
+      revoked: jspb.Message.getBooleanFieldWithDefault(msg, 7, false)
+    };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
+  };
 }
 
 
@@ -441,7 +442,7 @@ proto.flow.entities.AccountKey.toObject = function(includeInstance, msg) {
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.flow.entities.AccountKey}
  */
-proto.flow.entities.AccountKey.deserializeBinary = function(bytes) {
+proto.flow.entities.AccountKey.deserializeBinary = function (bytes) {
   var reader = new jspb.BinaryReader(bytes);
   var msg = new proto.flow.entities.AccountKey;
   return proto.flow.entities.AccountKey.deserializeBinaryFromReader(msg, reader);
@@ -455,44 +456,44 @@ proto.flow.entities.AccountKey.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.flow.entities.AccountKey}
  */
-proto.flow.entities.AccountKey.deserializeBinaryFromReader = function(msg, reader) {
+proto.flow.entities.AccountKey.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
     var field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {number} */ (reader.readUint32());
-      msg.setIndex(value);
-      break;
-    case 2:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setPublicKey(value);
-      break;
-    case 3:
-      var value = /** @type {number} */ (reader.readUint32());
-      msg.setSignAlgo(value);
-      break;
-    case 4:
-      var value = /** @type {number} */ (reader.readUint32());
-      msg.setHashAlgo(value);
-      break;
-    case 5:
-      var value = /** @type {number} */ (reader.readUint32());
-      msg.setWeight(value);
-      break;
-    case 6:
-      var value = /** @type {number} */ (reader.readUint32());
-      msg.setSequenceNumber(value);
-      break;
-    case 7:
-      var value = /** @type {boolean} */ (reader.readBool());
-      msg.setRevoked(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {number} */ (reader.readUint32());
+        msg.setIndex(value);
+        break;
+      case 2:
+        var value = /** @type {!Uint8Array} */ (reader.readBytes());
+        msg.setPublicKey(value);
+        break;
+      case 3:
+        var value = /** @type {number} */ (reader.readUint32());
+        msg.setSignAlgo(value);
+        break;
+      case 4:
+        var value = /** @type {number} */ (reader.readUint32());
+        msg.setHashAlgo(value);
+        break;
+      case 5:
+        var value = /** @type {number} */ (reader.readUint32());
+        msg.setWeight(value);
+        break;
+      case 6:
+        var value = /** @type {number} */ (reader.readUint32());
+        msg.setSequenceNumber(value);
+        break;
+      case 7:
+        var value = /** @type {boolean} */ (reader.readBool());
+        msg.setRevoked(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
@@ -503,7 +504,7 @@ proto.flow.entities.AccountKey.deserializeBinaryFromReader = function(msg, reade
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.flow.entities.AccountKey.prototype.serializeBinary = function() {
+proto.flow.entities.AccountKey.prototype.serializeBinary = function () {
   var writer = new jspb.BinaryWriter();
   proto.flow.entities.AccountKey.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
@@ -517,7 +518,7 @@ proto.flow.entities.AccountKey.prototype.serializeBinary = function() {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.flow.entities.AccountKey.serializeBinaryToWriter = function(message, writer) {
+proto.flow.entities.AccountKey.serializeBinaryToWriter = function (message, writer) {
   var f = undefined;
   f = message.getIndex();
   if (f !== 0) {
@@ -575,7 +576,7 @@ proto.flow.entities.AccountKey.serializeBinaryToWriter = function(message, write
  * optional uint32 index = 1;
  * @return {number}
  */
-proto.flow.entities.AccountKey.prototype.getIndex = function() {
+proto.flow.entities.AccountKey.prototype.getIndex = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
@@ -584,7 +585,7 @@ proto.flow.entities.AccountKey.prototype.getIndex = function() {
  * @param {number} value
  * @return {!proto.flow.entities.AccountKey} returns this
  */
-proto.flow.entities.AccountKey.prototype.setIndex = function(value) {
+proto.flow.entities.AccountKey.prototype.setIndex = function (value) {
   return jspb.Message.setProto3IntField(this, 1, value);
 };
 
@@ -593,7 +594,7 @@ proto.flow.entities.AccountKey.prototype.setIndex = function(value) {
  * optional bytes public_key = 2;
  * @return {!(string|Uint8Array)}
  */
-proto.flow.entities.AccountKey.prototype.getPublicKey = function() {
+proto.flow.entities.AccountKey.prototype.getPublicKey = function () {
   return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
@@ -603,9 +604,9 @@ proto.flow.entities.AccountKey.prototype.getPublicKey = function() {
  * This is a type-conversion wrapper around `getPublicKey()`
  * @return {string}
  */
-proto.flow.entities.AccountKey.prototype.getPublicKey_asB64 = function() {
+proto.flow.entities.AccountKey.prototype.getPublicKey_asB64 = function () {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getPublicKey()));
+    this.getPublicKey()));
 };
 
 
@@ -616,9 +617,9 @@ proto.flow.entities.AccountKey.prototype.getPublicKey_asB64 = function() {
  * This is a type-conversion wrapper around `getPublicKey()`
  * @return {!Uint8Array}
  */
-proto.flow.entities.AccountKey.prototype.getPublicKey_asU8 = function() {
+proto.flow.entities.AccountKey.prototype.getPublicKey_asU8 = function () {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getPublicKey()));
+    this.getPublicKey()));
 };
 
 
@@ -626,7 +627,7 @@ proto.flow.entities.AccountKey.prototype.getPublicKey_asU8 = function() {
  * @param {!(string|Uint8Array)} value
  * @return {!proto.flow.entities.AccountKey} returns this
  */
-proto.flow.entities.AccountKey.prototype.setPublicKey = function(value) {
+proto.flow.entities.AccountKey.prototype.setPublicKey = function (value) {
   return jspb.Message.setProto3BytesField(this, 2, value);
 };
 
@@ -635,7 +636,7 @@ proto.flow.entities.AccountKey.prototype.setPublicKey = function(value) {
  * optional uint32 sign_algo = 3;
  * @return {number}
  */
-proto.flow.entities.AccountKey.prototype.getSignAlgo = function() {
+proto.flow.entities.AccountKey.prototype.getSignAlgo = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
@@ -644,7 +645,7 @@ proto.flow.entities.AccountKey.prototype.getSignAlgo = function() {
  * @param {number} value
  * @return {!proto.flow.entities.AccountKey} returns this
  */
-proto.flow.entities.AccountKey.prototype.setSignAlgo = function(value) {
+proto.flow.entities.AccountKey.prototype.setSignAlgo = function (value) {
   return jspb.Message.setProto3IntField(this, 3, value);
 };
 
@@ -653,7 +654,7 @@ proto.flow.entities.AccountKey.prototype.setSignAlgo = function(value) {
  * optional uint32 hash_algo = 4;
  * @return {number}
  */
-proto.flow.entities.AccountKey.prototype.getHashAlgo = function() {
+proto.flow.entities.AccountKey.prototype.getHashAlgo = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
 };
 
@@ -662,7 +663,7 @@ proto.flow.entities.AccountKey.prototype.getHashAlgo = function() {
  * @param {number} value
  * @return {!proto.flow.entities.AccountKey} returns this
  */
-proto.flow.entities.AccountKey.prototype.setHashAlgo = function(value) {
+proto.flow.entities.AccountKey.prototype.setHashAlgo = function (value) {
   return jspb.Message.setProto3IntField(this, 4, value);
 };
 
@@ -671,7 +672,7 @@ proto.flow.entities.AccountKey.prototype.setHashAlgo = function(value) {
  * optional uint32 weight = 5;
  * @return {number}
  */
-proto.flow.entities.AccountKey.prototype.getWeight = function() {
+proto.flow.entities.AccountKey.prototype.getWeight = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
 };
 
@@ -680,7 +681,7 @@ proto.flow.entities.AccountKey.prototype.getWeight = function() {
  * @param {number} value
  * @return {!proto.flow.entities.AccountKey} returns this
  */
-proto.flow.entities.AccountKey.prototype.setWeight = function(value) {
+proto.flow.entities.AccountKey.prototype.setWeight = function (value) {
   return jspb.Message.setProto3IntField(this, 5, value);
 };
 
@@ -689,7 +690,7 @@ proto.flow.entities.AccountKey.prototype.setWeight = function(value) {
  * optional uint32 sequence_number = 6;
  * @return {number}
  */
-proto.flow.entities.AccountKey.prototype.getSequenceNumber = function() {
+proto.flow.entities.AccountKey.prototype.getSequenceNumber = function () {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 6, 0));
 };
 
@@ -698,7 +699,7 @@ proto.flow.entities.AccountKey.prototype.getSequenceNumber = function() {
  * @param {number} value
  * @return {!proto.flow.entities.AccountKey} returns this
  */
-proto.flow.entities.AccountKey.prototype.setSequenceNumber = function(value) {
+proto.flow.entities.AccountKey.prototype.setSequenceNumber = function (value) {
   return jspb.Message.setProto3IntField(this, 6, value);
 };
 
@@ -707,7 +708,7 @@ proto.flow.entities.AccountKey.prototype.setSequenceNumber = function(value) {
  * optional bool revoked = 7;
  * @return {boolean}
  */
-proto.flow.entities.AccountKey.prototype.getRevoked = function() {
+proto.flow.entities.AccountKey.prototype.getRevoked = function () {
   return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 7, false));
 };
 
@@ -716,7 +717,7 @@ proto.flow.entities.AccountKey.prototype.getRevoked = function() {
  * @param {boolean} value
  * @return {!proto.flow.entities.AccountKey} returns this
  */
-proto.flow.entities.AccountKey.prototype.setRevoked = function(value) {
+proto.flow.entities.AccountKey.prototype.setRevoked = function (value) {
   return jspb.Message.setProto3BooleanField(this, 7, value);
 };
 

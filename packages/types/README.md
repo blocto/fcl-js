@@ -22,7 +22,7 @@ npm install --save @onflow/types
 ### Transactions
 
 ```javascript
-import * as sdk from "@onflow/sdk"
+import * as sdk from "@portto/sdk"
 import * as t from "@onflow/types"
 
 sdk.build([
@@ -44,7 +44,7 @@ sdk.build([
 ### Scripts
 
 ```javascript
-import * as sdk from "@onflow/sdk"
+import * as sdk from "@portto/sdk"
 import * as t from "@onflow/types"
 
 sdk.build([

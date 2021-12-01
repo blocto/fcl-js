@@ -1,6 +1,6 @@
-import {invariant} from "@onflow/util-invariant"
-import {query} from "../exec/query"
-import {account} from "@onflow/sdk"
+import { invariant } from "@onflow/util-invariant"
+import { query } from "../exec/query"
+import { account } from "@portto/sdk"
 
 export async function verifyUserSignatures(msg, compSigs) {
   invariant(/^[0-9a-f]+$/i.test(msg), "Message must be a hex string")

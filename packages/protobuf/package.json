@@ -1,6 +1,6 @@
 {
-  "name": "@onflow/protobuf",
-  "version": "0.1.8",
+  "name": "@blocto/protobuf",
+  "version": "0.1.9",
   "description": "Access Node Protobuf",
   "license": "Apache-2.0",
   "author": "Dapper Labs <dev@dapperlabs.com>",
@@ -36,6 +36,6 @@
   "dependencies": {
     "@improbable-eng/grpc-web": "^0.12.0",
     "elliptic": "^6.5.4",
-    "google-protobuf": "^3.11.4"
+    "@blocto/google-protobuf": "^3.11.4"
   }
 }

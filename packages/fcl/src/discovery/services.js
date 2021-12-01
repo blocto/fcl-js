@@ -1,5 +1,5 @@
-import {config} from "@onflow/sdk"
-import {invariant} from "@onflow/util-invariant"
+import { config } from "@portto/sdk"
+import { invariant } from "@onflow/util-invariant"
 
 const asyncPipe = (...fns) => input => fns.reduce((chain, fn) => chain.then(fn), Promise.resolve(input))
 
@@ -14,7 +14,7 @@ async function addServices(services = []) {
       "Content-Type": "application/json",
     },
   }).then(d => d.json())
-  .then(json => [...services, ...json])
+    .then(json => [...services, ...json])
 }
 
 function addExtensions(services = []) {

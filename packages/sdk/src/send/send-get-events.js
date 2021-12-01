@@ -1,7 +1,7 @@
-import {invariant} from "@onflow/util-invariant"
-import {GetEventsForHeightRangeRequest, GetEventsForBlockIDsRequest, AccessAPI} from "@onflow/protobuf"
-import {response} from "../response/response.js"
-import {unary as defaultUnary} from "./unary"
+import { invariant } from "@onflow/util-invariant"
+import { GetEventsForHeightRangeRequest, GetEventsForBlockIDsRequest, AccessAPI } from "@blocto/protobuf"
+import { response } from "../response/response.js"
+import { unary as defaultUnary } from "./unary"
 
 const u8ToHex = u8 => Buffer.from(u8).toString("hex")
 const hexBuffer = hex => Buffer.from(hex, "hex")
@@ -63,19 +63,19 @@ function constructResponse(ix, res) {
   return ret
 }
 
-export async function sendGetEvents(ix, opts = {}) {  
+export async function sendGetEvents(ix, opts = {}) {
   invariant(opts.node, `SDK Send Get Events Error: opts.node must be defined.`)
 
   ix = await ix
 
-  const interactionContainsBlockHeightRange = ix.events.start !== null 
+  const interactionContainsBlockHeightRange = ix.events.start !== null
   const interactionContainsBlockIDsList = Array.isArray(ix.events.blockIds) && ix.events.blockIds.length > 0
- 
+
   invariant(
     interactionContainsBlockHeightRange || interactionContainsBlockIDsList,
     "SendGetEventsError: Unable to determine which get events request to send. Either a block height range, or block IDs must be specified."
   )
-  
+
   if (interactionContainsBlockHeightRange) {
     return await sendGetEventsForHeightRangeRequest(ix, opts)
   } else {

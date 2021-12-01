@@ -1,5 +1,5 @@
 {
-  "name": "@onflow/sdk",
+  "name": "@portto/sdk",
   "version": "0.0.56-alpha.1",
   "description": "Flow SDK",
   "license": "Apache-2.0",
@@ -37,7 +37,7 @@
   "dependencies": {
     "@improbable-eng/grpc-web": "^0.14.0",
     "@improbable-eng/grpc-web-node-http-transport": "^0.14.0",
-    "@onflow/protobuf": "^0.1.8",
+    "@blocto/protobuf": "^0.1.8",
     "@onflow/rlp": "^0.0.3",
     "@onflow/util-actor": "0.0.2",
     "@onflow/util-address": "^0.0.0",

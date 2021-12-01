@@ -1,14 +1,14 @@
 // package: flow.access
 // file: flow/access/access.proto
 
-import * as jspb from "google-protobuf";
+import * as jspb from "@blocto/google-protobuf";
 import * as flow_entities_account_pb from "../../flow/entities/account_pb";
 import * as flow_entities_block_header_pb from "../../flow/entities/block_header_pb";
 import * as flow_entities_block_pb from "../../flow/entities/block_pb";
 import * as flow_entities_collection_pb from "../../flow/entities/collection_pb";
 import * as flow_entities_event_pb from "../../flow/entities/event_pb";
 import * as flow_entities_transaction_pb from "../../flow/entities/transaction_pb";
-import * as google_protobuf_timestamp_pb from "google-protobuf/google/protobuf/timestamp_pb";
+import * as google_protobuf_timestamp_pb from "@blocto/google-protobuf/google/protobuf/timestamp_pb";
 
 export class PingRequest extends jspb.Message {
   serializeBinary(): Uint8Array;

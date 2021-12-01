@@ -13,7 +13,7 @@ Fairly Stable, nothing all that much here. Other modules sort of force this ones
 # Install
 
 ```bash
-npm install --save @onflow/sdk
+npm install --save @portto/sdk
 ```
 
 {

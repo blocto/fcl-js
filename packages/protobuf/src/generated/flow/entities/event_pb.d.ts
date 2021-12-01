@@ -1,7 +1,7 @@
 // package: flow.entities
 // file: flow/entities/event.proto
 
-import * as jspb from "google-protobuf";
+import * as jspb from "@blocto/google-protobuf";
 
 export class Event extends jspb.Message {
   getType(): string;

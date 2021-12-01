@@ -1,7 +1,7 @@
-import {invariant} from "@onflow/util-invariant"
-import {AccessAPI, GetTransactionRequest} from "@onflow/protobuf"
-import {response} from "../response/response.js"
-import {unary as defaultUnary} from "./unary"
+import { invariant } from "@onflow/util-invariant"
+import { AccessAPI, GetTransactionRequest } from "@blocto/protobuf"
+import { response } from "../response/response.js"
+import { unary as defaultUnary } from "./unary"
 
 const u8ToHex = u8 => Buffer.from(u8).toString("hex")
 const hexBuffer = hex => Buffer.from(hex, "hex")
@@ -35,15 +35,15 @@ export async function sendGetTransaction(ix, opts = {}) {
 
   let transaction = res.getTransaction()
   ret.transaction = {
-      script: Buffer.from(transaction.getScript_asU8()).toString("utf8"),
-      args: (transaction.getArgumentsList()).map(arg => JSON.parse(Buffer.from(arg).toString("utf8"))),
-      referenceBlockId: u8ToHex(transaction.getReferenceBlockId_asU8()),
-      gasLimit: transaction.getGasLimit(),
-      proposalKey: unwrapKey(transaction.getProposalKey()),
-      payer: u8ToHex(transaction.getPayer_asU8()),
-      authorizers: (transaction.getAuthorizersList()).map(u8ToHex),
-      payloadSignatures: (transaction.getPayloadSignaturesList()).map(unwrapSignature),
-      envelopeSignatures: (transaction.getEnvelopeSignaturesList()).map(unwrapSignature)
+    script: Buffer.from(transaction.getScript_asU8()).toString("utf8"),
+    args: (transaction.getArgumentsList()).map(arg => JSON.parse(Buffer.from(arg).toString("utf8"))),
+    referenceBlockId: u8ToHex(transaction.getReferenceBlockId_asU8()),
+    gasLimit: transaction.getGasLimit(),
+    proposalKey: unwrapKey(transaction.getProposalKey()),
+    payer: u8ToHex(transaction.getPayer_asU8()),
+    authorizers: (transaction.getAuthorizersList()).map(u8ToHex),
+    payloadSignatures: (transaction.getPayloadSignaturesList()).map(unwrapSignature),
+    envelopeSignatures: (transaction.getEnvelopeSignaturesList()).map(unwrapSignature)
   }
 
   return ret

@@ -1,8 +1,8 @@
-import {AccessAPI} from "@onflow/protobuf"
-import {sendPing} from "./send-ping.js"
-import {build} from "../build/build.js"
-import {ping} from "../build/build-ping.js"
-import {resolve} from "../resolve/resolve.js"
+import { AccessAPI } from "@blocto/protobuf"
+import { sendPing } from "./send-ping.js"
+import { build } from "../build/build.js"
+import { ping } from "../build/build-ping.js"
+import { resolve } from "../resolve/resolve.js"
 
 const jsonToUInt8Array = (json) => {
     var str = JSON.stringify(json, null, 0);
@@ -14,36 +14,36 @@ const jsonToUInt8Array = (json) => {
 };
 
 describe("Ping", () => {
-  test("Ping", async () => {
-    const unaryMock = jest.fn();
+    test("Ping", async () => {
+        const unaryMock = jest.fn();
 
-    unaryMock.mockReturnValue({});
+        unaryMock.mockReturnValue({});
 
-    await sendPing(
-        await resolve(
-            await build([
-                ping(),
-            ])
-        ),
-        {
-            unary: unaryMock,
-            node: "localhost:3000"
-        }
-    )
+        await sendPing(
+            await resolve(
+                await build([
+                    ping(),
+                ])
+            ),
+            {
+                unary: unaryMock,
+                node: "localhost:3000"
+            }
+        )
 
-    expect(unaryMock.mock.calls.length).toEqual(1)
+        expect(unaryMock.mock.calls.length).toEqual(1)
 
-    const unaryMockArgs = unaryMock.mock.calls[0]
+        const unaryMockArgs = unaryMock.mock.calls[0]
 
-    expect(unaryMockArgs.length).toEqual(3)
+        expect(unaryMockArgs.length).toEqual(3)
 
-    const unaryType = unaryMock.mock.calls[0][1]
+        const unaryType = unaryMock.mock.calls[0][1]
 
-    expect(unaryType).toEqual(AccessAPI.Ping)
+        expect(unaryType).toEqual(AccessAPI.Ping)
 
-    const unaryMockRequest = unaryMock.mock.calls[0][2]
+        const unaryMockRequest = unaryMock.mock.calls[0][2]
 
-    expect(unaryMockRequest).not.toBeUndefined()
-  })
+        expect(unaryMockRequest).not.toBeUndefined()
+    })
 
 })

@@ -1,4 +1,4 @@
-# @onflow/protobuf
+# @blocto/protobuf
 
 This package contains the protobuf files used by the Flow JS SDK to communicate with the Access API.
 
@@ -14,7 +14,7 @@ This risk is what lead us to the interaction abstraction and our send functions 
 # Install
 
 ```bash
-npm install --save @onflow/protobuf
+npm install --save @blocto/protobuf
 ```
 
 ## Versioning

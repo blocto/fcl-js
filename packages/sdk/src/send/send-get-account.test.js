@@ -1,9 +1,9 @@
-import {AccessAPI} from "@onflow/protobuf"
-import {sendGetAccount} from "./send-get-account.js"
-import {build} from "../build/build.js"
-import {getAccount} from "../build/build-get-account.js"
-import {atBlockHeight} from "../build/build-at-block-height.js"
-import {resolve} from "../resolve/resolve.js"
+import { AccessAPI } from "@blocto/protobuf"
+import { sendGetAccount } from "./send-get-account.js"
+import { build } from "../build/build.js"
+import { getAccount } from "../build/build-get-account.js"
+import { atBlockHeight } from "../build/build-at-block-height.js"
+import { resolve } from "../resolve/resolve.js"
 
 const jsonToUInt8Array = (json) => {
     var str = JSON.stringify(json, null, 0);
@@ -27,113 +27,113 @@ const strToUInt8Array = (str) => {
 };
 
 describe("Send Get Account", () => {
-  test("GetAccountAtBlockHeightRequest", async () => {
-    const unaryMock = jest.fn();
+    test("GetAccountAtBlockHeightRequest", async () => {
+        const unaryMock = jest.fn();
 
-    const returnedAccount = {
-        address: "0x1654653399040a61",
-        code: "contract",
-        keys: [],
-        balance: 10,
-        contracts: {}
-    }
-
-    unaryMock.mockReturnValue({
-        getAccount: () => ({
-            getAddress_asU8: () => hexStrToUInt8Array("1654653399040a61"),
-            getCode_asU8: () => strToUInt8Array("contract"),
-            getKeysList: () => [],
-            getBalance: () => 10,
-            getContractsMap: () => ({
-                getEntryList: () => []
-            }),
-        })
-    });
-
-    const response = await sendGetAccount(
-        await resolve(
-            await build([
-                getAccount("0x1654653399040a61"),
-                atBlockHeight(123)
-            ])
-        ),
-        {
-            unary: unaryMock,
-            node: "localhost:3000"
+        const returnedAccount = {
+            address: "0x1654653399040a61",
+            code: "contract",
+            keys: [],
+            balance: 10,
+            contracts: {}
         }
-    )
 
-    expect(unaryMock.mock.calls.length).toEqual(1)
+        unaryMock.mockReturnValue({
+            getAccount: () => ({
+                getAddress_asU8: () => hexStrToUInt8Array("1654653399040a61"),
+                getCode_asU8: () => strToUInt8Array("contract"),
+                getKeysList: () => [],
+                getBalance: () => 10,
+                getContractsMap: () => ({
+                    getEntryList: () => []
+                }),
+            })
+        });
 
-    const unaryMockArgs = unaryMock.mock.calls[0]
+        const response = await sendGetAccount(
+            await resolve(
+                await build([
+                    getAccount("0x1654653399040a61"),
+                    atBlockHeight(123)
+                ])
+            ),
+            {
+                unary: unaryMock,
+                node: "localhost:3000"
+            }
+        )
 
-    expect(unaryMockArgs.length).toEqual(3)
+        expect(unaryMock.mock.calls.length).toEqual(1)
 
-    const unaryType = unaryMock.mock.calls[0][1]
+        const unaryMockArgs = unaryMock.mock.calls[0]
 
-    expect(unaryType).toEqual(AccessAPI.GetAccountAtBlockHeight)
+        expect(unaryMockArgs.length).toEqual(3)
 
-    const unaryMockRequest = unaryMock.mock.calls[0][2]
-    const unaryMockAddress = unaryMockRequest.getAddress()
-    const unaryMockBlockHeight = unaryMockRequest.getBlockHeight()
+        const unaryType = unaryMock.mock.calls[0][1]
 
-    expect(unaryMockAddress).not.toBeUndefined()
-    expect(unaryMockBlockHeight).not.toBeUndefined()
+        expect(unaryType).toEqual(AccessAPI.GetAccountAtBlockHeight)
 
-    expect(response.account).toEqual(returnedAccount)
-  })
+        const unaryMockRequest = unaryMock.mock.calls[0][2]
+        const unaryMockAddress = unaryMockRequest.getAddress()
+        const unaryMockBlockHeight = unaryMockRequest.getBlockHeight()
 
-  test("GetAccountAtLatestBlockRequest", async () => {
-    const unaryMock = jest.fn();
+        expect(unaryMockAddress).not.toBeUndefined()
+        expect(unaryMockBlockHeight).not.toBeUndefined()
 
-    const returnedAccount = {
-        address: "0x1654653399040a61",
-        code: "contract",
-        keys: [],
-        balance: 10,
-        contracts: {}
-    }
+        expect(response.account).toEqual(returnedAccount)
+    })
 
-    unaryMock.mockReturnValue({
-        getAccount: () => ({
-            getAddress_asU8: () => hexStrToUInt8Array("1654653399040a61"),
-            getCode_asU8: () => strToUInt8Array("contract"),
-            getKeysList: () => [],
-            getBalance: () => 10,
-            getContractsMap: () => ({
-                getEntryList: () => []
-            }),
-        })
-    });
+    test("GetAccountAtLatestBlockRequest", async () => {
+        const unaryMock = jest.fn();
 
-    const response = await sendGetAccount(
-        await resolve(
-            await build([
-                getAccount("0x1654653399040a61")
-            ])
-        ),
-        {
-            unary: unaryMock,
-            node: "localhost:3000"
+        const returnedAccount = {
+            address: "0x1654653399040a61",
+            code: "contract",
+            keys: [],
+            balance: 10,
+            contracts: {}
         }
-    )
 
-    expect(unaryMock.mock.calls.length).toEqual(1)
+        unaryMock.mockReturnValue({
+            getAccount: () => ({
+                getAddress_asU8: () => hexStrToUInt8Array("1654653399040a61"),
+                getCode_asU8: () => strToUInt8Array("contract"),
+                getKeysList: () => [],
+                getBalance: () => 10,
+                getContractsMap: () => ({
+                    getEntryList: () => []
+                }),
+            })
+        });
 
-    const unaryMockArgs = unaryMock.mock.calls[0]
+        const response = await sendGetAccount(
+            await resolve(
+                await build([
+                    getAccount("0x1654653399040a61")
+                ])
+            ),
+            {
+                unary: unaryMock,
+                node: "localhost:3000"
+            }
+        )
 
-    expect(unaryMockArgs.length).toEqual(3)
+        expect(unaryMock.mock.calls.length).toEqual(1)
 
-    const unaryType = unaryMock.mock.calls[0][1]
+        const unaryMockArgs = unaryMock.mock.calls[0]
 
-    expect(unaryType).toEqual(AccessAPI.GetAccountAtLatestBlock)
+        expect(unaryMockArgs.length).toEqual(3)
 
-    const unaryMockRequest = unaryMock.mock.calls[0][2]
-    const unaryMockAddress = unaryMockRequest.getAddress()
+        const unaryType = unaryMock.mock.calls[0][1]
 
-    expect(unaryMockAddress).not.toBeUndefined()
+        expect(unaryType).toEqual(AccessAPI.GetAccountAtLatestBlock)
 
-    expect(response.account).toEqual(returnedAccount)
-  })
+        const unaryMockRequest = unaryMock.mock.calls[0][2]
+        const unaryMockAddress = unaryMockRequest.getAddress()
+
+        expect(unaryMockAddress).not.toBeUndefined()
+
+        expect(response.account).toEqual(returnedAccount)
+    })
 
 })

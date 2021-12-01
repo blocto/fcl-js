@@ -1,8 +1,8 @@
 // package: flow.entities
 // file: flow/entities/block_header.proto
 
-import * as jspb from "google-protobuf";
-import * as google_protobuf_timestamp_pb from "google-protobuf/google/protobuf/timestamp_pb";
+import * as jspb from "@blocto/google-protobuf";
+import * as google_protobuf_timestamp_pb from "@blocto/google-protobuf/google/protobuf/timestamp_pb";
 
 export class BlockHeader extends jspb.Message {
   getId(): Uint8Array | string;

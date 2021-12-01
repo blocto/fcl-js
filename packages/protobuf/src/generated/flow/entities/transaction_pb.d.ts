@@ -1,7 +1,7 @@
 // package: flow.entities
 // file: flow/entities/transaction.proto
 
-import * as jspb from "google-protobuf";
+import * as jspb from "@blocto/google-protobuf";
 
 export class Transaction extends jspb.Message {
   getScript(): Uint8Array | string;

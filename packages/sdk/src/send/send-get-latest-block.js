@@ -1,7 +1,7 @@
-import {invariant} from "@onflow/util-invariant"
-import {GetLatestBlockRequest, AccessAPI} from "@onflow/protobuf"
-import {response} from "../response/response.js"
-import {unary} from "./unary"
+import { invariant } from "@onflow/util-invariant"
+import { GetLatestBlockRequest, AccessAPI } from "@blocto/protobuf"
+import { response } from "../response/response.js"
+import { unary } from "./unary"
 
 const u8ToHex = u8 => Buffer.from(u8).toString("hex")
 

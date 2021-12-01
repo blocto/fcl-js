@@ -1,7 +1,7 @@
 // package: flow.entities
 // file: flow/entities/account.proto
 
-import * as jspb from "google-protobuf";
+import * as jspb from "@blocto/google-protobuf";
 
 export class Account extends jspb.Message {
   getAddress(): Uint8Array | string;

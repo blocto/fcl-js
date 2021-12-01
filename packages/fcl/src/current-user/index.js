@@ -1,15 +1,15 @@
 import "../default-config"
 import * as t from "@onflow/types"
-import {account, arg, config} from "@onflow/sdk"
-import {spawn, send, INIT, SUBSCRIBE, UNSUBSCRIBE} from "@onflow/util-actor"
-import {withPrefix, sansPrefix} from "@onflow/util-address"
-import {invariant} from "@onflow/util-invariant"
-import {buildUser} from "./build-user"
-import {serviceOfType} from "./service-of-type"
-import {execService} from "./exec-service"
-import {verifyUserSignatures as verify} from "../exec/verify"
-import {normalizeCompositeSignature} from "./normalize/composite-signature"
-import {buildAuthnConfig} from "../config-utils"
+import { account, arg, config } from "@portto/sdk"
+import { spawn, send, INIT, SUBSCRIBE, UNSUBSCRIBE } from "@onflow/util-actor"
+import { withPrefix, sansPrefix } from "@onflow/util-address"
+import { invariant } from "@onflow/util-invariant"
+import { buildUser } from "./build-user"
+import { serviceOfType } from "./service-of-type"
+import { execService } from "./exec-service"
+import { verifyUserSignatures as verify } from "../exec/verify"
+import { normalizeCompositeSignature } from "./normalize/composite-signature"
+import { buildAuthnConfig } from "../config-utils"
 
 const NAME = "CURRENT_USER"
 const UPDATED = "CURRENT_USER/UPDATED"
@@ -61,25 +61,25 @@ const HANDLERS = {
   },
   [SUBSCRIBE]: (ctx, letter) => {
     ctx.subscribe(letter.from)
-    ctx.send(letter.from, UPDATED, {...ctx.all()})
+    ctx.send(letter.from, UPDATED, { ...ctx.all() })
   },
   [UNSUBSCRIBE]: (ctx, letter) => {
     ctx.unsubscribe(letter.from)
   },
   [SNAPSHOT]: async (ctx, letter) => {
-    letter.reply({...ctx.all()})
+    letter.reply({ ...ctx.all() })
   },
   [SET_CURRENT_USER]: async (ctx, letter, data) => {
     ctx.merge(data)
     const storage = await config.first(["fcl.storage", "fcl.storage.default"])
     if (storage.can) storage.put(NAME, ctx.all())
-    ctx.broadcast(UPDATED, {...ctx.all()})
+    ctx.broadcast(UPDATED, { ...ctx.all() })
   },
   [DEL_CURRENT_USER]: async (ctx, letter) => {
     ctx.merge(JSON.parse(DATA))
     const storage = await config.first(["fcl.storage", "fcl.storage.default"])
     if (storage.can) storage.put(NAME, ctx.all())
-    ctx.broadcast(UPDATED, {...ctx.all()})
+    ctx.broadcast(UPDATED, { ...ctx.all() })
   },
 }
 
@@ -99,7 +99,7 @@ async function authenticate({ service, redir = false }) {
     const user = await snapshot()
     if (user.loggedIn && notExpired(user)) return resolve(user)
 
-    const {discoveryWallet, discoveryWalletMethod, appDomainTag} =
+    const { discoveryWallet, discoveryWalletMethod, appDomainTag } =
       await buildAuthnConfig()
 
     invariant(
@@ -167,7 +167,7 @@ function resolvePreAuthz(authz) {
     addr: az.identity.address,
     keyId: az.identity.keyId,
     signingFunction(signable) {
-      return execService({service: az, msg: signable})
+      return execService({ service: az, msg: signable })
     },
     role: {
       proposer: role === "PROPOSER",
@@ -180,7 +180,7 @@ function resolvePreAuthz(authz) {
 
 async function authorization(account) {
   spawnCurrentUser()
-  const user = await authenticate({redir: true})
+  const user = await authenticate({ redir: true })
   const authz = serviceOfType(user.services, "authz")
 
   const preAuthz = serviceOfType(user.services, "pre-authz")
@@ -240,18 +240,18 @@ function subscribe(callback) {
 
 function snapshot() {
   spawnCurrentUser()
-  return send(NAME, SNAPSHOT, null, {expectReply: true, timeout: 0})
+  return send(NAME, SNAPSHOT, null, { expectReply: true, timeout: 0 })
 }
 
 async function info() {
   spawnCurrentUser()
-  const {addr} = await snapshot()
+  const { addr } = await snapshot()
   if (addr == null) throw new Error("No Flow Address for Current User")
   return account(addr)
 }
 
 async function resolveArgument() {
-  const {addr} = await authenticate()
+  const { addr } = await authenticate()
   return arg(withPrefix(addr), t.Address)
 }
 
@@ -265,7 +265,7 @@ const makeSignable = msg => {
 
 async function signUserMessage(msg) {
   spawnCurrentUser()
-  const user = await authenticate({redir: true})
+  const user = await authenticate({ redir: true })
 
   const signingService = serviceOfType(user.services, "user-signature")
 
@@ -326,4 +326,4 @@ currentUser.subscribe = subscribe
 currentUser.snapshot = snapshot
 currentUser.resolveArgument = resolveArgument
 
-export {currentUser}
+export { currentUser }

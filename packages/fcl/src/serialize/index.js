@@ -1,6 +1,6 @@
-import {interaction, pipe} from "@onflow/sdk"
-import {resolve as defaultResolve} from "@onflow/sdk"
-import {config, createSignableVoucher} from "@onflow/sdk"
+import { interaction, pipe } from "@portto/sdk"
+import { resolve as defaultResolve } from "@portto/sdk"
+import { config, createSignableVoucher } from "@portto/sdk"
 
 export const serialize = async (args = [], opts = {}) => {
   const resolveFunction = await config.first(

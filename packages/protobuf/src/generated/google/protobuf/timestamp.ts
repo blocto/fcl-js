@@ -1,4 +1,4 @@
-import * as pb_1 from "google-protobuf";
+import * as pb_1 from "@blocto/google-protobuf";
 export namespace google.protobuf {
     export class Timestamp extends pb_1.Message {
         constructor(data?: any[] | {

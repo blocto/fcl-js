@@ -157,21 +157,21 @@ may cease to exist.
 At the time of writing this if you are writing script and transaction interactions and building up your resolvers yourself you will likely have a piece of code that looks something like this.
 
 ```javascript
-import * as sdk from "@onflow/sdk"
+import * as sdk from "@portto/sdk"
 
 sdk.resolve(ix, [
   sdk.resolveParams,
 ])
 ```
 
-We are introducing a more generic resolver that covers core cadence concepts: `@onflow/sdk-resolve-cadence`.
-The above code using `sdk.resolveParams` will still work for now as a proxy to `@onflow/sdk-resolve-cadence` (with deprecation notice), but we can't promise it will stay around for ever in the future.
+We are introducing a more generic resolver that covers core cadence concepts: `@portto/sdk-resolve-cadence`.
+The above code using `sdk.resolveParams` will still work for now as a proxy to `@portto/sdk-resolve-cadence` (with deprecation notice), but we can't promise it will stay around for ever in the future.
 
 Instead we would recommend that you use the following in its place:
 
 ```javascript
-import * as sdk from "@onflow/sdk"
-import {resolveCadence} from "@onflow/sdk-resolve-cadence"
+import * as sdk from "@portto/sdk"
+import {resolveCadence} from "@portto/sdk-resolve-cadence"
 
 sdk.resolve(ix, [
   resolveCadence,

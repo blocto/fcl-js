@@ -195,7 +195,7 @@ currentUser.subscribe(callback)
 
 ## 0.0.77-alpha.1 - 2021-07-23
 
-- 2021-07-23 -- VSN `@onflow/sdk` 0.0.53 -> 0.0.54
+- 2021-07-23 -- VSN `@portto/sdk` 0.0.53 -> 0.0.54
 - 2021-07-23 -- Reverts to iFrame as default wallet method/view.
 
 ## 0.0.77-pain.1
@@ -210,7 +210,7 @@ currentUser.subscribe(callback)
 ## 0.0.[75-76] - 2021-07-201
 
 - 2021-07-21 -- SDK VSN 0.0.52
-- 2021-07-21 -- Updates `verifyUserSignatures` to use `account` util from `@onflow/sdk`
+- 2021-07-21 -- Updates `verifyUserSignatures` to use `account` util from `@portto/sdk`
 
 ## 0.0.74 - 2021-07-20
 
@@ -223,7 +223,7 @@ currentUser.subscribe(callback)
 
 ## 0.0.74-alpha.1 - 2021-07-13
 
-- 2021-07-13 -- VSN `@onflow/sdk` 0.0.50 -> 0.0.51-alpha.1
+- 2021-07-13 -- VSN `@portto/sdk` 0.0.50 -> 0.0.51-alpha.1
   - Includes a fix for an issue in what `fcl.serialize` returned.
   - Exposed new `TestUtils` Top Level
   - Includes some new `config` functionality.
@@ -280,8 +280,8 @@ expect(await config.first(["nope", "oh-no"], "FALLBACK")).toBe("FALLBACK")
 
 ## 0.0.73-alpha.2 - 2021-06-17
 
-- 2021-06-17 -- VSN `@onflow/sdk` 0.0.48 -> 0.0.50
-- 2021-06-17 -- Used `config` from `@onflow/sdk` instead of `@onflow/config`
+- 2021-06-17 -- VSN `@portto/sdk` 0.0.48 -> 0.0.50
+- 2021-06-17 -- Used `config` from `@portto/sdk` instead of `@onflow/config`
 
 ## 0.0.73-alpha.1 - 2021-06-17
 
@@ -380,8 +380,8 @@ await fcl.mutate({
 ## 0.0.72 - 2021-06-16
 
 - 2021-06-16 -- Full VSN Release `@onflow/fcl` 0.0.71 -> 0.0.72
-- 2021-06-16 -- VSN `@onflow/sdk` 0.0.47 -> 0.0.48
-- 2021-06-16 -- Exports `encodeMessageFromSignable` from `@onflow/sdk`
+- 2021-06-16 -- VSN `@portto/sdk` 0.0.47 -> 0.0.48
+- 2021-06-16 -- Exports `encodeMessageFromSignable` from `@portto/sdk`
 
 ## 0.0.71 - 2021-06-04
 
@@ -392,7 +392,7 @@ await fcl.mutate({
 - 2021-06-03 -- Adds `hid *` permission policy to iframe rendered in render-frame strategy.
 - 2021-05-28 -- Adds `fcl.currentUser().signUserMessage` and `user-signature` service normalizer. `fcl.currentUser().signUserMessage` allows for sending of unencrypted message data to a connected wallet provider or service to be signed with user's private key.
 - 2021-05-27 -- Updates `fcl.serialize` to return serialized voucher
-- 2021-05-27 -- VSN `@onflow/sdk` 0.0.46-alpha.1 -> 0.0.47-alpha.1
+- 2021-05-27 -- VSN `@portto/sdk` 0.0.46-alpha.1 -> 0.0.47-alpha.1
 
 ## 0.0.70 - 2021-05-10
 
@@ -400,7 +400,7 @@ await fcl.mutate({
 
 ## 0.0.70-alpha.1 - 2021-05-05
 
-- 2021-05-05 **BREAKING** -- VSN `@onflow/sdk` 0.0.45 -> 0.0.46-alpha.1 -- Prepends a transaction domain tag to encoded payload and envelope messages. Transaction domain tags allow signers to identify which messages are intended to represent encoded transactions, and which are not. The Flow protocol has been updated (as of May 5th 2021) to both accept signatures produced from messages prepended with a transaction domain tag, and from messages that are not. The next spork (time and date of next spork are TBD) will strictly require all signatures for transnactions to have been produced from messages prepended with a transaction domain tag. This breaking change requires all users of Flow Client Library and the Flow JavaScript SDK to update their versions to a version greater than or equal to the verison that this change was included in.
+- 2021-05-05 **BREAKING** -- VSN `@portto/sdk` 0.0.45 -> 0.0.46-alpha.1 -- Prepends a transaction domain tag to encoded payload and envelope messages. Transaction domain tags allow signers to identify which messages are intended to represent encoded transactions, and which are not. The Flow protocol has been updated (as of May 5th 2021) to both accept signatures produced from messages prepended with a transaction domain tag, and from messages that are not. The next spork (time and date of next spork are TBD) will strictly require all signatures for transnactions to have been produced from messages prepended with a transaction domain tag. This breaking change requires all users of Flow Client Library and the Flow JavaScript SDK to update their versions to a version greater than or equal to the verison that this change was included in.
 
 ## 0.0.69 - 2021-04-28
 
@@ -420,7 +420,7 @@ await fcl.mutate({
 
 ## 0.0.68-alpha.20 - 2021-04-16
 
-- 2021-04-16 - VSN `@onflow/sdk` 0.0.45-alpha.18 -> 0.0.45-alpha.19
+- 2021-04-16 - VSN `@portto/sdk` 0.0.45-alpha.18 -> 0.0.45-alpha.19
 
 ## 0.0.68-alpha.19 - 2021-04-14
 
@@ -480,7 +480,7 @@ As always with services, an example of the data they are supposed to return can 
 
 ## 0.0.68-alpha.9 - 2021-03-02
 
-- 2020-03-02 -- VSN `@onflow/sdk` 0.0.45-alpha.9 -> 0.0.45-alpha.10
+- 2020-03-02 -- VSN `@portto/sdk` 0.0.45-alpha.9 -> 0.0.45-alpha.10
 
 ## 0.0.68-alpha.[7..8] - 2021-03-02
 
@@ -548,9 +548,9 @@ FCL                         Wallet
 
 ## 0.0.67-alpha.42 - 2020-12-11
 
-- 2020-12-11 -- VSN `@onflow/sdk-send` 0.0.9 -> 0.0.10
-- 2020-12-11 -- VSN `@onflow/sdk-resolve` 0.0.9 -> 0.0.10
-- 2020-12-11 -- VSN `@onflow/sdk-account` 0.0.7 -> 0.0.8
+- 2020-12-11 -- VSN `@portto/sdk-send` 0.0.9 -> 0.0.10
+- 2020-12-11 -- VSN `@portto/sdk-resolve` 0.0.9 -> 0.0.10
+- 2020-12-11 -- VSN `@portto/sdk-account` 0.0.7 -> 0.0.8
 
 ## 0.0.67-alpha.41 - 2020-12-08
 
@@ -685,9 +685,9 @@ await fcl.logIn()
 
 ## 0.0.67-alpha.0 - 2020-11-17
 
-- 2020-11-17 -- VSN @onflow/sdk-latest-block 0.0.2 -> 0.0.3
-- 2020-11-17 -- VSN @onflow/sdk-account 0.0.2 -> 0.0.3
-- 2020-11-17 -- VSN @onflow/sdk-send 0.0.3 -> 0.0.5
+- 2020-11-17 -- VSN @portto/sdk-latest-block 0.0.2 -> 0.0.3
+- 2020-11-17 -- VSN @portto/sdk-account 0.0.2 -> 0.0.3
+- 2020-11-17 -- VSN @portto/sdk-send 0.0.3 -> 0.0.5
 
 ## 0.0.66 - 2020-11-09
 
@@ -699,11 +699,11 @@ await fcl.logIn()
 
 ## 0.0.64 - 2020-11-04
 
-- 2020-11-04 -- VSN `@onflow/sdk-send` 0.0.2 -> 0.0.3
+- 2020-11-04 -- VSN `@portto/sdk-send` 0.0.2 -> 0.0.3
 
 ## 0.0.63 - 2020-11-04
 
-- 2020-11-04 -- VSN `@onflow/sdk-resolve` 0.0.3 -> 0.0.4
+- 2020-11-04 -- VSN `@portto/sdk-resolve` 0.0.3 -> 0.0.4
 
 ## 0.0.62 - 2020-10-29
 
@@ -711,36 +711,36 @@ await fcl.logIn()
 
 ## 0.0.61 - 2020-10-28
 
-- 2020-10-28 -- VSN `@onflow/sdk-decode` 0.0.0 -> 0.0.1
-- 2020-10-28 -- VSN `@onflow/sdk-build-authorizations` 0.0.0 -> 0.0.1
-- 2020-10-28 -- VSN `@onflow/sdk-latest-block` 0.0.0 -> 0.0.2
-- 2020-10-28 -- VSN `@onflow/sdk-account` 0.0.0 -> 0.0.2
-- 2020-10-28 -- VSN `@onflow/sdk-send` 0.0.0 -> 0.0.2
-- 2020-10-28 -- VSN `@onflow/sdk-resolve` 0.0.0 -> 0.0.3
+- 2020-10-28 -- VSN `@portto/sdk-decode` 0.0.0 -> 0.0.1
+- 2020-10-28 -- VSN `@portto/sdk-build-authorizations` 0.0.0 -> 0.0.1
+- 2020-10-28 -- VSN `@portto/sdk-latest-block` 0.0.0 -> 0.0.2
+- 2020-10-28 -- VSN `@portto/sdk-account` 0.0.0 -> 0.0.2
+- 2020-10-28 -- VSN `@portto/sdk-send` 0.0.0 -> 0.0.2
+- 2020-10-28 -- VSN `@portto/sdk-resolve` 0.0.0 -> 0.0.3
 - 2020-10-28 -- Added in `persistSession` config flag (defaults to true)
 
 ## 0.0.61-alpha.5 - 2020-10-08
 
-- 2020-10-08 -- ADD PROXY `latestBlock` exports directly to `@onflow/sdk-latest-block`
-- 2020-10-08 -- ADD PROXY `account` exports directly to `@onflow/sdk-account`
-- 2020-10-08 -- PROXY `send` export directly to `@onflow/sdk-send`
-- 2020-10-08 -- PROXY `decode` export directly to `@onflow/sdk-decode`
+- 2020-10-08 -- ADD PROXY `latestBlock` exports directly to `@portto/sdk-latest-block`
+- 2020-10-08 -- ADD PROXY `account` exports directly to `@portto/sdk-account`
+- 2020-10-08 -- PROXY `send` export directly to `@portto/sdk-send`
+- 2020-10-08 -- PROXY `decode` export directly to `@portto/sdk-decode`
 - 2020-10-08 -- VSN `@onflow/decode` 0.0.7 -> 0.0.8
-- 2020-10-08 -- VSN `@onflow/sdk-build-get-account` 0.0.0 -> 0.0.1
+- 2020-10-08 -- VSN `@portto/sdk-build-get-account` 0.0.0 -> 0.0.1
 
 ## 0.0.61-alpha.4 - 2020-10-07
 
-- 2020-10-07 -- remove resolvers and replace with @onflow/sdk-resolve
+- 2020-10-07 -- remove resolvers and replace with @portto/sdk-resolve
 
 ## 0.0.61-alpha.3 - 2020-10-07
 
 - 2020-10-07 -- remove use of sdk
-- 2020-10-07 -- use `@onflow/sdk-resolve-ref-block-id` package directly
+- 2020-10-07 -- use `@portto/sdk-resolve-ref-block-id` package directly
 
 ## 0.0.61-alpha.2 - 2020-10-07
 
-- 2020-10-07 -- VSN `@onflow/sdk-resolve-signatures` 0.0.0 -> 0.0.1
-- 2020-10-07 -- VSN `@onflow/sdk` 0.0.35 -> 0.0.37
+- 2020-10-07 -- VSN `@portto/sdk-resolve-signatures` 0.0.0 -> 0.0.1
+- 2020-10-07 -- VSN `@portto/sdk` 0.0.35 -> 0.0.37
 
 ## 0.0.61-alpha.1 - 2020-10-07
 
@@ -753,14 +753,14 @@ await fcl.logIn()
 
 ## 0.0.59 -- 2020-09-29
 
-- 2020-09-29 -- VSN `@onflow/sdk` 0.0.31 -> 0.0.35
-- 2020-09-29 -- use `@onflow/sdk-resolve-validators` package directly
-- 2020-09-29 -- use `@onflow/sdk-resolve-signatures` package directly
-- 2020-09-29 -- use `@onflow/sdk-resolve-accounts` package directly
+- 2020-09-29 -- VSN `@portto/sdk` 0.0.31 -> 0.0.35
+- 2020-09-29 -- use `@portto/sdk-resolve-validators` package directly
+- 2020-09-29 -- use `@portto/sdk-resolve-signatures` package directly
+- 2020-09-29 -- use `@portto/sdk-resolve-accounts` package directly
 
 ## 0.0.58 -- 2020-09-29
 
-- 2020-09-29 -- use `@onflow/sdk-resolve-arguments` package directly
+- 2020-09-29 -- use `@portto/sdk-resolve-arguments` package directly
 
 ## 0.0.57 -- 2020-09-29
 
@@ -781,7 +781,7 @@ await fcl.logIn()
 
 ## 0.0.53 -- 2020-08-26
 
-- 2020-08-26 -- `@onflow/sdk` VSN `0.0.30` -> `0.0.31`
+- 2020-08-26 -- `@portto/sdk` VSN `0.0.30` -> `0.0.31`
 - 2020-08-20 -- Adds Authorization Function Documentation
 
 ## 0.0.52 -- 2020-08-18
@@ -816,7 +816,7 @@ await fcl.logIn()
 
 ## 0.0.46 -- 2020-07-27
 
-- 2020-07-27 -- VSN `@onflow/sdk` 0.0.28 -> 0.0.30
+- 2020-07-27 -- VSN `@portto/sdk` 0.0.28 -> 0.0.30
 
 ## 0.0.45 -- 2020-07-22
 
@@ -829,7 +829,7 @@ await fcl.logIn()
 
 ## 0.0.43 -- 2020-07-21
 
-- 2020-07-21 -- VSN `@onflow/sdk` 0.0.27 -> 0.0.28
+- 2020-07-21 -- VSN `@portto/sdk` 0.0.27 -> 0.0.28
 
 ## 0.0.42 -- 2020-07-20
 
@@ -837,7 +837,7 @@ await fcl.logIn()
 
 ## 0.0.41 -- 2020-07-13
 
-- 2020-07-13 -- VSN `@onflow/sdk` 0.0.26 -> 0.0.27
+- 2020-07-13 -- VSN `@portto/sdk` 0.0.26 -> 0.0.27
 
 ## 0.0.40 -- 2020-07-09
 
@@ -848,7 +848,7 @@ await fcl.logIn()
 - 2020-07-09 -- Expose `fcl.args` and `fcl.arg`
 - 2020-07-09 -- Bring in resolveSignatures fix from SDK that deals with signatures better
 - 2020-07-08 -- Updates FCL's resolve implementation according to the new resolvers available in the SDK.
-- 2020-07-08 -- VSN `@onflow/sdk` 0.0.23 -> 0.0.24
+- 2020-07-08 -- VSN `@portto/sdk` 0.0.23 -> 0.0.24
 
 ## 0.0.38
 
@@ -856,11 +856,11 @@ await fcl.logIn()
 
 ## 0.0.37 -- 2020-06-04
 
-- 2020-06-04 -- VSN `@onflow/sdk` 0.0.22 -> 0.0.23
+- 2020-06-04 -- VSN `@portto/sdk` 0.0.22 -> 0.0.23
 
 ## 0.0.36 -- 2020-06-03
 
-- 2020-06-03 -- VSN `@onflow/sdk` 0.0.21 -> 0.0.22
+- 2020-06-03 -- VSN `@portto/sdk` 0.0.21 -> 0.0.22
 
 ## 0.0.35 -- 2020-05-15
 
@@ -868,11 +868,11 @@ await fcl.logIn()
 
 ## 0.0.34 -- 2020-05-15
 
-- 2020-05-15 -- VSN `@onflow/sdk` 0.0.20 -> 0.0.21
+- 2020-05-15 -- VSN `@portto/sdk` 0.0.20 -> 0.0.21
 
 ## 0.0.33 -- 2020-05-07
 
-- 2020-05-07 -- VSN `@onflow/sdk` 0.0.19 -> 0.0.20
+- 2020-05-07 -- VSN `@portto/sdk` 0.0.19 -> 0.0.20
 
 ## 0.0.32 -- 2020-05-07
 
@@ -880,7 +880,7 @@ await fcl.logIn()
 
 ## 0.0.31 -- 2020-05-07
 
-- 2020-05-07 -- VSN `@onflow/sdk` 0.0.17 -> 0.0.19
+- 2020-05-07 -- VSN `@portto/sdk` 0.0.17 -> 0.0.19
 
 ## 0.0.30 -- 2020-05-07
 
@@ -893,19 +893,19 @@ await fcl.logIn()
 
 - 2020-05-06 -- Fixed an issue with custom decoders
 - 2020-05-06 -- Leverage named imports to enable better tree shaking
-- 2020-05-06 -- Proxy `@onflow/sdk` through fcl to enable single import
-- 2020-05-06 -- VSN `@onflow/sdk` 0.0.16 -> 0.0.17
-- 2020-05-05 -- VSN `@onflow/sdk` 0.0.15 -> 0.0.16
+- 2020-05-06 -- Proxy `@portto/sdk` through fcl to enable single import
+- 2020-05-06 -- VSN `@portto/sdk` 0.0.16 -> 0.0.17
+- 2020-05-05 -- VSN `@portto/sdk` 0.0.15 -> 0.0.16
 - 2020-05-05 -- Update resolvers based on sdk update
-- 2020-05-05 -- VSN `@onflow/sdk` 0.0.14 -> 0.0.15 Breaking Change
+- 2020-05-05 -- VSN `@portto/sdk` 0.0.14 -> 0.0.15 Breaking Change
 - 2020-04-29 -- authn challenge response no longer locks to handshake origin
 - 2020-04-28 -- `fcl.user(addr).info()` does a `send([getAccount(addr)])` returning the `account`
 - 2020-04-23 -- `fcl.authenticate()` renders iframe for config: `challenge.handshake`
 
 ## 0.0.28 -- 2020-04-20
 
-- 2020-04-20 -- VSN `@onflow/sdk` 0.0.12 -> 0.0.14
-- 2020-04-20 -- Remove `@onflow/send` in favour of `@onflow/sdk`
+- 2020-04-20 -- VSN `@portto/sdk` 0.0.12 -> 0.0.14
+- 2020-04-20 -- Remove `@onflow/send` in favour of `@portto/sdk`
 
 ## 0.0.27 -- 2020-04-18
 

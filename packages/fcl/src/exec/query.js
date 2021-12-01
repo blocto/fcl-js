@@ -1,8 +1,8 @@
-import {invariant} from "@onflow/util-invariant"
-import * as sdk from "@onflow/sdk"
+import { invariant } from "@onflow/util-invariant"
+import * as sdk from "@portto/sdk"
 import * as t from "@onflow/types"
-import {isRequired, isObject, isString, isFunc} from "./utils/is"
-import {normalizeArgs} from "./utils/normalize-args"
+import { isRequired, isObject, isString, isFunc } from "./utils/is"
+import { normalizeArgs } from "./utils/normalize-args"
 
 /** Query the Flow Blockchain
  *

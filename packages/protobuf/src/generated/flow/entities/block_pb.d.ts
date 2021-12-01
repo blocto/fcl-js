@@ -1,8 +1,8 @@
 // package: flow.entities
 // file: flow/entities/block.proto
 
-import * as jspb from "google-protobuf";
-import * as google_protobuf_timestamp_pb from "google-protobuf/google/protobuf/timestamp_pb";
+import * as jspb from "@blocto/google-protobuf";
+import * as google_protobuf_timestamp_pb from "@blocto/google-protobuf/google/protobuf/timestamp_pb";
 import * as flow_entities_collection_pb from "../../flow/entities/collection_pb";
 import * as flow_entities_block_seal_pb from "../../flow/entities/block_seal_pb";
 

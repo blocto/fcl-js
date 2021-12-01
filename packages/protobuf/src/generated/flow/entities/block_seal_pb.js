@@ -8,9 +8,9 @@
  */
 // GENERATED CODE -- DO NOT EDIT!
 
-var jspb = require('google-protobuf');
+var jspb = require('@blocto/google-protobuf');
 var goog = jspb;
-var global = Function('return this')();
+var global = {}
 
 goog.exportSymbol('proto.flow.entities.BlockSeal', null, global);
 /**
@@ -23,7 +23,7 @@ goog.exportSymbol('proto.flow.entities.BlockSeal', null, global);
  * @extends {jspb.Message}
  * @constructor
  */
-proto.flow.entities.BlockSeal = function(opt_data) {
+proto.flow.entities.BlockSeal = function (opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, proto.flow.entities.BlockSeal.repeatedFields_, null);
 };
 goog.inherits(proto.flow.entities.BlockSeal, jspb.Message);
@@ -40,50 +40,50 @@ if (goog.DEBUG && !COMPILED) {
  * @private {!Array<number>}
  * @const
  */
-proto.flow.entities.BlockSeal.repeatedFields_ = [3,4];
+proto.flow.entities.BlockSeal.repeatedFields_ = [3, 4];
 
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * Optional fields that are not set will be set to undefined.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
- * @param {boolean=} opt_includeInstance Deprecated. whether to include the
- *     JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.flow.entities.BlockSeal.prototype.toObject = function(opt_includeInstance) {
-  return proto.flow.entities.BlockSeal.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Deprecated. Whether to include
- *     the JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.flow.entities.BlockSeal} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.flow.entities.BlockSeal.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    blockId: msg.getBlockId_asB64(),
-    executionReceiptId: msg.getExecutionReceiptId_asB64(),
-    executionReceiptSignaturesList: msg.getExecutionReceiptSignaturesList_asB64(),
-    resultApprovalSignaturesList: msg.getResultApprovalSignaturesList_asB64()
+  /**
+   * Creates an object representation of this proto.
+   * Field names that are reserved in JavaScript and will be renamed to pb_name.
+   * Optional fields that are not set will be set to undefined.
+   * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+   * For the list of reserved names please see:
+   *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+   * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+   *     JSPB instance for transitional soy proto support:
+   *     http://goto/soy-param-migration
+   * @return {!Object}
+   */
+  proto.flow.entities.BlockSeal.prototype.toObject = function (opt_includeInstance) {
+    return proto.flow.entities.BlockSeal.toObject(opt_includeInstance, this);
   };
 
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
+
+  /**
+   * Static version of the {@see toObject} method.
+   * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+   *     the JSPB instance for transitional soy proto support:
+   *     http://goto/soy-param-migration
+   * @param {!proto.flow.entities.BlockSeal} msg The msg instance to transform.
+   * @return {!Object}
+   * @suppress {unusedLocalVariables} f is only used for nested messages
+   */
+  proto.flow.entities.BlockSeal.toObject = function (includeInstance, msg) {
+    var f, obj = {
+      blockId: msg.getBlockId_asB64(),
+      executionReceiptId: msg.getExecutionReceiptId_asB64(),
+      executionReceiptSignaturesList: msg.getExecutionReceiptSignaturesList_asB64(),
+      resultApprovalSignaturesList: msg.getResultApprovalSignaturesList_asB64()
+    };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
+  };
 }
 
 
@@ -92,7 +92,7 @@ proto.flow.entities.BlockSeal.toObject = function(includeInstance, msg) {
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.flow.entities.BlockSeal}
  */
-proto.flow.entities.BlockSeal.deserializeBinary = function(bytes) {
+proto.flow.entities.BlockSeal.deserializeBinary = function (bytes) {
   var reader = new jspb.BinaryReader(bytes);
   var msg = new proto.flow.entities.BlockSeal;
   return proto.flow.entities.BlockSeal.deserializeBinaryFromReader(msg, reader);
@@ -106,32 +106,32 @@ proto.flow.entities.BlockSeal.deserializeBinary = function(bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.flow.entities.BlockSeal}
  */
-proto.flow.entities.BlockSeal.deserializeBinaryFromReader = function(msg, reader) {
+proto.flow.entities.BlockSeal.deserializeBinaryFromReader = function (msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
     var field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setBlockId(value);
-      break;
-    case 2:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setExecutionReceiptId(value);
-      break;
-    case 3:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.addExecutionReceiptSignatures(value);
-      break;
-    case 4:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.addResultApprovalSignatures(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {!Uint8Array} */ (reader.readBytes());
+        msg.setBlockId(value);
+        break;
+      case 2:
+        var value = /** @type {!Uint8Array} */ (reader.readBytes());
+        msg.setExecutionReceiptId(value);
+        break;
+      case 3:
+        var value = /** @type {!Uint8Array} */ (reader.readBytes());
+        msg.addExecutionReceiptSignatures(value);
+        break;
+      case 4:
+        var value = /** @type {!Uint8Array} */ (reader.readBytes());
+        msg.addResultApprovalSignatures(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
@@ -142,7 +142,7 @@ proto.flow.entities.BlockSeal.deserializeBinaryFromReader = function(msg, reader
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.flow.entities.BlockSeal.prototype.serializeBinary = function() {
+proto.flow.entities.BlockSeal.prototype.serializeBinary = function () {
   var writer = new jspb.BinaryWriter();
   proto.flow.entities.BlockSeal.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
@@ -156,7 +156,7 @@ proto.flow.entities.BlockSeal.prototype.serializeBinary = function() {
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.flow.entities.BlockSeal.serializeBinaryToWriter = function(message, writer) {
+proto.flow.entities.BlockSeal.serializeBinaryToWriter = function (message, writer) {
   var f = undefined;
   f = message.getBlockId_asU8();
   if (f.length > 0) {
@@ -193,7 +193,7 @@ proto.flow.entities.BlockSeal.serializeBinaryToWriter = function(message, writer
  * optional bytes block_id = 1;
  * @return {!(string|Uint8Array)}
  */
-proto.flow.entities.BlockSeal.prototype.getBlockId = function() {
+proto.flow.entities.BlockSeal.prototype.getBlockId = function () {
   return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
@@ -203,9 +203,9 @@ proto.flow.entities.BlockSeal.prototype.getBlockId = function() {
  * This is a type-conversion wrapper around `getBlockId()`
  * @return {string}
  */
-proto.flow.entities.BlockSeal.prototype.getBlockId_asB64 = function() {
+proto.flow.entities.BlockSeal.prototype.getBlockId_asB64 = function () {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getBlockId()));
+    this.getBlockId()));
 };
 
 
@@ -216,9 +216,9 @@ proto.flow.entities.BlockSeal.prototype.getBlockId_asB64 = function() {
  * This is a type-conversion wrapper around `getBlockId()`
  * @return {!Uint8Array}
  */
-proto.flow.entities.BlockSeal.prototype.getBlockId_asU8 = function() {
+proto.flow.entities.BlockSeal.prototype.getBlockId_asU8 = function () {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getBlockId()));
+    this.getBlockId()));
 };
 
 
@@ -226,7 +226,7 @@ proto.flow.entities.BlockSeal.prototype.getBlockId_asU8 = function() {
  * @param {!(string|Uint8Array)} value
  * @return {!proto.flow.entities.BlockSeal} returns this
  */
-proto.flow.entities.BlockSeal.prototype.setBlockId = function(value) {
+proto.flow.entities.BlockSeal.prototype.setBlockId = function (value) {
   return jspb.Message.setProto3BytesField(this, 1, value);
 };
 
@@ -235,7 +235,7 @@ proto.flow.entities.BlockSeal.prototype.setBlockId = function(value) {
  * optional bytes execution_receipt_id = 2;
  * @return {!(string|Uint8Array)}
  */
-proto.flow.entities.BlockSeal.prototype.getExecutionReceiptId = function() {
+proto.flow.entities.BlockSeal.prototype.getExecutionReceiptId = function () {
   return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
@@ -245,9 +245,9 @@ proto.flow.entities.BlockSeal.prototype.getExecutionReceiptId = function() {
  * This is a type-conversion wrapper around `getExecutionReceiptId()`
  * @return {string}
  */
-proto.flow.entities.BlockSeal.prototype.getExecutionReceiptId_asB64 = function() {
+proto.flow.entities.BlockSeal.prototype.getExecutionReceiptId_asB64 = function () {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getExecutionReceiptId()));
+    this.getExecutionReceiptId()));
 };
 
 
@@ -258,9 +258,9 @@ proto.flow.entities.BlockSeal.prototype.getExecutionReceiptId_asB64 = function()
  * This is a type-conversion wrapper around `getExecutionReceiptId()`
  * @return {!Uint8Array}
  */
-proto.flow.entities.BlockSeal.prototype.getExecutionReceiptId_asU8 = function() {
+proto.flow.entities.BlockSeal.prototype.getExecutionReceiptId_asU8 = function () {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getExecutionReceiptId()));
+    this.getExecutionReceiptId()));
 };
 
 
@@ -268,7 +268,7 @@ proto.flow.entities.BlockSeal.prototype.getExecutionReceiptId_asU8 = function() 
  * @param {!(string|Uint8Array)} value
  * @return {!proto.flow.entities.BlockSeal} returns this
  */
-proto.flow.entities.BlockSeal.prototype.setExecutionReceiptId = function(value) {
+proto.flow.entities.BlockSeal.prototype.setExecutionReceiptId = function (value) {
   return jspb.Message.setProto3BytesField(this, 2, value);
 };
 
@@ -277,7 +277,7 @@ proto.flow.entities.BlockSeal.prototype.setExecutionReceiptId = function(value) 
  * repeated bytes execution_receipt_signatures = 3;
  * @return {!(Array<!Uint8Array>|Array<string>)}
  */
-proto.flow.entities.BlockSeal.prototype.getExecutionReceiptSignaturesList = function() {
+proto.flow.entities.BlockSeal.prototype.getExecutionReceiptSignaturesList = function () {
   return /** @type {!(Array<!Uint8Array>|Array<string>)} */ (jspb.Message.getRepeatedField(this, 3));
 };
 
@@ -287,9 +287,9 @@ proto.flow.entities.BlockSeal.prototype.getExecutionReceiptSignaturesList = func
  * This is a type-conversion wrapper around `getExecutionReceiptSignaturesList()`
  * @return {!Array<string>}
  */
-proto.flow.entities.BlockSeal.prototype.getExecutionReceiptSignaturesList_asB64 = function() {
+proto.flow.entities.BlockSeal.prototype.getExecutionReceiptSignaturesList_asB64 = function () {
   return /** @type {!Array<string>} */ (jspb.Message.bytesListAsB64(
-      this.getExecutionReceiptSignaturesList()));
+    this.getExecutionReceiptSignaturesList()));
 };
 
 
@@ -300,9 +300,9 @@ proto.flow.entities.BlockSeal.prototype.getExecutionReceiptSignaturesList_asB64 
  * This is a type-conversion wrapper around `getExecutionReceiptSignaturesList()`
  * @return {!Array<!Uint8Array>}
  */
-proto.flow.entities.BlockSeal.prototype.getExecutionReceiptSignaturesList_asU8 = function() {
+proto.flow.entities.BlockSeal.prototype.getExecutionReceiptSignaturesList_asU8 = function () {
   return /** @type {!Array<!Uint8Array>} */ (jspb.Message.bytesListAsU8(
-      this.getExecutionReceiptSignaturesList()));
+    this.getExecutionReceiptSignaturesList()));
 };
 
 
@@ -310,7 +310,7 @@ proto.flow.entities.BlockSeal.prototype.getExecutionReceiptSignaturesList_asU8 =
  * @param {!(Array<!Uint8Array>|Array<string>)} value
  * @return {!proto.flow.entities.BlockSeal} returns this
  */
-proto.flow.entities.BlockSeal.prototype.setExecutionReceiptSignaturesList = function(value) {
+proto.flow.entities.BlockSeal.prototype.setExecutionReceiptSignaturesList = function (value) {
   return jspb.Message.setField(this, 3, value || []);
 };
 
@@ -320,7 +320,7 @@ proto.flow.entities.BlockSeal.prototype.setExecutionReceiptSignaturesList = func
  * @param {number=} opt_index
  * @return {!proto.flow.entities.BlockSeal} returns this
  */
-proto.flow.entities.BlockSeal.prototype.addExecutionReceiptSignatures = function(value, opt_index) {
+proto.flow.entities.BlockSeal.prototype.addExecutionReceiptSignatures = function (value, opt_index) {
   return jspb.Message.addToRepeatedField(this, 3, value, opt_index);
 };
 
@@ -329,7 +329,7 @@ proto.flow.entities.BlockSeal.prototype.addExecutionReceiptSignatures = function
  * Clears the list making it empty but non-null.
  * @return {!proto.flow.entities.BlockSeal} returns this
  */
-proto.flow.entities.BlockSeal.prototype.clearExecutionReceiptSignaturesList = function() {
+proto.flow.entities.BlockSeal.prototype.clearExecutionReceiptSignaturesList = function () {
   return this.setExecutionReceiptSignaturesList([]);
 };
 
@@ -338,7 +338,7 @@ proto.flow.entities.BlockSeal.prototype.clearExecutionReceiptSignaturesList = fu
  * repeated bytes result_approval_signatures = 4;
  * @return {!(Array<!Uint8Array>|Array<string>)}
  */
-proto.flow.entities.BlockSeal.prototype.getResultApprovalSignaturesList = function() {
+proto.flow.entities.BlockSeal.prototype.getResultApprovalSignaturesList = function () {
   return /** @type {!(Array<!Uint8Array>|Array<string>)} */ (jspb.Message.getRepeatedField(this, 4));
 };
 
@@ -348,9 +348,9 @@ proto.flow.entities.BlockSeal.prototype.getResultApprovalSignaturesList = functi
  * This is a type-conversion wrapper around `getResultApprovalSignaturesList()`
  * @return {!Array<string>}
  */
-proto.flow.entities.BlockSeal.prototype.getResultApprovalSignaturesList_asB64 = function() {
+proto.flow.entities.BlockSeal.prototype.getResultApprovalSignaturesList_asB64 = function () {
   return /** @type {!Array<string>} */ (jspb.Message.bytesListAsB64(
-      this.getResultApprovalSignaturesList()));
+    this.getResultApprovalSignaturesList()));
 };
 
 
@@ -361,9 +361,9 @@ proto.flow.entities.BlockSeal.prototype.getResultApprovalSignaturesList_asB64 = 
  * This is a type-conversion wrapper around `getResultApprovalSignaturesList()`
  * @return {!Array<!Uint8Array>}
  */
-proto.flow.entities.BlockSeal.prototype.getResultApprovalSignaturesList_asU8 = function() {
+proto.flow.entities.BlockSeal.prototype.getResultApprovalSignaturesList_asU8 = function () {
   return /** @type {!Array<!Uint8Array>} */ (jspb.Message.bytesListAsU8(
-      this.getResultApprovalSignaturesList()));
+    this.getResultApprovalSignaturesList()));
 };
 
 
@@ -371,7 +371,7 @@ proto.flow.entities.BlockSeal.prototype.getResultApprovalSignaturesList_asU8 = f
  * @param {!(Array<!Uint8Array>|Array<string>)} value
  * @return {!proto.flow.entities.BlockSeal} returns this
  */
-proto.flow.entities.BlockSeal.prototype.setResultApprovalSignaturesList = function(value) {
+proto.flow.entities.BlockSeal.prototype.setResultApprovalSignaturesList = function (value) {
   return jspb.Message.setField(this, 4, value || []);
 };
 
@@ -381,7 +381,7 @@ proto.flow.entities.BlockSeal.prototype.setResultApprovalSignaturesList = functi
  * @param {number=} opt_index
  * @return {!proto.flow.entities.BlockSeal} returns this
  */
-proto.flow.entities.BlockSeal.prototype.addResultApprovalSignatures = function(value, opt_index) {
+proto.flow.entities.BlockSeal.prototype.addResultApprovalSignatures = function (value, opt_index) {
   return jspb.Message.addToRepeatedField(this, 4, value, opt_index);
 };
 
@@ -390,7 +390,7 @@ proto.flow.entities.BlockSeal.prototype.addResultApprovalSignatures = function(v
  * Clears the list making it empty but non-null.
  * @return {!proto.flow.entities.BlockSeal} returns this
  */
-proto.flow.entities.BlockSeal.prototype.clearResultApprovalSignaturesList = function() {
+proto.flow.entities.BlockSeal.prototype.clearResultApprovalSignaturesList = function () {
   return this.setResultApprovalSignaturesList([]);
 };
 
