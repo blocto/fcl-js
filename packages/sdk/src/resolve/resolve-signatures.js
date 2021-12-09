@@ -1,5 +1,5 @@
-import {isTransaction} from "../interaction/interaction.js"
-import {sansPrefix} from "@onflow/util-address"
+import { isTransaction } from "../interaction/interaction.js"
+import { sansPrefix } from "@onflow/util-address"
 import {
   encodeTransactionPayload as encodeInsideMessage,
   encodeTransactionEnvelope as encodeOutsideMessage,
@@ -28,7 +28,7 @@ export async function resolveSignatures(ix) {
       })
       await Promise.all(outsideSigners.map(fetchSignature(ix, outsidePayload)))
     } catch (error) {
-      console.error("Signatures", error, {ix})
+      console.error("Signatures", error, { ix })
       throw error
     }
   }
@@ -39,12 +39,12 @@ function fetchSignature(ix, payload) {
   return async function innerFetchSignature(id) {
     const acct = ix.accounts[id]
     if (acct.signature != null) return
-    const {signature} = await acct.signingFunction(
+    const { signature, keyId } = await acct.signingFunction(
       buildSignable(acct, payload, ix)
     )
-    // if (!acct.role.proposer) {
-    //   ix.accounts[id].keyId = keyId
-    // }
+    if (!acct.role.proposer) {
+      ix.accounts[id].keyId = keyId
+    }
     ix.accounts[id].signature = signature
   }
 }

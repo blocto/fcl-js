@@ -10,7 +10,13 @@
 
 var jspb = require('@blocto/google-protobuf');
 var goog = jspb;
-var global = {}
+var global = (function () {
+  if (this) { return this; }
+  if (typeof window !== 'undefined') { return window; }
+  if (typeof global !== 'undefined') { return global; }
+  if (typeof self !== 'undefined') { return self; }
+  return {};
+}.call(null));
 
 goog.exportSymbol('proto.flow.entities.Account', null, global);
 goog.exportSymbol('proto.flow.entities.AccountKey', null, global);

@@ -1,6 +1,6 @@
 {
   "name": "@portto/sdk",
-  "version": "0.0.56-alpha.1",
+  "version": "0.0.56-alpha.2",
   "description": "Flow SDK",
   "license": "Apache-2.0",
   "author": "Dapper Labs <dev@dapperlabs.com>",
@@ -28,7 +28,7 @@
   "unpkg": "dist/sdk.umd.js",
   "scripts": {
     "alpha": "npm publish --tag alpha",
-    "prepublishOnly": "npm test && npm run build",
+    "prepublishOnly": "npm run build",
     "test": "jest",
     "build": "microbundle",
     "test:watch": "jest --watch",
