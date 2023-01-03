@@ -20,7 +20,7 @@
   "devDependencies": {
     "jest": "26.4.2",
     "jest-esm-transformer": "1.0.0",
-    "microbundle": "0.12.4"
+    "microbundle": "0.15.1"
   },
   "source": "src/index.js",
   "main": "dist/rlp.js",
