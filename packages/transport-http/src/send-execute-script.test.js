@@ -10,7 +10,7 @@ import {
   resolve,
   response as responseADT,
   script,
-} from "@onflow/sdk"
+} from "@blocto/flow-sdk"
 
 describe("Send Execute Script", () => {
   test("ExecuteScriptAtLatestBlock", async () => {

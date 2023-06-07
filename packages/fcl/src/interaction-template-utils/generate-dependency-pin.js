@@ -6,7 +6,7 @@ import {
   atBlockHeight,
   config,
   decode,
-} from "@onflow/sdk"
+} from "@blocto/flow-sdk"
 import {genHash} from "./utils/hash.js"
 import {findImports} from "./utils/find-imports.js"
 import {generateImport} from "./utils/generate-import.js"
