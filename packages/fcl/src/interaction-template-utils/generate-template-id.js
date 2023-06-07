@@ -1,4 +1,4 @@
-import {invariant} from "@onflow/sdk"
+import {invariant} from "@blocto/flow-sdk"
 import {encode as rlpEncode} from "@onflow/rlp"
 import {genHash} from "./utils/hash.js"
 import {normalizeInteractionTemplate} from "../normalizers/interaction-template/interaction-template.js"

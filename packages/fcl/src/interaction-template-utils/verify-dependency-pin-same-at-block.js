@@ -1,5 +1,5 @@
 import {generateDependencyPin} from "./generate-dependency-pin.js"
-import {invariant, block} from "@onflow/sdk"
+import {invariant, block} from "@blocto/flow-sdk"
 import {log, LEVELS} from "@onflow/util-logger"
 import {normalizeInteractionTemplate} from "../normalizers/interaction-template/interaction-template.js"
 

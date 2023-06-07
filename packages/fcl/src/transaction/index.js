@@ -11,7 +11,7 @@ import {
   UNSUBSCRIBE,
   ERROR,
 } from "@onflow/util-actor"
-import {send as fclSend, decode, getTransactionStatus} from "@onflow/sdk"
+import {send as fclSend, decode, getTransactionStatus} from "@blocto/flow-sdk"
 
 /**
  * @typedef {import("@onflow/typedefs").Transaction} Transaction

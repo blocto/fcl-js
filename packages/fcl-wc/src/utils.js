@@ -1,6 +1,6 @@
 import {log, LEVELS} from "@onflow/util-logger"
 import {invariant} from "@onflow/util-invariant"
-import * as fcl from "@onflow/fcl"
+import * as fcl from "@blocto/fcl"
 
 export let CONFIGURED_NETWORK = null
 

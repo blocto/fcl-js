@@ -5,7 +5,7 @@ import {
   getCollection,
   resolve,
   response as responseADT,
-} from "@onflow/sdk"
+} from "@blocto/flow-sdk"
 
 describe("Send Get Collection", () => {
   test("GetCollection", async () => {

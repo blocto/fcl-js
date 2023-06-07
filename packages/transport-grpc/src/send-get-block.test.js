@@ -8,7 +8,7 @@ import {
   getBlock,
   resolve,
   response as responseADT,
-} from "@onflow/sdk"
+} from "@blocto/flow-sdk"
 
 const hexStrToUInt8Array = hex => {
   return new Uint8Array(hex.match(/.{1,2}/g).map(byte => parseInt(byte, 16)))

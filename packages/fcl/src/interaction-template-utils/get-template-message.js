@@ -1,4 +1,4 @@
-import {invariant} from "@onflow/sdk"
+import {invariant} from "@blocto/flow-sdk"
 
 /**
  * @description Get Interaction Template argument message

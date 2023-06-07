@@ -1,4 +1,4 @@
-import * as sdk from "@onflow/sdk"
+import * as sdk from "@blocto/flow-sdk"
 import {config} from "@onflow/config"
 import {log} from "@onflow/util-logger"
 import {invariant} from "@onflow/util-invariant"

@@ -6,7 +6,7 @@ import {
   getAccount,
   resolve,
   response as responseADT,
-} from "@onflow/sdk"
+} from "@blocto/flow-sdk"
 
 describe("Send Get Account", () => {
   test("GetAccountAtBlockHeightRequest", async () => {

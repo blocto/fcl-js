@@ -5,7 +5,7 @@ import {
   getTransaction,
   resolve,
   response as responseADT,
-} from "@onflow/sdk"
+} from "@blocto/flow-sdk"
 
 describe("Get Transaction", () => {
   test("GetTransactionResult", async () => {

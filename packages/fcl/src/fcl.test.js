@@ -9,7 +9,7 @@ import {
   ref,
   resolve,
   transaction,
-} from "@onflow/sdk"
+} from "@blocto/flow-sdk"
 
 test("serialize returns voucher", async () => {
   const authz = {

@@ -1,4 +1,4 @@
-import * as sdk from "@onflow/sdk"
+import * as sdk from "@blocto/flow-sdk"
 import {normalizeArgs} from "./utils/normalize-args"
 import {currentUser} from "../current-user"
 import {prepTemplateOpts} from "./utils/prep-template-opts.js"

@@ -5,7 +5,7 @@ import {
   getEventsAtBlockHeightRange,
   send,
   decode,
-} from "@onflow/sdk"
+} from "@blocto/flow-sdk"
 
 const RATE = 10000
 const UPDATED = "UPDATED"
@@ -76,7 +76,7 @@ const spawnEvents = key => spawn(HANDLERS, key)
  * @returns {SubscribeObject}
  * 
  * @example
- * import * as fcl from "@onflow/fcl"
+ * import * as fcl from "@blocto/fcl"
  * fcl.events(eventName).subscribe((event) => console.log(event))
  */
 export function events(key) {
