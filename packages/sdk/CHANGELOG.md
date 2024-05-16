@@ -1,5 +1,11 @@
 # @onflow/sdk
 
+## 1.2.3
+
+### Patch Changes
+
+- [`41656b8b`](https://github.com/onflow/fcl-js/commit/41656b8bcf6be88c679de09569fe74643be10828) Thanks [@scottphc](https://github.com/scottphc)! - Use keyID from signatures
+
 ## 1.2.2
 
 ### Patch Changes
