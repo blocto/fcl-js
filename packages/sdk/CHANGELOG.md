@@ -1,5 +1,201 @@
 # @onflow/sdk
 
+## 1.5.1
+
+### Patch Changes
+
+- Updated dependencies [[`fe5e1b3d`](https://github.com/onflow/fcl-js/commit/fe5e1b3d330b7734740cceb9a873d1b680f28175)]:
+  - @onflow/util-actor@1.3.3
+  - @onflow/config@1.4.1
+
+## 1.5.0
+
+### Minor Changes
+
+- [#1863](https://github.com/onflow/fcl-js/pull/1863) [`7ef7edf1`](https://github.com/onflow/fcl-js/commit/7ef7edf1e134041da944f24f49e661caadcc7074) Thanks [@jribbink](https://github.com/jribbink)! - Update SDK encoding/decoding for Cadence 1.0 JSON-CDC changes
+
+### Patch Changes
+
+- [#1879](https://github.com/onflow/fcl-js/pull/1879) [`8fb453b5`](https://github.com/onflow/fcl-js/commit/8fb453b5ff3a00285d91a5432972afbe9e779706) Thanks [@jribbink](https://github.com/jribbink)! - Allow building a transaction without any authorizers
+
+- Updated dependencies [[`dfc5472e`](https://github.com/onflow/fcl-js/commit/dfc5472e94c8237b048940ebc44742071f77f59d), [`6c635f9f`](https://github.com/onflow/fcl-js/commit/6c635f9ff340284845ffe1196965ced7c748294f), [`ad089fe7`](https://github.com/onflow/fcl-js/commit/ad089fe7556767e1fae96f3f2e98fd76c49bba88)]:
+  - @onflow/transport-http@1.10.1
+  - @onflow/util-invariant@1.2.3
+  - @onflow/config@1.4.0
+
+## 1.4.0
+
+### Minor Changes
+
+- [#1802](https://github.com/onflow/fcl-js/pull/1802) [`699303cf`](https://github.com/onflow/fcl-js/commit/699303cfd5e0545267632c9236f8c91833ce1259) Thanks [@nialexsan](https://github.com/nialexsan)! - Typescript improvements
+
+- [#1794](https://github.com/onflow/fcl-js/pull/1794) [`acf90a78`](https://github.com/onflow/fcl-js/commit/acf90a7841f843227d5d9edb450ef08322c77c4d) Thanks [@jribbink](https://github.com/jribbink)! - Add support for new event streaming API. This can be accessed through new SDK builder `sdk.subscribeEvents(...)`. See FLIP for more information: https://github.com/onflow/flips/blob/4152912f8ec39515eb1c4dddbc6605c6ebe70966/protocol/20230309-accessnode-event-streaming-api.md.
+
+- [#1852](https://github.com/onflow/fcl-js/pull/1852) [`b2c73354`](https://github.com/onflow/fcl-js/commit/b2c733545a3904dcff959a2e12b4cf90383bdac0) Thanks [@jribbink](https://github.com/jribbink)! - Generalize chainId decoder for all "flow" prefixed networks
+
+- [#1855](https://github.com/onflow/fcl-js/pull/1855) [`80db8166`](https://github.com/onflow/fcl-js/commit/80db816620d7643c35a0fca7149c15de92f7bc88) Thanks [@jribbink](https://github.com/jribbink)! - Add GetNodeVersionInfo SDK Interaction
+
+### Patch Changes
+
+- [#1859](https://github.com/onflow/fcl-js/pull/1859) [`7ed491c5`](https://github.com/onflow/fcl-js/commit/7ed491c5d2335fbbff04444d41f1f1580763d8d3) Thanks [@jribbink](https://github.com/jribbink)! - TypeScript Fixes
+
+- [#1821](https://github.com/onflow/fcl-js/pull/1821) [`b9c078ce`](https://github.com/onflow/fcl-js/commit/b9c078ce87869c2b41dff07b861cea09a294c6a1) Thanks [@nialexsan](https://github.com/nialexsan)! - Split packages into `@onflow/fcl`, `@onflow/fcl-core`, and `@onflow/fcl-react-native`.
+
+- [#1840](https://github.com/onflow/fcl-js/pull/1840) [`151a2290`](https://github.com/onflow/fcl-js/commit/151a2290e92fbcb399052476004c7f20ceda5c2d) Thanks [@jribbink](https://github.com/jribbink)! - Typescript fixes for SDK builders
+
+- [#1827](https://github.com/onflow/fcl-js/pull/1827) [`e74c4a60`](https://github.com/onflow/fcl-js/commit/e74c4a60f38f366874aa1391ca1c890a7ad3a42a) Thanks [@nialexsan](https://github.com/nialexsan)! - Pin internal dependencies to exact versions
+
+- [#1832](https://github.com/onflow/fcl-js/pull/1832) [`037dc2f9`](https://github.com/onflow/fcl-js/commit/037dc2f9db9c22185e3c048c65e23e0efa70085f) Thanks [@jribbink](https://github.com/jribbink)! - Update access modifiers to support Cadence 1.0
+
+- [#1814](https://github.com/onflow/fcl-js/pull/1814) [`0d09d838`](https://github.com/onflow/fcl-js/commit/0d09d8386c2fc472833df7152467d477f36dddc4) Thanks [@jribbink](https://github.com/jribbink)! - Fix type declarations not fully being generated
+
+- Updated dependencies [[`699303cf`](https://github.com/onflow/fcl-js/commit/699303cfd5e0545267632c9236f8c91833ce1259), [`7ed491c5`](https://github.com/onflow/fcl-js/commit/7ed491c5d2335fbbff04444d41f1f1580763d8d3), [`72e8f796`](https://github.com/onflow/fcl-js/commit/72e8f796caf8f62a829cba3641e395c20466547a), [`b9c078ce`](https://github.com/onflow/fcl-js/commit/b9c078ce87869c2b41dff07b861cea09a294c6a1), [`acf90a78`](https://github.com/onflow/fcl-js/commit/acf90a7841f843227d5d9edb450ef08322c77c4d), [`e74c4a60`](https://github.com/onflow/fcl-js/commit/e74c4a60f38f366874aa1391ca1c890a7ad3a42a), [`037dc2f9`](https://github.com/onflow/fcl-js/commit/037dc2f9db9c22185e3c048c65e23e0efa70085f), [`80db8166`](https://github.com/onflow/fcl-js/commit/80db816620d7643c35a0fca7149c15de92f7bc88), [`0d09d838`](https://github.com/onflow/fcl-js/commit/0d09d8386c2fc472833df7152467d477f36dddc4), [`acf90a78`](https://github.com/onflow/fcl-js/commit/acf90a7841f843227d5d9edb450ef08322c77c4d), [`fdd52c45`](https://github.com/onflow/fcl-js/commit/fdd52c45b3a64210c5f716e13aa4d08d3796370c)]:
+  - @onflow/transport-http@1.10.0
+  - @onflow/typedefs@1.3.0
+  - @onflow/util-address@1.2.2
+  - @onflow/util-invariant@1.2.2
+  - @onflow/util-template@1.2.2
+  - @onflow/util-logger@1.3.2
+  - @onflow/util-actor@1.3.2
+  - @onflow/config@1.3.0
+  - @onflow/rlp@1.2.2
+
+## 1.4.0-alpha.9
+
+### Patch Changes
+
+- [#1859](https://github.com/onflow/fcl-js/pull/1859) [`7ed491c5`](https://github.com/onflow/fcl-js/commit/7ed491c5d2335fbbff04444d41f1f1580763d8d3) Thanks [@jribbink](https://github.com/jribbink)! - TypeScript Fixes
+
+- Updated dependencies [[`7ed491c5`](https://github.com/onflow/fcl-js/commit/7ed491c5d2335fbbff04444d41f1f1580763d8d3)]:
+  - @onflow/util-address@1.2.2-alpha.3
+  - @onflow/typedefs@1.3.0-alpha.4
+  - @onflow/transport-http@1.10.0-alpha.5
+
+## 1.4.0-alpha.8
+
+### Minor Changes
+
+- [#1855](https://github.com/onflow/fcl-js/pull/1855) [`80db8166`](https://github.com/onflow/fcl-js/commit/80db816620d7643c35a0fca7149c15de92f7bc88) Thanks [@jribbink](https://github.com/jribbink)! - Add GetNodeVersionInfo SDK Interaction
+
+### Patch Changes
+
+- Updated dependencies [[`80db8166`](https://github.com/onflow/fcl-js/commit/80db816620d7643c35a0fca7149c15de92f7bc88)]:
+  - @onflow/transport-http@1.10.0-alpha.4
+  - @onflow/typedefs@1.3.0-alpha.3
+
+## 1.4.0-alpha.7
+
+### Minor Changes
+
+- [#1852](https://github.com/onflow/fcl-js/pull/1852) [`b2c73354`](https://github.com/onflow/fcl-js/commit/b2c733545a3904dcff959a2e12b4cf90383bdac0) Thanks [@jribbink](https://github.com/jribbink)! - Generalize chainId decoder for all "flow" prefixed networks
+
+## 1.4.0-alpha.6
+
+### Patch Changes
+
+- Updated dependencies [[`fdd52c45`](https://github.com/onflow/fcl-js/commit/fdd52c45b3a64210c5f716e13aa4d08d3796370c)]:
+  - @onflow/config@1.3.0-alpha.3
+
+## 1.4.0-alpha.5
+
+### Patch Changes
+
+- [#1840](https://github.com/onflow/fcl-js/pull/1840) [`151a2290`](https://github.com/onflow/fcl-js/commit/151a2290e92fbcb399052476004c7f20ceda5c2d) Thanks [@jribbink](https://github.com/jribbink)! - Typescript fixes for SDK builders
+
+## 1.4.0-alpha.4
+
+### Patch Changes
+
+- [#1832](https://github.com/onflow/fcl-js/pull/1832) [`037dc2f9`](https://github.com/onflow/fcl-js/commit/037dc2f9db9c22185e3c048c65e23e0efa70085f) Thanks [@jribbink](https://github.com/jribbink)! - Update access modifiers to support Cadence 1.0
+
+- Updated dependencies [[`72e8f796`](https://github.com/onflow/fcl-js/commit/72e8f796caf8f62a829cba3641e395c20466547a), [`037dc2f9`](https://github.com/onflow/fcl-js/commit/037dc2f9db9c22185e3c048c65e23e0efa70085f)]:
+  - @onflow/transport-http@1.10.0-alpha.3
+
+## 1.4.0-alpha.3
+
+### Patch Changes
+
+- [#1827](https://github.com/onflow/fcl-js/pull/1827) [`e74c4a60`](https://github.com/onflow/fcl-js/commit/e74c4a60f38f366874aa1391ca1c890a7ad3a42a) Thanks [@nialexsan](https://github.com/nialexsan)! - pin versions
+
+- Updated dependencies [[`e74c4a60`](https://github.com/onflow/fcl-js/commit/e74c4a60f38f366874aa1391ca1c890a7ad3a42a)]:
+  - @onflow/transport-http@1.10.0-alpha.2
+  - @onflow/util-invariant@1.2.2-alpha.2
+  - @onflow/util-template@1.2.2-alpha.2
+  - @onflow/util-address@1.2.2-alpha.2
+  - @onflow/util-logger@1.3.2-alpha.2
+  - @onflow/util-actor@1.3.2-alpha.2
+  - @onflow/typedefs@1.3.0-alpha.2
+  - @onflow/config@1.2.2-alpha.2
+  - @onflow/rlp@1.2.2-alpha.2
+
+## 1.4.0-alpha.2
+
+### Minor Changes
+
+- [#1802](https://github.com/onflow/fcl-js/pull/1802) [`699303cf`](https://github.com/onflow/fcl-js/commit/699303cfd5e0545267632c9236f8c91833ce1259) Thanks [@nialexsan](https://github.com/nialexsan)! - TS conversion
+
+- [#1794](https://github.com/onflow/fcl-js/pull/1794) [`acf90a78`](https://github.com/onflow/fcl-js/commit/acf90a7841f843227d5d9edb450ef08322c77c4d) Thanks [@jribbink](https://github.com/jribbink)! - Add support for new event streaming API https://github.com/onflow/flips/blob/4152912f8ec39515eb1c4dddbc6605c6ebe70966/protocol/20230309-accessnode-event-streaming-api.md. Can be accessed through new SDK builder sdk.subscribeEvents(...).
+
+### Patch Changes
+
+- [#1814](https://github.com/onflow/fcl-js/pull/1814) [`0d09d838`](https://github.com/onflow/fcl-js/commit/0d09d8386c2fc472833df7152467d477f36dddc4) Thanks [@jribbink](https://github.com/jribbink)! - Fix type declarations not fully being generated
+
+- Updated dependencies [[`699303cf`](https://github.com/onflow/fcl-js/commit/699303cfd5e0545267632c9236f8c91833ce1259), [`acf90a78`](https://github.com/onflow/fcl-js/commit/acf90a7841f843227d5d9edb450ef08322c77c4d), [`0d09d838`](https://github.com/onflow/fcl-js/commit/0d09d8386c2fc472833df7152467d477f36dddc4), [`acf90a78`](https://github.com/onflow/fcl-js/commit/acf90a7841f843227d5d9edb450ef08322c77c4d)]:
+  - @onflow/transport-http@1.10.0-alpha.1
+  - @onflow/typedefs@1.3.0-alpha.1
+  - @onflow/util-invariant@1.2.2-alpha.1
+  - @onflow/util-template@1.2.2-alpha.1
+  - @onflow/util-address@1.2.2-alpha.1
+  - @onflow/util-logger@1.3.2-alpha.1
+  - @onflow/util-actor@1.3.2-alpha.1
+  - @onflow/config@1.2.2-alpha.1
+  - @onflow/rlp@1.2.2-alpha.1
+
+## 1.3.1
+
+### Patch Changes
+
+- [#1807](https://github.com/onflow/fcl-js/pull/1807) [`9430d723`](https://github.com/onflow/fcl-js/commit/9430d7232c272f4acb55f5bcff7be82cef9704d9) Thanks [@jribbink](https://github.com/jribbink)! - Fix versioning & actor bug
+
+- Updated dependencies [[`9430d723`](https://github.com/onflow/fcl-js/commit/9430d7232c272f4acb55f5bcff7be82cef9704d9)]:
+  - @onflow/util-actor@1.3.1
+  - @onflow/config@1.2.1
+  - @onflow/rlp@1.2.1
+  - @onflow/transport-http@1.8.1
+  - @onflow/util-address@1.2.1
+  - @onflow/util-invariant@1.2.1
+  - @onflow/util-logger@1.3.1
+  - @onflow/util-template@1.2.1
+
+## 1.3.0
+
+### Minor Changes
+
+- [#1801](https://github.com/onflow/fcl-js/pull/1801) [`8881394b`](https://github.com/onflow/fcl-js/commit/8881394bc11fea507e330a4c507ef304fe456c42) Thanks [@nialexsan](https://github.com/nialexsan)! - TS build
+
+### Patch Changes
+
+- Updated dependencies [[`8881394b`](https://github.com/onflow/fcl-js/commit/8881394bc11fea507e330a4c507ef304fe456c42), [`8881394b`](https://github.com/onflow/fcl-js/commit/8881394bc11fea507e330a4c507ef304fe456c42), [`8881394b`](https://github.com/onflow/fcl-js/commit/8881394bc11fea507e330a4c507ef304fe456c42), [`8881394b`](https://github.com/onflow/fcl-js/commit/8881394bc11fea507e330a4c507ef304fe456c42)]:
+  - @onflow/util-invariant@1.2.0
+  - @onflow/util-template@1.2.0
+  - @onflow/util-address@1.2.0
+  - @onflow/util-logger@1.3.0
+  - @onflow/rlp@1.2.0
+  - @onflow/transport-http@1.8.0
+  - @onflow/util-actor@1.3.0
+  - @onflow/config@1.2.0
+
+## 1.2.3
+
+### Patch Changes
+
+- [#1532](https://github.com/onflow/fcl-js/pull/1532) [`06846f8e`](https://github.com/onflow/fcl-js/commit/06846f8e9c1e2cdf10aa8dfdff6e6c5b31af81e5) Thanks [@JeffreyDoyle](https://github.com/JeffreyDoyle)! - Refactor Resolve Accounts to user role based async decomposition for resolving internal accounts
+
+- [#1532](https://github.com/onflow/fcl-js/pull/1532) [`06846f8e`](https://github.com/onflow/fcl-js/commit/06846f8e9c1e2cdf10aa8dfdff6e6c5b31af81e5) Thanks [@JeffreyDoyle](https://github.com/JeffreyDoyle)! - Fixed duplicate signatures when sending transaction
+
+- Updated dependencies [[`06846f8e`](https://github.com/onflow/fcl-js/commit/06846f8e9c1e2cdf10aa8dfdff6e6c5b31af81e5)]:
+  - @onflow/transport-http@1.7.2
+
 ## 1.2.2
 
 ### Patch Changes
@@ -464,7 +660,7 @@
 - 2022-03-16 -- [@chasefleming](https://github.com/chasefleming): Warn about field renamings/deprecations. To turn on warnings, set config `log.level` to `2`.
 
 ```js
-sdk.config("logger.level", 2)
+sdk.config("logger.level", 2);
 ```
 
 - 2022-03-07 -- **BREAKING** [@JeffreyDoyle](https://github.com/JeffreyDoyle): Decode number types implicitly. Number types, `[U]Int*` and `Word*`, will now be decoded into String. This is done to protect against decoding such types into JavaScript Number when the value they represent exceeds the largest supported value for Number. Developers should adjust their use of the JS-SDK accordingly to this new return type when decoding number `[U]Int*` and `Word*` types.
@@ -473,8 +669,8 @@ sdk.config("logger.level", 2)
 - 2022-02-04 -- [@chasefleming](https://github.com/chasefleming): Add options for for getting account by block height.
 
 ```javascript
-await sdk.account("0x123") // Existing: get account at the latest block
-await sdk.account("0x123", {height: 123}) // New: get account at the block with the provided height
+await sdk.account("0x123"); // Existing: get account at the latest block
+await sdk.account("0x123", { height: 123 }); // New: get account at the block with the provided height
 ```
 
 ## 0.0.57-alpha.3 -- 2022-02-02
@@ -487,20 +683,20 @@ await sdk.account("0x123", {height: 123}) // New: get account at the block with 
 - 2022-01-21 -- [@JeffreyDoyle](https://github.com/JeffreyDoyle): Abstracts away the SDK transport modules into their own packages. The JS-SDK now makes use of transport modules for sending an interaction to an access api and receiving a response. A transport module can be defined in config:
 
 ```javascript
-import {send as grpcSend} from "@onflow/transport-grpc"
-import {send as httpSend} from "@onflow/transport-http"
+import { send as grpcSend } from "@onflow/transport-grpc";
+import { send as httpSend } from "@onflow/transport-http";
 
 // Configure SDK to use GRPC
 sdk
   .config()
   .put("accessNode.api", "https://access-testnet.onflow.org")
-  .put("sdk.transport", grpcSend)
+  .put("sdk.transport", grpcSend);
 
 // Configure SDK to use HTTP
 sdk
   .config()
   .put("accessNode.api", "https://rest-testnet.onflow.org")
-  .put("sdk.transport", httpSend)
+  .put("sdk.transport", httpSend);
 ```
 
 ## 0.0.56-alpha.3 -- 2022-01-19
@@ -508,10 +704,10 @@ sdk
 - 2022-01-07 -- [@chasefleming](https://github.com/chasefleming): Create methods for more easily getting a block by height or by id.
 
 ```javascript
-await sdk.block() // get latest finalized block
-await sdk.block({sealed: true}) // get latest sealed block
-await sdk.block({id: "abc"}) // get block by id
-await sdk.block({height: 123}) // get block by height
+await sdk.block(); // get latest finalized block
+await sdk.block({ sealed: true }); // get latest sealed block
+await sdk.block({ id: "abc" }); // get block by id
+await sdk.block({ height: 123 }); // get block by height
 ```
 
 ## 0.0.56-alpha.2 -- 2022-01-05
@@ -522,7 +718,7 @@ await sdk.block({height: 123}) // get block by height
 - 2021-11-17 -- [@chasefleming](https://github.com/chasefleming): Support passing of current user as authorization. Simply pass `currentUser` instead of `currentUser.authorization` or `currentUser().authorization`.
 
 ```javascript
-import {currentUser} from "@onflow/fcl"
+import { currentUser } from "@onflow/fcl";
 
 fcl
   .send([
@@ -531,7 +727,7 @@ fcl
     fcl.payer(currentUser),
     fcl.authorizations([currentUser]),
   ])
-  .then(fcl.decode)
+  .then(fcl.decode);
 ```
 
 ## 0.0.56-alpha.1 -- 2021-10-21
@@ -543,13 +739,13 @@ fcl
 Example of `statusString`:
 
 ```javascript
-import * as sdk from "@onflow/sdk"
+import * as sdk from "@onflow/sdk";
 const response = await sdk.send(
   await sdk.build([sdk.getTransactionStatus(txId)]),
-  {node: "http://localhost:8080"}
-)
+  { node: "http://localhost:8080" },
+);
 
-console.log(response.statusString)
+console.log(response.statusString);
 ```
 
 ## 0.0.55 -- 2021-10-01
@@ -564,11 +760,11 @@ const argument = {
     return {
       value: "0x12341324",
       xform: t.Address,
-    }
+    };
   },
-}
+};
 
-sdk.args([argument])
+sdk.args([argument]);
 ```
 
 - 2021-09-20 -- [@chasefleming](https://github.com/chasefleming): Support asynchronous resolve methods in `resolveArguments`
@@ -610,44 +806,44 @@ sdk.args([argument])
 Example Updates to config.
 
 ```javascript
-import {config} from "@onflow/config"
+import { config } from "@onflow/config";
 
-expect(await config.all()).toEqual({})
+expect(await config.all()).toEqual({});
 
 config({
   "foo.bar": "baz",
-})
-config.put("bob", "pat")
+});
+config.put("bob", "pat");
 
 expect(await config.all()).toEqual({
   "foo.bar": "baz",
   bob: "pat",
-})
+});
 
-var ret = await config.overload({bob: "bill"}, async () => {
+var ret = await config.overload({ bob: "bill" }, async () => {
   expect(await config.all()).toEqual({
     "foo.bar": "baz",
     bob: "bill",
-  })
-  return "woot"
-})
+  });
+  return "woot";
+});
 
-expect(ret).toBe("woot")
+expect(ret).toBe("woot");
 
 expect(await config.all()).toEqual({
   "foo.bar": "baz",
   bob: "pat",
-})
+});
 
-expect(await config.first(["bax", "foo.bar"], "FALLBACK")).toBe("baz")
-expect(await config.first(["nope", "oh-no"], "FALLBACK")).toBe("FALLBACK")
+expect(await config.first(["bax", "foo.bar"], "FALLBACK")).toBe("baz");
+expect(await config.first(["nope", "oh-no"], "FALLBACK")).toBe("FALLBACK");
 ```
 
 Example of TestUtils.
 
 ```javascript
-import {config, TestUtils} from "@onflow/sdk"
-import * as sdk from "@onflow/sdk"
+import { config, TestUtils } from "@onflow/sdk";
+import * as sdk from "@onflow/sdk";
 
 test("single account/key pair for all three signatory roles", async () => {
   await config.overload(
@@ -657,11 +853,11 @@ test("single account/key pair for all three signatory roles", async () => {
       "sdk.transport": TestUtils.mockSend(),
     },
     async () => {
-      const SIGNATORY = {addr: "0x1111222233334444", keyId: 1}
-      const idof = acct => `${acct.addr}-${acct.keyId}`
+      const SIGNATORY = { addr: "0x1111222233334444", keyId: 1 };
+      const idof = (acct) => `${acct.addr}-${acct.keyId}`;
 
       // authzFn -- stubs out an authorization function from a signatory
-      const authz = TestUtils.authzFn(SIGNATORY)
+      const authz = TestUtils.authzFn(SIGNATORY);
 
       // run -- builds and resolves the transaction // sets a reference block
       var ix = await run([
@@ -669,17 +865,17 @@ test("single account/key pair for all three signatory roles", async () => {
         sdk.proposer(authz),
         sdk.payer(authz),
         sdk.authorizations([authz]),
-      ])
+      ]);
 
-      expect(Object.keys(ix.accounts).length).toBe(1)
-      expect(ix.accounts[TestUtils.idof(SIGNATORY)]).toBeDefined()
+      expect(Object.keys(ix.accounts).length).toBe(1);
+      expect(ix.accounts[TestUtils.idof(SIGNATORY)]).toBeDefined();
 
-      expect(ix.proposer).toBe(TestUtils.idof(SIGNATORY))
-      expect(ix.payer).toBe(TestUtils.idof(SIGNATORY))
-      expect(ix.authorizations).toEqual([TestUtils.idof(SIGNATORY)])
-    }
-  )
-})
+      expect(ix.proposer).toBe(TestUtils.idof(SIGNATORY));
+      expect(ix.payer).toBe(TestUtils.idof(SIGNATORY));
+      expect(ix.authorizations).toEqual([TestUtils.idof(SIGNATORY)]);
+    },
+  );
+});
 ```
 
 ## 0.0.50 - 2021-06-17
@@ -692,20 +888,20 @@ test("single account/key pair for all three signatory roles", async () => {
 - 2021-06-16 -- [@orodio](https://github.com/orodio): Added the ability to set configuration values in `sdk.config` from initializer.
 
 ```javascript
-import {config} from "@onflow/config"
+import { config } from "@onflow/config";
 
 config({
   "accessNode.api": "https://access-testnet.onflow.org",
   "discovery.wallet": "https://fcl-discovery.onflow.org/testnet/authn",
   "0xFUSD": "0xe223d8a629e49c68",
-})
+});
 
 // -- is equivalent to --
 
 config()
   .put("accessNode.api", "https://access-testnet.onflow.org")
   .put("discovery.wallet", "https://fcl-discovery.onflow.org/testnet/authn")
-  .put("0xFUSD", "0xe223d8a629e49c68")
+  .put("0xFUSD", "0xe223d8a629e49c68");
 ```
 
 ## 0.0.48 - 2021-06-16
@@ -713,9 +909,9 @@ config()
 - 2021-06-16 -- [@JeffreyDoyle](https://github.com/JeffreyDoyle): Adds ability to specify optional grpc metadata to requests sent to an Access API. To specity grpc metadata, use config like such:
 
 ```javascript
-import {config} from "@onflow/config"
+import { config } from "@onflow/config";
 
-fcl.config().put("grpc.metadata", {headerkey1: "headervalue1"})
+fcl.config().put("grpc.metadata", { headerkey1: "headervalue1" });
 ```
 
 - 2021-06-16 -- [@JeffreyDoyle](https://github.com/JeffreyDoyle): Adds encode signable wallet utility function.
