@@ -1,4 +1,4 @@
-import {send, decode, subscribeEvents} from "@onflow/sdk"
+import {send, decode, subscribeEvents} from "@blocto/flow-sdk"
 import {Event, EventFilter, EventStream} from "@onflow/typedefs"
 import {events as legacyEvents} from "./legacy-events"
 

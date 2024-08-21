@@ -7,7 +7,7 @@ import {
   getBlockHeader,
   resolve,
   response as responseADT,
-} from "@onflow/sdk"
+} from "@blocto/flow-sdk"
 
 describe("Send Get Block Header", () => {
   test("GetBlockHeaderByID", async () => {

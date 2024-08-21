@@ -9,7 +9,7 @@ import {
   SUBSCRIBE,
   UNSUBSCRIBE,
 } from "@onflow/util-actor"
-import {send as fclSend, decode, getTransactionStatus} from "@onflow/sdk"
+import {send as fclSend, decode, getTransactionStatus} from "@blocto/flow-sdk"
 import {HTTPRequestError} from "@onflow/transport-http"
 import {grpc} from "@improbable-eng/grpc-web"
 

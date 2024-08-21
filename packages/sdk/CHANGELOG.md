@@ -1,4 +1,4 @@
-# @onflow/sdk
+# @blocto/flow-sdk
 
 ## 1.5.1
 
@@ -732,14 +732,14 @@ fcl
 
 ## 0.0.56-alpha.1 -- 2021-10-21
 
-- 2021-10-21 -- [@GregSantos](https://github.com/gregsantos): SDK Alpha Release `@onflow/sdk` 0.0.55 -> 0.0.56-alpha.1
+- 2021-10-21 -- [@GregSantos](https://github.com/gregsantos): SDK Alpha Release `@blocto/flow-sdk` 0.0.55 -> 0.0.56-alpha.1
 - 2021-10-13 -- **Community Contribution from** [@avcdsld](https://github.com/avcdsld): Adds initial implementation of a feature that allows for the transaction id to be computed before sending the transaction to the chain. It can be passed an asynchronous function that receives the voucher. Exports `voucherToTxId` to produce a transaction hash from `voucher`.
 - 2021-10-11 -- [@chasefleming](https://github.com/chasefleming): Access string status instead of just number value (e.g. `FINALIZED` for status `2`) by using the `statusString` property on the response of `getTransactionStatus`
 
 Example of `statusString`:
 
 ```javascript
-import * as sdk from "@onflow/sdk";
+import * as sdk from "@blocto/flow-sdk";
 const response = await sdk.send(
   await sdk.build([sdk.getTransactionStatus(txId)]),
   { node: "http://localhost:8080" },
@@ -842,8 +842,8 @@ expect(await config.first(["nope", "oh-no"], "FALLBACK")).toBe("FALLBACK");
 Example of TestUtils.
 
 ```javascript
-import { config, TestUtils } from "@onflow/sdk";
-import * as sdk from "@onflow/sdk";
+import { config, TestUtils } from "@blocto/flow-sdk";
+import * as sdk from "@blocto/flow-sdk";
 
 test("single account/key pair for all three signatory roles", async () => {
   await config.overload(
@@ -884,7 +884,7 @@ test("single account/key pair for all three signatory roles", async () => {
 
 ## 0.0.49 - 2021-06-16
 
-- 2021-06-16 -- [@orodio](https://github.com/orodio): Pulled `@onflow/config` functionality into `@onflow/sdk`
+- 2021-06-16 -- [@orodio](https://github.com/orodio): Pulled `@onflow/config` functionality into `@blocto/flow-sdk`
 - 2021-06-16 -- [@orodio](https://github.com/orodio): Added the ability to set configuration values in `sdk.config` from initializer.
 
 ```javascript
@@ -918,7 +918,7 @@ fcl.config().put("grpc.metadata", { headerkey1: "headervalue1" });
 
 ## 0.0.47 - 2021-06-04
 
-- 2021-04-27 -- [@JeffreyDoyle](https://github.com/JeffreyDoyle): Full VSN Release `@onflow/sdk` 0.0.47-alpha.1 -> 0.0.47
+- 2021-04-27 -- [@JeffreyDoyle](https://github.com/JeffreyDoyle): Full VSN Release `@blocto/flow-sdk` 0.0.47-alpha.1 -> 0.0.47
 
 ## 0.0.47-alpha.1 - 2021-05-27
 
@@ -937,7 +937,7 @@ fcl.config().put("grpc.metadata", { headerkey1: "headervalue1" });
 
 ## 0.0.45 - 2021-04-27
 
-- 2021-04-27 -- Full VSN Release `@onflow/sdk` 0.0.45-alpha.20 -> 0.0.45
+- 2021-04-27 -- Full VSN Release `@blocto/flow-sdk` 0.0.45-alpha.20 -> 0.0.45
 - 2021-04-23 -- Moves type check utils to `/utils`
 - 2021-04-23 -- Move `createVoucher` to `/utils` to resolve circular dependency in `interaction`
 - 2021-04-22 -- Adds `wallet-utils` `validateSignableTransaction` support for wallets to validate Signable payload
@@ -1017,13 +1017,13 @@ type Metadata {
 
 ## 0.0.45-alpha.[4-6] -- 2021-02-02
 
-- 2021-02-18 -- Merged `@onflow/send` into `@onflow/sdk`
-- 2021-02-18 -- Merged `@onflow/decode` into `@onflow/sdk`
-- 2021-02-18 -- Merged `@onflow/encode` into `@onflow/sdk`
-- 2021-02-18 -- Merged `@onflow/interaction` into `@onflow/sdk`
-- 2021-02-18 -- Merged `@onflow/response` into `@onflow/sdk`
-- 2021-02-18 -- Merged all `@onflow/resolve-*` into `@onflow/sdk`
-- 2021-02-18 -- Merged all `@onflow/build-*` into `@onflow/sdk`
+- 2021-02-18 -- Merged `@onflow/send` into `@blocto/flow-sdk`
+- 2021-02-18 -- Merged `@onflow/decode` into `@blocto/flow-sdk`
+- 2021-02-18 -- Merged `@onflow/encode` into `@blocto/flow-sdk`
+- 2021-02-18 -- Merged `@onflow/interaction` into `@blocto/flow-sdk`
+- 2021-02-18 -- Merged `@onflow/response` into `@blocto/flow-sdk`
+- 2021-02-18 -- Merged all `@onflow/resolve-*` into `@blocto/flow-sdk`
+- 2021-02-18 -- Merged all `@onflow/build-*` into `@blocto/flow-sdk`
 
 ## 0.0.45-alpha.[1-3] -- 2021-02-02
 
@@ -1031,70 +1031,70 @@ type Metadata {
 
 ## 0.0.44 -- 2020-12-11
 
-- 2020-12-11 -- VSN `@onflow/sdk-resolve-ref-block-id` 0.0.0 -> 0.0.7
+- 2020-12-11 -- VSN `@blocto/flow-sdk-resolve-ref-block-id` 0.0.0 -> 0.0.7
 - 2020-12-11 -- VSN `@onflow/decode` 0.0.9 -> 0.0.10
 - 2020-12-11 -- VSN `@onflow/send` 0.0.34 -> 0.0.34
 
 ## 0.0.43 -- 2020-10-28
 
-- 2020-11-04 -- VSN `@onflow/sdk-resolve-signatures` 0.0.4 -> 0.0.5
+- 2020-11-04 -- VSN `@blocto/flow-sdk-resolve-signatures` 0.0.4 -> 0.0.5
 
 ## 0.0.42 -- 2020-10-28
 
 - 2020-10-28 -- VSN `@onflow/decode` 0.0.8 -> 0.0.9
-- 2020-10-28 -- VSN `@onflow/sdk-build-authorizations` 0.0.0 -> 0.0.1
-- 2020-10-28 -- VSN `@onflow/sdk-resolve-ref-block-id` 0.0.0 -> 0.0.3
-- 2020-10-28 -- VSN `@onflow/sdk-resolve-signatures` 0.0.3 -> 0.0.4
+- 2020-10-28 -- VSN `@blocto/flow-sdk-build-authorizations` 0.0.0 -> 0.0.1
+- 2020-10-28 -- VSN `@blocto/flow-sdk-resolve-ref-block-id` 0.0.0 -> 0.0.3
+- 2020-10-28 -- VSN `@blocto/flow-sdk-resolve-signatures` 0.0.3 -> 0.0.4
 
 ## 0.0.41 -- 2020-10-28
 
-- 2020-10-28 -- VSN `@onflow/sdk-resolve-signatures` 0.0.2 -> 0.0.3
+- 2020-10-28 -- VSN `@blocto/flow-sdk-resolve-signatures` 0.0.2 -> 0.0.3
 
 ## 0.0.40 -- 2020-10-28
 
-- 2020-10-28 -- VSN `@onflow/sdk-resolve-signatures` 0.0.1 -> 0.0.2
+- 2020-10-28 -- VSN `@blocto/flow-sdk-resolve-signatures` 0.0.1 -> 0.0.2
 
 ## 0.0.39 -- 2020-10-08
 
 - 2020-10-08 -- VSN `@onflow/decode` 0.0.7 -> 0.0.8
-- 2020-10-08 -- VSN `@onflow/sdk-build-get-account` 0.0.0 -> 0.0.1
+- 2020-10-08 -- VSN `@blocto/flow-sdk-build-get-account` 0.0.0 -> 0.0.1
 
 ## 0.0.38 -- 2020-10-07
 
-- 2020-10-07 -- Proxy `@onflow/sdk-resolve-ref-block-id` at the top level
+- 2020-10-07 -- Proxy `@blocto/flow-sdk-resolve-ref-block-id` at the top level
 - 2020-10-07 -- Removed export of resolveProposerSequenceNumber (it never worked anyways)
 
 ## 0.0.37 -- 2020-10-07
 
-- 2020-10-07 -- VSN `@onflow/sdk-resolve-signatures` 0.0.0 -> 0.0.1
+- 2020-10-07 -- VSN `@blocto/flow-sdk-resolve-signatures` 0.0.0 -> 0.0.1
 
 ## 0.0.36 -- 2020-10-07
 
-- 2020-10-07 -- Proxy `@onflow/sdk-build-authorizations` at the top level
-- 2020-10-07 -- Proxy `@onflow/sdk-build-get-account` at the top level
-- 2020-10-07 -- Proxy `@onflow/sdk-build-get-events` at the top level
-- 2020-10-07 -- Proxy `@onflow/sdk-build-get-latest-block` at the top level
-- 2020-10-07 -- Proxy `@onflow/sdk-build-get-block-by-id` at the top level
-- 2020-10-07 -- Proxy `@onflow/sdk-build-get-block-by-height` at the top level
-- 2020-10-07 -- Proxy `@onflow/sdk-build-transaction-status` at the top level
-- 2020-10-07 -- Proxy `@onflow/sdk-build-limit` at the top level
-- 2020-10-07 -- Proxy `@onflow/sdk-build-params` at the top level
-- 2020-10-07 -- Proxy `@onflow/sdk-build-arguments` at the top level
-- 2020-10-07 -- Proxy `@onflow/sdk-build-proposer` at the top level
-- 2020-10-07 -- Proxy `@onflow/sdk-build-payer` at the top level
-- 2020-10-07 -- Proxy `@onflow/sdk-build-ping` at the top level
-- 2020-10-07 -- Proxy `@onflow/sdk-build-ref` at the top level
-- 2020-10-07 -- Proxy `@onflow/sdk-build-script` at the top level
-- 2020-10-07 -- Proxy `@onflow/sdk-build-transaction` at the top level
-- 2020-10-07 -- Proxy `@onflow/sdk-build-validator` at the top level
-- 2020-10-07 -- Proxy `@onflow/sdk-build-invariant` at the top level
+- 2020-10-07 -- Proxy `@blocto/flow-sdk-build-authorizations` at the top level
+- 2020-10-07 -- Proxy `@blocto/flow-sdk-build-get-account` at the top level
+- 2020-10-07 -- Proxy `@blocto/flow-sdk-build-get-events` at the top level
+- 2020-10-07 -- Proxy `@blocto/flow-sdk-build-get-latest-block` at the top level
+- 2020-10-07 -- Proxy `@blocto/flow-sdk-build-get-block-by-id` at the top level
+- 2020-10-07 -- Proxy `@blocto/flow-sdk-build-get-block-by-height` at the top level
+- 2020-10-07 -- Proxy `@blocto/flow-sdk-build-transaction-status` at the top level
+- 2020-10-07 -- Proxy `@blocto/flow-sdk-build-limit` at the top level
+- 2020-10-07 -- Proxy `@blocto/flow-sdk-build-params` at the top level
+- 2020-10-07 -- Proxy `@blocto/flow-sdk-build-arguments` at the top level
+- 2020-10-07 -- Proxy `@blocto/flow-sdk-build-proposer` at the top level
+- 2020-10-07 -- Proxy `@blocto/flow-sdk-build-payer` at the top level
+- 2020-10-07 -- Proxy `@blocto/flow-sdk-build-ping` at the top level
+- 2020-10-07 -- Proxy `@blocto/flow-sdk-build-ref` at the top level
+- 2020-10-07 -- Proxy `@blocto/flow-sdk-build-script` at the top level
+- 2020-10-07 -- Proxy `@blocto/flow-sdk-build-transaction` at the top level
+- 2020-10-07 -- Proxy `@blocto/flow-sdk-build-validator` at the top level
+- 2020-10-07 -- Proxy `@blocto/flow-sdk-build-invariant` at the top level
 
 ## 0.0.35 -- 2020-09-29
 
-- 2020-09-29 -- Proxy @onflow/sdk-resolve-validators at the top level
-- 2020-09-29 -- Proxy @onflow/sdk-resolve-signatures at the top level
-- 2020-09-29 -- Proxy @onflow/sdk-resolve-accounts at the top level
-- 2020-09-29 -- Proxy @onflow/sdk-resolve-arguments at the top level
+- 2020-09-29 -- Proxy @blocto/flow-sdk-resolve-validators at the top level
+- 2020-09-29 -- Proxy @blocto/flow-sdk-resolve-signatures at the top level
+- 2020-09-29 -- Proxy @blocto/flow-sdk-resolve-accounts at the top level
+- 2020-09-29 -- Proxy @blocto/flow-sdk-resolve-arguments at the top level
 - 2020-09-29 -- VSN `@onflow/send` 0.0.21 -> 0.0.22
 
 ## 0.0.34 - 2020-09-29
@@ -1103,8 +1103,8 @@ type Metadata {
 
 ## 0.0.33 - 2020-09-29
 
-- 2020-09-29 -- Proxy sdk.resolveArguments to `@onflow/sdk-resolve-arguments`
-- 2020-09-29 -- VSN `@onflow/sdk-resolve-cadence` 0.0.0 -> 0.0.1
+- 2020-09-29 -- Proxy sdk.resolveArguments to `@blocto/flow-sdk-resolve-arguments`
+- 2020-09-29 -- VSN `@blocto/flow-sdk-resolve-cadence` 0.0.0 -> 0.0.1
 
 ## 0.0.32 -- 2020-09-29
 

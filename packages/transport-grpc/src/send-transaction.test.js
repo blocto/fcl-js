@@ -11,7 +11,7 @@ import {
   transaction,
   voucherIntercept,
   voucherToTxId,
-} from "@onflow/sdk"
+} from "@blocto/flow-sdk"
 import {sendTransaction} from "./send-transaction"
 
 const hexStrToUInt8Array = hex => {

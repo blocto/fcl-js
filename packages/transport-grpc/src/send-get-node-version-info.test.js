@@ -5,7 +5,7 @@ import {
   getNodeVersionInfo,
   resolve,
   response as responseADT,
-} from "@onflow/sdk"
+} from "@blocto/flow-sdk"
 
 describe("Get Network Parameters", () => {
   test("GetNetworkParametersResult", async () => {

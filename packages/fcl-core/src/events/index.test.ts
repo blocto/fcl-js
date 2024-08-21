@@ -1,6 +1,6 @@
 import {EventStream} from "@onflow/typedefs"
 import {events} from "."
-import * as sdk from "@onflow/sdk"
+import * as sdk from "@blocto/flow-sdk"
 
 describe("events", () => {
   let sendSpy

@@ -1,5 +1,5 @@
 ---
-"@onflow/sdk": patch
+"@blocto/flow-sdk": patch
 ---
 
 Use keyID from signatures

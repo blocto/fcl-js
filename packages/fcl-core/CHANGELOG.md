@@ -15,14 +15,14 @@
 - Updated dependencies [[`fe5e1b3d`](https://github.com/onflow/fcl-js/commit/fe5e1b3d330b7734740cceb9a873d1b680f28175)]:
   - @onflow/util-actor@1.3.3
   - @onflow/config@1.4.1
-  - @onflow/sdk@1.5.1
+  - @blocto/flow-sdk@1.5.1
 
 ## 1.9.1
 
 ### Patch Changes
 
 - Updated dependencies [[`7ef7edf1`](https://github.com/onflow/fcl-js/commit/7ef7edf1e134041da944f24f49e661caadcc7074), [`6c635f9f`](https://github.com/onflow/fcl-js/commit/6c635f9ff340284845ffe1196965ced7c748294f), [`8fb453b5`](https://github.com/onflow/fcl-js/commit/8fb453b5ff3a00285d91a5432972afbe9e779706), [`ad089fe7`](https://github.com/onflow/fcl-js/commit/ad089fe7556767e1fae96f3f2e98fd76c49bba88)]:
-  - @onflow/sdk@1.5.0
+  - @blocto/flow-sdk@1.5.0
   - @onflow/types@1.4.0
   - @onflow/util-invariant@1.2.3
   - @onflow/config@1.4.0
@@ -47,7 +47,7 @@
 
 - Updated dependencies [[`699303cf`](https://github.com/onflow/fcl-js/commit/699303cfd5e0545267632c9236f8c91833ce1259), [`7ed491c5`](https://github.com/onflow/fcl-js/commit/7ed491c5d2335fbbff04444d41f1f1580763d8d3), [`45d3c30c`](https://github.com/onflow/fcl-js/commit/45d3c30c8965512dde41f10d1c64c813811c3c0f), [`acf90a78`](https://github.com/onflow/fcl-js/commit/acf90a7841f843227d5d9edb450ef08322c77c4d), [`b9c078ce`](https://github.com/onflow/fcl-js/commit/b9c078ce87869c2b41dff07b861cea09a294c6a1), [`151a2290`](https://github.com/onflow/fcl-js/commit/151a2290e92fbcb399052476004c7f20ceda5c2d), [`e74c4a60`](https://github.com/onflow/fcl-js/commit/e74c4a60f38f366874aa1391ca1c890a7ad3a42a), [`037dc2f9`](https://github.com/onflow/fcl-js/commit/037dc2f9db9c22185e3c048c65e23e0efa70085f), [`b2c73354`](https://github.com/onflow/fcl-js/commit/b2c733545a3904dcff959a2e12b4cf90383bdac0), [`80db8166`](https://github.com/onflow/fcl-js/commit/80db816620d7643c35a0fca7149c15de92f7bc88), [`0d09d838`](https://github.com/onflow/fcl-js/commit/0d09d8386c2fc472833df7152467d477f36dddc4), [`fdd52c45`](https://github.com/onflow/fcl-js/commit/fdd52c45b3a64210c5f716e13aa4d08d3796370c)]:
   - @onflow/types@1.3.0
-  - @onflow/sdk@1.4.0
+  - @blocto/flow-sdk@1.4.0
   - @onflow/util-address@1.2.2
   - @onflow/util-invariant@1.2.2
   - @onflow/util-template@1.2.2
@@ -64,7 +64,7 @@
 
 - Updated dependencies [[`7ed491c5`](https://github.com/onflow/fcl-js/commit/7ed491c5d2335fbbff04444d41f1f1580763d8d3)]:
   - @onflow/util-address@1.2.2-alpha.3
-  - @onflow/sdk@1.4.0-alpha.9
+  - @blocto/flow-sdk@1.4.0-alpha.9
 
 ## 1.9.0-alpha.7
 
@@ -75,7 +75,7 @@
 ### Patch Changes
 
 - Updated dependencies [[`80db8166`](https://github.com/onflow/fcl-js/commit/80db816620d7643c35a0fca7149c15de92f7bc88)]:
-  - @onflow/sdk@1.4.0-alpha.8
+  - @blocto/flow-sdk@1.4.0-alpha.8
 
 ## 1.9.0-alpha.6
 
@@ -86,7 +86,7 @@
 ### Patch Changes
 
 - Updated dependencies [[`b2c73354`](https://github.com/onflow/fcl-js/commit/b2c733545a3904dcff959a2e12b4cf90383bdac0)]:
-  - @onflow/sdk@1.4.0-alpha.7
+  - @blocto/flow-sdk@1.4.0-alpha.7
 
 ## 1.9.0-alpha.5
 
@@ -94,7 +94,7 @@
 
 - Updated dependencies [[`fdd52c45`](https://github.com/onflow/fcl-js/commit/fdd52c45b3a64210c5f716e13aa4d08d3796370c)]:
   - @onflow/config@1.3.0-alpha.3
-  - @onflow/sdk@1.4.0-alpha.6
+  - @blocto/flow-sdk@1.4.0-alpha.6
 
 ## 1.9.0-alpha.4
 
@@ -107,7 +107,7 @@
 ### Patch Changes
 
 - Updated dependencies [[`151a2290`](https://github.com/onflow/fcl-js/commit/151a2290e92fbcb399052476004c7f20ceda5c2d)]:
-  - @onflow/sdk@1.4.0-alpha.5
+  - @blocto/flow-sdk@1.4.0-alpha.5
 
 ## 1.8.2-alpha.2
 
@@ -123,7 +123,7 @@
 - [#1832](https://github.com/onflow/fcl-js/pull/1832) [`037dc2f9`](https://github.com/onflow/fcl-js/commit/037dc2f9db9c22185e3c048c65e23e0efa70085f) Thanks [@jribbink](https://github.com/jribbink)! - Update access modifiers to support Cadence 1.0
 
 - Updated dependencies [[`037dc2f9`](https://github.com/onflow/fcl-js/commit/037dc2f9db9c22185e3c048c65e23e0efa70085f)]:
-  - @onflow/sdk@1.4.0-alpha.4
+  - @blocto/flow-sdk@1.4.0-alpha.4
 
 ## 1.8.2-alpha.0
 
@@ -142,7 +142,7 @@
   - @onflow/config@1.2.2-alpha.2
   - @onflow/types@1.3.0-alpha.2
   - @onflow/rlp@1.2.2-alpha.2
-  - @onflow/sdk@1.4.0-alpha.3
+  - @blocto/flow-sdk@1.4.0-alpha.3
 
 ## 1.9.0
 
@@ -164,7 +164,7 @@
   - @onflow/util-actor@1.3.1
   - @onflow/config@1.2.1
   - @onflow/rlp@1.2.1
-  - @onflow/sdk@1.3.1
+  - @blocto/flow-sdk@1.3.1
   - @onflow/types@1.2.1
   - @onflow/util-address@1.2.1
   - @onflow/util-invariant@1.2.1
@@ -191,7 +191,7 @@
   - @onflow/rlp@1.2.0
   - @onflow/util-actor@1.3.0
   - @onflow/config@1.2.0
-  - @onflow/sdk@1.3.0
+  - @blocto/flow-sdk@1.3.0
 
 ## 1.7.0
 
@@ -210,7 +210,7 @@
 - [#1532](https://github.com/onflow/fcl-js/pull/1532) [`06846f8e`](https://github.com/onflow/fcl-js/commit/06846f8e9c1e2cdf10aa8dfdff6e6c5b31af81e5) Thanks [@JeffreyDoyle](https://github.com/JeffreyDoyle)! - Fixed duplicate signatures when sending transaction
 
 - Updated dependencies [[`06846f8e`](https://github.com/onflow/fcl-js/commit/06846f8e9c1e2cdf10aa8dfdff6e6c5b31af81e5), [`06846f8e`](https://github.com/onflow/fcl-js/commit/06846f8e9c1e2cdf10aa8dfdff6e6c5b31af81e5)]:
-  - @onflow/sdk@1.2.3
+  - @blocto/flow-sdk@1.2.3
 
 ## 1.6.0
 
@@ -231,7 +231,7 @@
 - [#1767](https://github.com/onflow/fcl-js/pull/1767) [`f6681cfe`](https://github.com/onflow/fcl-js/commit/f6681cfebc5aab78cbf74f34b5655faa4f06a8c4) Thanks [@jribbink](https://github.com/jribbink)! - Fix responseBody not being included in errors
 
 - Updated dependencies [[`f6681cfe`](https://github.com/onflow/fcl-js/commit/f6681cfebc5aab78cbf74f34b5655faa4f06a8c4)]:
-  - @onflow/sdk@1.2.2
+  - @blocto/flow-sdk@1.2.2
 
 ## 1.5.1
 
@@ -263,7 +263,7 @@
 
 - Updated dependencies [[`6193bd42`](https://github.com/onflow/fcl-js/commit/6193bd420371494a975f19fd001af6af012bd72f), [`fefb578a`](https://github.com/onflow/fcl-js/commit/fefb578ae96a112164c561fa3e0a490008d8a5f6), [`62fd9baf`](https://github.com/onflow/fcl-js/commit/62fd9baf28afbb2742f9e8c5ef6674adc9d030b7), [`1553967a`](https://github.com/onflow/fcl-js/commit/1553967aff61c242990b2de509e5dc5b8842ab2d)]:
   - @onflow/config@1.1.1
-  - @onflow/sdk@1.2.1
+  - @blocto/flow-sdk@1.2.1
   - @onflow/util-logger@1.2.1
 
 ## 1.5.0-alpha.5
@@ -273,7 +273,7 @@
 - [#1723](https://github.com/onflow/fcl-js/pull/1723) [`1308f522`](https://github.com/onflow/fcl-js/commit/1308f522e56cef517a60be465789815281bab6d8) Thanks [@jribbink](https://github.com/jribbink)! - Fixed types for sdk builder functions (fixes fcl.send/fcl.build type errors)
 
 - Updated dependencies [[`1553967a`](https://github.com/onflow/fcl-js/commit/1553967aff61c242990b2de509e5dc5b8842ab2d)]:
-  - @onflow/sdk@1.2.1-alpha.2
+  - @blocto/flow-sdk@1.2.1-alpha.2
 
 ## 1.5.0-alpha.4
 
@@ -291,7 +291,7 @@
 
 - Updated dependencies [[`6193bd42`](https://github.com/onflow/fcl-js/commit/6193bd420371494a975f19fd001af6af012bd72f), [`fefb578a`](https://github.com/onflow/fcl-js/commit/fefb578ae96a112164c561fa3e0a490008d8a5f6)]:
   - @onflow/config@1.1.1-alpha.0
-  - @onflow/sdk@1.2.1-alpha.0
+  - @blocto/flow-sdk@1.2.1-alpha.0
   - @onflow/util-logger@1.2.1-alpha.0
 
 ## 1.5.0-alpha.2
@@ -359,7 +359,7 @@
 - Updated dependencies [[`e10e3c9c`](https://github.com/onflow/fcl-js/commit/e10e3c9c1f611e7dfd8a0bf7292473c71c2e04b9), [`2d143bc7`](https://github.com/onflow/fcl-js/commit/2d143bc7b30f59e9f9289eee020cfaae74b4f4e1), [`74c75d51`](https://github.com/onflow/fcl-js/commit/74c75d5167560eb07da6e21f9f7835b5639ee7d5), [`62dfafa9`](https://github.com/onflow/fcl-js/commit/62dfafa9c7adc3933822b0d3171d6eb025f1719e), [`66fe102a`](https://github.com/onflow/fcl-js/commit/66fe102a269aca71bd82c6ac55bb23527d04db01), [`62dfafa9`](https://github.com/onflow/fcl-js/commit/62dfafa9c7adc3933822b0d3171d6eb025f1719e), [`c20bc344`](https://github.com/onflow/fcl-js/commit/c20bc34448a22966d349b0b1c4c0f742ae93a355), [`de7ffa47`](https://github.com/onflow/fcl-js/commit/de7ffa4768ea19e9378e7db74c85750b6554027c), [`bbdeea32`](https://github.com/onflow/fcl-js/commit/bbdeea32f024d6eea4a74c94023e01688a38b6cb), [`2512b5c5`](https://github.com/onflow/fcl-js/commit/2512b5c53dff708fca97cd8afdbb1f4a46b2f106), [`544d8ebb`](https://github.com/onflow/fcl-js/commit/544d8ebb298ce1be8491d5609729110211b83242), [`bd6ebb8e`](https://github.com/onflow/fcl-js/commit/bd6ebb8eea5b0de26c0de9b2e0e7561006783040), [`35052784`](https://github.com/onflow/fcl-js/commit/3505278418e64045248c04fd21f0c09ddbb3132e), [`5bec5576`](https://github.com/onflow/fcl-js/commit/5bec5576a79809d0684411736e3f4c02b8051c22), [`48ff4330`](https://github.com/onflow/fcl-js/commit/48ff43303c30bab86274bd281f6af28affdb2f25), [`d9a49531`](https://github.com/onflow/fcl-js/commit/d9a495316cd03ed0de99e0f01d1b8850a1f0eec4), [`7b122a49`](https://github.com/onflow/fcl-js/commit/7b122a49b47b2f261e67d4b08d0d8d32d35d3a72), [`f68c1433`](https://github.com/onflow/fcl-js/commit/f68c14337b5470b4d79ec682f7bb41ddeae2e020), [`687f45ec`](https://github.com/onflow/fcl-js/commit/687f45ec25e613399f031497634c4102935d114d), [`8c921ba2`](https://github.com/onflow/fcl-js/commit/8c921ba2098d2449846bb4a3fdf44a633f4cb11e), [`a4a1c7bf`](https://github.com/onflow/fcl-js/commit/a4a1c7bf0be9facb213f56a91d1a66b60bdea64b)]:
   - @onflow/config@1.1.0
   - @onflow/util-address@1.1.0
-  - @onflow/sdk@1.2.0
+  - @blocto/flow-sdk@1.2.0
   - @onflow/rlp@1.1.0
   - @onflow/types@1.1.0
   - @onflow/util-actor@1.2.0
@@ -381,7 +381,7 @@
 - [#1663](https://github.com/onflow/fcl-js/pull/1663) [`62dfafa9`](https://github.com/onflow/fcl-js/commit/62dfafa9c7adc3933822b0d3171d6eb025f1719e) Thanks [@nialexsan](https://github.com/nialexsan)! - Upgrade jest to v29.5 and update tests accordingly. Change build to transpile with ESM modules.
 
 - Updated dependencies [[`62dfafa9`](https://github.com/onflow/fcl-js/commit/62dfafa9c7adc3933822b0d3171d6eb025f1719e), [`62dfafa9`](https://github.com/onflow/fcl-js/commit/62dfafa9c7adc3933822b0d3171d6eb025f1719e)]:
-  - @onflow/sdk@1.2.0-alpha.10
+  - @blocto/flow-sdk@1.2.0-alpha.10
   - @onflow/config@1.1.0-alpha.8
   - @onflow/rlp@1.1.0-alpha.2
   - @onflow/types@1.1.0-alpha.2
@@ -408,7 +408,7 @@
   - @onflow/config@1.1.0-alpha.7
   - @onflow/types@1.1.0-alpha.1
   - @onflow/rlp@1.1.0-alpha.1
-  - @onflow/sdk@1.2.0-alpha.9
+  - @blocto/flow-sdk@1.2.0-alpha.9
 
 ## 1.4.0-alpha.9
 
@@ -451,7 +451,7 @@
 ### Patch Changes
 
 - Updated dependencies [[`7b122a49`](https://github.com/onflow/fcl-js/commit/7b122a49b47b2f261e67d4b08d0d8d32d35d3a72)]:
-  - @onflow/sdk@1.2.0-alpha.7
+  - @blocto/flow-sdk@1.2.0-alpha.7
 
 ## 1.4.0-alpha.4
 
@@ -460,7 +460,7 @@
 - Updated dependencies [[`d9a49531`](https://github.com/onflow/fcl-js/commit/d9a495316cd03ed0de99e0f01d1b8850a1f0eec4)]:
   - @onflow/config@1.1.0-alpha.4
   - @onflow/rlp@1.1.0-alpha.0
-  - @onflow/sdk@1.2.0-alpha.6
+  - @blocto/flow-sdk@1.2.0-alpha.6
   - @onflow/types@1.1.0-alpha.0
   - @onflow/util-actor@1.2.0-alpha.0
   - @onflow/util-address@1.1.0-alpha.3
@@ -479,7 +479,7 @@
 
 - Updated dependencies [[`bbdeea32`](https://github.com/onflow/fcl-js/commit/bbdeea32f024d6eea4a74c94023e01688a38b6cb)]:
   - @onflow/config@1.1.0-alpha.3
-  - @onflow/sdk@1.2.0-alpha.5
+  - @blocto/flow-sdk@1.2.0-alpha.5
   - @onflow/util-address@1.1.0-alpha.2
 
 ## 1.4.0-alpha.2
@@ -491,7 +491,7 @@
 ### Patch Changes
 
 - Updated dependencies [[`74c75d51`](https://github.com/onflow/fcl-js/commit/74c75d5167560eb07da6e21f9f7835b5639ee7d5), [`f68c1433`](https://github.com/onflow/fcl-js/commit/f68c14337b5470b4d79ec682f7bb41ddeae2e020)]:
-  - @onflow/sdk@1.2.0-alpha.4
+  - @blocto/flow-sdk@1.2.0-alpha.4
   - @onflow/config@1.1.0-alpha.2
 
 ## 1.4.0-alpha.1
@@ -503,7 +503,7 @@
 ### Patch Changes
 
 - Updated dependencies [[`c20bc344`](https://github.com/onflow/fcl-js/commit/c20bc34448a22966d349b0b1c4c0f742ae93a355), [`5bec5576`](https://github.com/onflow/fcl-js/commit/5bec5576a79809d0684411736e3f4c02b8051c22), [`687f45ec`](https://github.com/onflow/fcl-js/commit/687f45ec25e613399f031497634c4102935d114d)]:
-  - @onflow/sdk@1.2.0-alpha.1
+  - @blocto/flow-sdk@1.2.0-alpha.1
   - @onflow/util-address@1.1.0-alpha.0
   - @onflow/util-uid@1.1.0-alpha.0
 
@@ -517,7 +517,7 @@
 
 - Updated dependencies [[`e10e3c9c`](https://github.com/onflow/fcl-js/commit/e10e3c9c1f611e7dfd8a0bf7292473c71c2e04b9)]:
   - @onflow/config@1.1.0-alpha.0
-  - @onflow/sdk@1.1.3-alpha.0
+  - @blocto/flow-sdk@1.1.3-alpha.0
   - @onflow/util-logger@1.1.3-alpha.0
 
 ## 1.3.2
@@ -586,7 +586,7 @@
 * [#1404](https://github.com/onflow/fcl-js/pull/1404) [`f9f1dab7`](https://github.com/onflow/fcl-js/commit/f9f1dab70a6014b68ce5197544fae396340b6670) Thanks [@chasefleming](https://github.com/chasefleming)! - Fixes issue where Discovery API was not loading for server side rendered applications on Safari or Chrome Incognito.
 
 * Updated dependencies [[`99e03af7`](https://github.com/onflow/fcl-js/commit/99e03af76e526593e5c989e43754ce23420e317f)]:
-  - @onflow/sdk@1.1.2
+  - @blocto/flow-sdk@1.1.2
 
 ## 1.3.0-alpha.10
 
@@ -674,14 +674,14 @@
 - [#1357](https://github.com/onflow/fcl-js/pull/1357) [`ecbd77b2`](https://github.com/onflow/fcl-js/commit/ecbd77b2acfbe4a28793baca3db47c1d5347247d) Thanks [@gregsantos](https://github.com/gregsantos)! - Improve building discovery service on authn
 
 - Updated dependencies []:
-  - @onflow/sdk@1.1.2-alpha.1
+  - @blocto/flow-sdk@1.1.2-alpha.1
 
 ## 1.2.1-alpha.0
 
 ### Patch Changes
 
 - Updated dependencies [[`99e03af7`](https://github.com/onflow/fcl-js/commit/99e03af76e526593e5c989e43754ce23420e317f)]:
-  - @onflow/sdk@1.1.2-alpha.0
+  - @blocto/flow-sdk@1.1.2-alpha.0
 
 ## 1.2.0
 
@@ -706,7 +706,7 @@
 * [#1227](https://github.com/onflow/fcl-js/pull/1227) [`352f1460`](https://github.com/onflow/fcl-js/commit/352f1460a2f34d228a74fa4bbc6fcf6e68a968b6) Thanks [@jribbink](https://github.com/jribbink)! - Switch to fcl-bundle instead of microbundle for build scripts
 
 * Updated dependencies [[`053ff10d`](https://github.com/onflow/fcl-js/commit/053ff10dbc1d6ec64b1cafec9dad6b58ad154552), [`352f1460`](https://github.com/onflow/fcl-js/commit/352f1460a2f34d228a74fa4bbc6fcf6e68a968b6)]:
-  - @onflow/sdk@1.1.1
+  - @blocto/flow-sdk@1.1.1
   - @onflow/config@1.0.3
   - @onflow/rlp@1.0.2
   - @onflow/types@1.0.3
@@ -734,7 +734,7 @@
 * Updated dependencies [[`352f1460`](https://github.com/onflow/fcl-js/commit/352f1460a2f34d228a74fa4bbc6fcf6e68a968b6)]:
   - @onflow/config@1.0.3-alpha.0
   - @onflow/rlp@1.0.2-alpha.0
-  - @onflow/sdk@1.1.1-alpha.1
+  - @blocto/flow-sdk@1.1.1-alpha.1
   - @onflow/types@1.0.3-alpha.0
   - @onflow/util-actor@1.1.1-alpha.0
   - @onflow/util-address@1.0.2-alpha.0
@@ -750,7 +750,7 @@
 - [#1274](https://github.com/onflow/fcl-js/pull/1274) [`865e412c`](https://github.com/onflow/fcl-js/commit/865e412c5c975e68f30e9c8b4b225030560a5187) Thanks [@jribbink](https://github.com/jribbink)! - Throw error if FCL popup/tab is blocked from opening or if sendMsgToFCL cannot access parent window reference for postMessage.
 
 - Updated dependencies []:
-  - @onflow/sdk@1.1.1-alpha.0
+  - @blocto/flow-sdk@1.1.1-alpha.0
   - @onflow/util-logger@1.1.1-alpha.0
 
 ## 1.1.0
@@ -771,7 +771,7 @@
 * [#1210](https://github.com/onflow/fcl-js/pull/1210) [`457f4996`](https://github.com/onflow/fcl-js/commit/457f49964dd2a0e849ae18a8dd0864bcb52082e8) Thanks [@jribbink](https://github.com/jribbink)! - Add deprecation warning when "env" is used instead of "flow.network" in config
 
 * Updated dependencies [[`d09ba0f0`](https://github.com/onflow/fcl-js/commit/d09ba0f00f53f93feb351a3da5e821eada6287f0), [`90d5163a`](https://github.com/onflow/fcl-js/commit/90d5163a7723dd529324a271ea8accaa43a3d7be), [`45951f1a`](https://github.com/onflow/fcl-js/commit/45951f1af310d302ee708e43d1a939265f404d2c), [`cc422a78`](https://github.com/onflow/fcl-js/commit/cc422a781d0e87ba8945c336902bbc9542d5b4c4), [`1654ebbe`](https://github.com/onflow/fcl-js/commit/1654ebbe45ea5e4ca13536ed2139520ce21ee314), [`d09ba0f0`](https://github.com/onflow/fcl-js/commit/d09ba0f00f53f93feb351a3da5e821eada6287f0), [`e0d3a377`](https://github.com/onflow/fcl-js/commit/e0d3a377260338a37518f0ad2a52dcc618fd9bc5), [`d1765950`](https://github.com/onflow/fcl-js/commit/d176595021681e660ae0a06161340833280091fb), [`4ec2bdc9`](https://github.com/onflow/fcl-js/commit/4ec2bdc9805ac081bdc8003b6e1ea52e02d3909d)]:
-  - @onflow/sdk@1.1.0
+  - @blocto/flow-sdk@1.1.0
   - @onflow/types@1.0.2
   - @onflow/util-logger@1.1.0
   - @onflow/util-template@1.0.2
@@ -789,7 +789,7 @@
 - [#1245](https://github.com/onflow/fcl-js/pull/1245) [`d09ba0f0`](https://github.com/onflow/fcl-js/commit/d09ba0f00f53f93feb351a3da5e821eada6287f0) Thanks [@jribbink](https://github.com/jribbink)! - Switch deprecation warnings to standardized warnings introduced by @onflow/util-logger (log.deprecate)
 
 - Updated dependencies [[`d09ba0f0`](https://github.com/onflow/fcl-js/commit/d09ba0f00f53f93feb351a3da5e821eada6287f0), [`d09ba0f0`](https://github.com/onflow/fcl-js/commit/d09ba0f00f53f93feb351a3da5e821eada6287f0), [`4ec2bdc9`](https://github.com/onflow/fcl-js/commit/4ec2bdc9805ac081bdc8003b6e1ea52e02d3909d)]:
-  - @onflow/sdk@1.1.0-alpha.3
+  - @blocto/flow-sdk@1.1.0-alpha.3
   - @onflow/types@1.0.2-alpha.0
   - @onflow/util-logger@1.1.0-alpha.2
   - @onflow/util-template@1.0.2-alpha.0
@@ -803,7 +803,7 @@
 - [#1210](https://github.com/onflow/fcl-js/pull/1210) [`457f4996`](https://github.com/onflow/fcl-js/commit/457f49964dd2a0e849ae18a8dd0864bcb52082e8) Thanks [@jribbink](https://github.com/jribbink)! - Add deprecation warning when "env" is used instead of "flow.network" in config
 
 - Updated dependencies [[`e0d3a377`](https://github.com/onflow/fcl-js/commit/e0d3a377260338a37518f0ad2a52dcc618fd9bc5)]:
-  - @onflow/sdk@1.1.0-alpha.2
+  - @blocto/flow-sdk@1.1.0-alpha.2
 
 ## 1.0.3-alpha.0
 
@@ -814,7 +814,7 @@
 * [#1211](https://github.com/onflow/fcl-js/pull/1211) [`f4c6fb9a`](https://github.com/onflow/fcl-js/commit/f4c6fb9a05e8cf717afcd6a3b3b4c8b102f253e3) Thanks [@gregsantos](https://github.com/gregsantos)! - Update event listeners in strategies
   Fixes a bug where event listener was not being removed on close
 * Updated dependencies [[`1654ebbe`](https://github.com/onflow/fcl-js/commit/1654ebbe45ea5e4ca13536ed2139520ce21ee314), [`d1765950`](https://github.com/onflow/fcl-js/commit/d176595021681e660ae0a06161340833280091fb)]:
-  - @onflow/sdk@1.0.2-alpha.0
+  - @blocto/flow-sdk@1.0.2-alpha.0
 
 ## 1.0.2
 
@@ -833,7 +833,7 @@
 * Updated dependencies [[`9e7e4cfb`](https://github.com/onflow/fcl-js/commit/9e7e4cfbc026765019653b0e891e63a2d789ceb4)]:
   - @onflow/config@1.0.1
   - @onflow/rlp@1.0.1
-  - @onflow/sdk@1.0.1
+  - @blocto/flow-sdk@1.0.1
   - @onflow/types@1.0.1
   - @onflow/util-actor@1.0.1
   - @onflow/util-address@1.0.1
@@ -872,7 +872,7 @@
 - [#1115](https://github.com/onflow/fcl-js/pull/1115) [`f7a985b3`](https://github.com/onflow/fcl-js/commit/f7a985b3cb64ed80c7354f97177ae7ef006530fe) Thanks [@JeffreyDoyle](https://github.com/JeffreyDoyle)! - **BREAKING** Remove deprecated block builders, interaction types and send methods.
 
 - Updated dependencies [[`700433d5`](https://github.com/onflow/fcl-js/commit/700433d50d4156183b09b13781f7f74f23882586), [`6ff970df`](https://github.com/onflow/fcl-js/commit/6ff970dfc04281c86043e1cf8f5bceb633dc4186), [`7287ff14`](https://github.com/onflow/fcl-js/commit/7287ff14d20e19270ff345cd8b274ad5c8509eb7), [`9c191c15`](https://github.com/onflow/fcl-js/commit/9c191c1520ee772b4343265a42ad0e995a92dd9a), [`de47af64`](https://github.com/onflow/fcl-js/commit/de47af647a5bdad154a2d83e2ea2260ab54f0c60), [`2768d1fa`](https://github.com/onflow/fcl-js/commit/2768d1fac5c74f7fc81cd0810fb7f30b68f8ab6d), [`11229868`](https://github.com/onflow/fcl-js/commit/11229868cf916d204901f8bb3f76ee234e9152a8), [`f7a985b3`](https://github.com/onflow/fcl-js/commit/f7a985b3cb64ed80c7354f97177ae7ef006530fe), [`ced27ea8`](https://github.com/onflow/fcl-js/commit/ced27ea855988f02f1312c7b732aa107a410c854)]:
-  - @onflow/sdk@1.0.0
+  - @blocto/flow-sdk@1.0.0
   - @onflow/config@1.0.0
   - @onflow/util-actor@1.0.0
   - @onflow/util-address@1.0.0
@@ -897,7 +897,7 @@
 * Updated dependencies [[`11229868`](https://github.com/onflow/fcl-js/commit/11229868cf916d204901f8bb3f76ee234e9152a8)]:
   - @onflow/config@1.0.0-alpha.2
   - @onflow/rlp@1.0.0-alpha.1
-  - @onflow/sdk@1.0.0-alpha.2
+  - @blocto/flow-sdk@1.0.0-alpha.2
   - @onflow/types@1.0.0-alpha.1
   - @onflow/util-actor@1.0.0-alpha.2
   - @onflow/util-address@1.0.0-alpha.1
@@ -924,7 +924,7 @@
 - [#1115](https://github.com/onflow/fcl-js/pull/1115) [`f7a985b3`](https://github.com/onflow/fcl-js/commit/f7a985b3cb64ed80c7354f97177ae7ef006530fe) Thanks [@JeffreyDoyle](https://github.com/JeffreyDoyle)! - **BREAKING** Remove deprecated block builders, interaction types and send methods.
 
 - Updated dependencies [[`700433d5`](https://github.com/onflow/fcl-js/commit/700433d50d4156183b09b13781f7f74f23882586), [`6ff970df`](https://github.com/onflow/fcl-js/commit/6ff970dfc04281c86043e1cf8f5bceb633dc4186), [`7287ff14`](https://github.com/onflow/fcl-js/commit/7287ff14d20e19270ff345cd8b274ad5c8509eb7), [`9c191c15`](https://github.com/onflow/fcl-js/commit/9c191c1520ee772b4343265a42ad0e995a92dd9a), [`de47af64`](https://github.com/onflow/fcl-js/commit/de47af647a5bdad154a2d83e2ea2260ab54f0c60), [`f7a985b3`](https://github.com/onflow/fcl-js/commit/f7a985b3cb64ed80c7354f97177ae7ef006530fe)]:
-  - @onflow/sdk@1.0.0-alpha.1
+  - @blocto/flow-sdk@1.0.0-alpha.1
   - @onflow/config@1.0.0-alpha.1
   - @onflow/util-actor@1.0.0-alpha.1
 
@@ -946,7 +946,7 @@
   - @onflow/util-address@1.0.0-alpha.0
   - @onflow/util-invariant@1.0.0-alpha.0
   - @onflow/rlp@1.0.0-alpha.0
-  - @onflow/sdk@1.0.0-alpha.0
+  - @blocto/flow-sdk@1.0.0-alpha.0
   - @onflow/types@1.0.0-alpha.0
   - @onflow/util-actor@1.0.0-alpha.0
   - @onflow/util-template@1.0.0-alpha.0
@@ -974,22 +974,22 @@ MESSAGE = HEX(
 
 ## 0.0.79-alpha.3 - 2022-02-03
 
-- 2022-02-03 -- [gregsantos](https://github.com/gregsantos): VSN `@onflow/sdk` 0.0.57-alpha.2 -> 0.0.57-alpha.3
+- 2022-02-03 -- [gregsantos](https://github.com/gregsantos): VSN `@blocto/flow-sdk` 0.0.57-alpha.2 -> 0.0.57-alpha.3
 - 2022-02-03 -- [gregsantos](https://github.com/gregsantos): Export `voucherIntercept` and `voucherToTxId` from `sdk`
 - 2022-02-02 -- [gregsantos](https://github.com/gregsantos): Update start script to set current `VERSION`
 
 ## 0.0.79-alpha.2 - 2022-01-21
 
-- 2022-01-21 -- [@JeffreyDoyle](https://github.com/JeffreyDoyle): VSN `@onflow/sdk` 0.0.57-alpha.1 -> 0.0.57-alpha.2
+- 2022-01-21 -- [@JeffreyDoyle](https://github.com/JeffreyDoyle): VSN `@blocto/flow-sdk` 0.0.57-alpha.1 -> 0.0.57-alpha.2
 
 ## 0.0.79-alpha.1 - 2022-01-21
 
-- 2022-01-21 -- [@JeffreyDoyle](https://github.com/JeffreyDoyle): VSN `@onflow/sdk` 0.0.56 -> 0.0.57-alpha.1
+- 2022-01-21 -- [@JeffreyDoyle](https://github.com/JeffreyDoyle): VSN `@blocto/flow-sdk` 0.0.56 -> 0.0.57-alpha.1
 
 ## 0.0.78-alpha.11 - 2022-01-19
 
-- 2022-01-19 -- Expose new `block` method from `@onflow/sdk`.
-- 2022-01-19 -- VSN `@onflow/sdk` 0.0.56-alpha.2 -> 0.0.56-alpha.3
+- 2022-01-19 -- Expose new `block` method from `@blocto/flow-sdk`.
+- 2022-01-19 -- VSN `@blocto/flow-sdk` 0.0.56-alpha.2 -> 0.0.56-alpha.3
 - 2022-01-18 -- Support `discovery.wallet.method` options when set in config for authentication with Discovery API services.
 - 2022-01-18 -- Add missing `service` and `app` to config for exec service redirect.
 
@@ -1267,7 +1267,7 @@ export const SESSION_STORAGE = {
 
 ## 0.0.77-alpha.1 - 2021-07-23
 
-- 2021-07-23 -- VSN `@onflow/sdk` 0.0.53 -> 0.0.54
+- 2021-07-23 -- VSN `@blocto/flow-sdk` 0.0.53 -> 0.0.54
 - 2021-07-23 -- Reverts to iFrame as default wallet method/view.
 
 ## 0.0.77-pain.1
@@ -1282,7 +1282,7 @@ export const SESSION_STORAGE = {
 ## 0.0.[75-76] - 2021-07-201
 
 - 2021-07-21 -- SDK VSN 0.0.52
-- 2021-07-21 -- Updates `verifyUserSignatures` to use `account` util from `@onflow/sdk`
+- 2021-07-21 -- Updates `verifyUserSignatures` to use `account` util from `@blocto/flow-sdk`
 
 ## 0.0.74 - 2021-07-20
 
@@ -1295,7 +1295,7 @@ export const SESSION_STORAGE = {
 
 ## 0.0.74-alpha.1 - 2021-07-13
 
-- 2021-07-13 -- VSN `@onflow/sdk` 0.0.50 -> 0.0.51-alpha.1
+- 2021-07-13 -- VSN `@blocto/flow-sdk` 0.0.50 -> 0.0.51-alpha.1
   - Includes a fix for an issue in what `fcl.serialize` returned.
   - Exposed new `TestUtils` Top Level
   - Includes some new `config` functionality.
@@ -1352,8 +1352,8 @@ expect(await config.first(["nope", "oh-no"], "FALLBACK")).toBe("FALLBACK");
 
 ## 0.0.73-alpha.2 - 2021-06-17
 
-- 2021-06-17 -- VSN `@onflow/sdk` 0.0.48 -> 0.0.50
-- 2021-06-17 -- Used `config` from `@onflow/sdk` instead of `@onflow/config`
+- 2021-06-17 -- VSN `@blocto/flow-sdk` 0.0.48 -> 0.0.50
+- 2021-06-17 -- Used `config` from `@blocto/flow-sdk` instead of `@onflow/config`
 
 ## 0.0.73-alpha.1 - 2021-06-17
 
@@ -1452,8 +1452,8 @@ await fcl.mutate({
 ## 0.0.72 - 2021-06-16
 
 - 2021-06-16 -- Full VSN Release `@onflow/fcl` 0.0.71 -> 0.0.72
-- 2021-06-16 -- VSN `@onflow/sdk` 0.0.47 -> 0.0.48
-- 2021-06-16 -- Exports `encodeMessageFromSignable` from `@onflow/sdk`
+- 2021-06-16 -- VSN `@blocto/flow-sdk` 0.0.47 -> 0.0.48
+- 2021-06-16 -- Exports `encodeMessageFromSignable` from `@blocto/flow-sdk`
 
 ## 0.0.71 - 2021-06-04
 
@@ -1464,7 +1464,7 @@ await fcl.mutate({
 - 2021-06-03 -- Adds `hid *` permission policy to iframe rendered in render-frame strategy.
 - 2021-05-28 -- Adds `fcl.currentUser().signUserMessage` and `user-signature` service normalizer. `fcl.currentUser().signUserMessage` allows for sending of unencrypted message data to a connected wallet provider or service to be signed with user's private key.
 - 2021-05-27 -- Updates `fcl.serialize` to return serialized voucher
-- 2021-05-27 -- VSN `@onflow/sdk` 0.0.46-alpha.1 -> 0.0.47-alpha.1
+- 2021-05-27 -- VSN `@blocto/flow-sdk` 0.0.46-alpha.1 -> 0.0.47-alpha.1
 
 ## 0.0.70 - 2021-05-10
 
@@ -1472,7 +1472,7 @@ await fcl.mutate({
 
 ## 0.0.70-alpha.1 - 2021-05-05
 
-- 2021-05-05 **BREAKING** -- VSN `@onflow/sdk` 0.0.45 -> 0.0.46-alpha.1 -- Prepends a transaction domain tag to encoded payload and envelope messages. Transaction domain tags allow signers to identify which messages are intended to represent encoded transactions, and which are not. The Flow protocol has been updated (as of May 5th 2021) to both accept signatures produced from messages prepended with a transaction domain tag, and from messages that are not. The next spork (time and date of next spork are TBD) will strictly require all signatures for transnactions to have been produced from messages prepended with a transaction domain tag. This breaking change requires all users of Flow Client Library and the Flow JavaScript SDK to update their versions to a version greater than or equal to the verison that this change was included in.
+- 2021-05-05 **BREAKING** -- VSN `@blocto/flow-sdk` 0.0.45 -> 0.0.46-alpha.1 -- Prepends a transaction domain tag to encoded payload and envelope messages. Transaction domain tags allow signers to identify which messages are intended to represent encoded transactions, and which are not. The Flow protocol has been updated (as of May 5th 2021) to both accept signatures produced from messages prepended with a transaction domain tag, and from messages that are not. The next spork (time and date of next spork are TBD) will strictly require all signatures for transnactions to have been produced from messages prepended with a transaction domain tag. This breaking change requires all users of Flow Client Library and the Flow JavaScript SDK to update their versions to a version greater than or equal to the verison that this change was included in.
 
 ## 0.0.69 - 2021-04-28
 
@@ -1492,7 +1492,7 @@ await fcl.mutate({
 
 ## 0.0.68-alpha.20 - 2021-04-16
 
-- 2021-04-16 - VSN `@onflow/sdk` 0.0.45-alpha.18 -> 0.0.45-alpha.19
+- 2021-04-16 - VSN `@blocto/flow-sdk` 0.0.45-alpha.18 -> 0.0.45-alpha.19
 
 ## 0.0.68-alpha.19 - 2021-04-14
 
@@ -1552,7 +1552,7 @@ As always with services, an example of the data they are supposed to return can 
 
 ## 0.0.68-alpha.9 - 2021-03-02
 
-- 2020-03-02 -- VSN `@onflow/sdk` 0.0.45-alpha.9 -> 0.0.45-alpha.10
+- 2020-03-02 -- VSN `@blocto/flow-sdk` 0.0.45-alpha.9 -> 0.0.45-alpha.10
 
 ## 0.0.68-alpha.[7..8] - 2021-03-02
 
@@ -1620,9 +1620,9 @@ FCL                         Wallet
 
 ## 0.0.67-alpha.42 - 2020-12-11
 
-- 2020-12-11 -- VSN `@onflow/sdk-send` 0.0.9 -> 0.0.10
-- 2020-12-11 -- VSN `@onflow/sdk-resolve` 0.0.9 -> 0.0.10
-- 2020-12-11 -- VSN `@onflow/sdk-account` 0.0.7 -> 0.0.8
+- 2020-12-11 -- VSN `@blocto/flow-sdk-send` 0.0.9 -> 0.0.10
+- 2020-12-11 -- VSN `@blocto/flow-sdk-resolve` 0.0.9 -> 0.0.10
+- 2020-12-11 -- VSN `@blocto/flow-sdk-account` 0.0.7 -> 0.0.8
 
 ## 0.0.67-alpha.41 - 2020-12-08
 
@@ -1757,9 +1757,9 @@ await fcl.logIn();
 
 ## 0.0.67-alpha.0 - 2020-11-17
 
-- 2020-11-17 -- VSN @onflow/sdk-latest-block 0.0.2 -> 0.0.3
-- 2020-11-17 -- VSN @onflow/sdk-account 0.0.2 -> 0.0.3
-- 2020-11-17 -- VSN @onflow/sdk-send 0.0.3 -> 0.0.5
+- 2020-11-17 -- VSN @blocto/flow-sdk-latest-block 0.0.2 -> 0.0.3
+- 2020-11-17 -- VSN @blocto/flow-sdk-account 0.0.2 -> 0.0.3
+- 2020-11-17 -- VSN @blocto/flow-sdk-send 0.0.3 -> 0.0.5
 
 ## 0.0.66 - 2020-11-09
 
@@ -1771,11 +1771,11 @@ await fcl.logIn();
 
 ## 0.0.64 - 2020-11-04
 
-- 2020-11-04 -- VSN `@onflow/sdk-send` 0.0.2 -> 0.0.3
+- 2020-11-04 -- VSN `@blocto/flow-sdk-send` 0.0.2 -> 0.0.3
 
 ## 0.0.63 - 2020-11-04
 
-- 2020-11-04 -- VSN `@onflow/sdk-resolve` 0.0.3 -> 0.0.4
+- 2020-11-04 -- VSN `@blocto/flow-sdk-resolve` 0.0.3 -> 0.0.4
 
 ## 0.0.62 - 2020-10-29
 
@@ -1783,36 +1783,36 @@ await fcl.logIn();
 
 ## 0.0.61 - 2020-10-28
 
-- 2020-10-28 -- VSN `@onflow/sdk-decode` 0.0.0 -> 0.0.1
-- 2020-10-28 -- VSN `@onflow/sdk-build-authorizations` 0.0.0 -> 0.0.1
-- 2020-10-28 -- VSN `@onflow/sdk-latest-block` 0.0.0 -> 0.0.2
-- 2020-10-28 -- VSN `@onflow/sdk-account` 0.0.0 -> 0.0.2
-- 2020-10-28 -- VSN `@onflow/sdk-send` 0.0.0 -> 0.0.2
-- 2020-10-28 -- VSN `@onflow/sdk-resolve` 0.0.0 -> 0.0.3
+- 2020-10-28 -- VSN `@blocto/flow-sdk-decode` 0.0.0 -> 0.0.1
+- 2020-10-28 -- VSN `@blocto/flow-sdk-build-authorizations` 0.0.0 -> 0.0.1
+- 2020-10-28 -- VSN `@blocto/flow-sdk-latest-block` 0.0.0 -> 0.0.2
+- 2020-10-28 -- VSN `@blocto/flow-sdk-account` 0.0.0 -> 0.0.2
+- 2020-10-28 -- VSN `@blocto/flow-sdk-send` 0.0.0 -> 0.0.2
+- 2020-10-28 -- VSN `@blocto/flow-sdk-resolve` 0.0.0 -> 0.0.3
 - 2020-10-28 -- Added in `persistSession` config flag (defaults to true)
 
 ## 0.0.61-alpha.5 - 2020-10-08
 
-- 2020-10-08 -- ADD PROXY `latestBlock` exports directly to `@onflow/sdk-latest-block`
-- 2020-10-08 -- ADD PROXY `account` exports directly to `@onflow/sdk-account`
-- 2020-10-08 -- PROXY `send` export directly to `@onflow/sdk-send`
-- 2020-10-08 -- PROXY `decode` export directly to `@onflow/sdk-decode`
+- 2020-10-08 -- ADD PROXY `latestBlock` exports directly to `@blocto/flow-sdk-latest-block`
+- 2020-10-08 -- ADD PROXY `account` exports directly to `@blocto/flow-sdk-account`
+- 2020-10-08 -- PROXY `send` export directly to `@blocto/flow-sdk-send`
+- 2020-10-08 -- PROXY `decode` export directly to `@blocto/flow-sdk-decode`
 - 2020-10-08 -- VSN `@onflow/decode` 0.0.7 -> 0.0.8
-- 2020-10-08 -- VSN `@onflow/sdk-build-get-account` 0.0.0 -> 0.0.1
+- 2020-10-08 -- VSN `@blocto/flow-sdk-build-get-account` 0.0.0 -> 0.0.1
 
 ## 0.0.61-alpha.4 - 2020-10-07
 
-- 2020-10-07 -- remove resolvers and replace with @onflow/sdk-resolve
+- 2020-10-07 -- remove resolvers and replace with @blocto/flow-sdk-resolve
 
 ## 0.0.61-alpha.3 - 2020-10-07
 
 - 2020-10-07 -- remove use of sdk
-- 2020-10-07 -- use `@onflow/sdk-resolve-ref-block-id` package directly
+- 2020-10-07 -- use `@blocto/flow-sdk-resolve-ref-block-id` package directly
 
 ## 0.0.61-alpha.2 - 2020-10-07
 
-- 2020-10-07 -- VSN `@onflow/sdk-resolve-signatures` 0.0.0 -> 0.0.1
-- 2020-10-07 -- VSN `@onflow/sdk` 0.0.35 -> 0.0.37
+- 2020-10-07 -- VSN `@blocto/flow-sdk-resolve-signatures` 0.0.0 -> 0.0.1
+- 2020-10-07 -- VSN `@blocto/flow-sdk` 0.0.35 -> 0.0.37
 
 ## 0.0.61-alpha.1 - 2020-10-07
 
@@ -1825,14 +1825,14 @@ await fcl.logIn();
 
 ## 0.0.59 -- 2020-09-29
 
-- 2020-09-29 -- VSN `@onflow/sdk` 0.0.31 -> 0.0.35
-- 2020-09-29 -- use `@onflow/sdk-resolve-validators` package directly
-- 2020-09-29 -- use `@onflow/sdk-resolve-signatures` package directly
-- 2020-09-29 -- use `@onflow/sdk-resolve-accounts` package directly
+- 2020-09-29 -- VSN `@blocto/flow-sdk` 0.0.31 -> 0.0.35
+- 2020-09-29 -- use `@blocto/flow-sdk-resolve-validators` package directly
+- 2020-09-29 -- use `@blocto/flow-sdk-resolve-signatures` package directly
+- 2020-09-29 -- use `@blocto/flow-sdk-resolve-accounts` package directly
 
 ## 0.0.58 -- 2020-09-29
 
-- 2020-09-29 -- use `@onflow/sdk-resolve-arguments` package directly
+- 2020-09-29 -- use `@blocto/flow-sdk-resolve-arguments` package directly
 
 ## 0.0.57 -- 2020-09-29
 
@@ -1853,7 +1853,7 @@ await fcl.logIn();
 
 ## 0.0.53 -- 2020-08-26
 
-- 2020-08-26 -- `@onflow/sdk` VSN `0.0.30` -> `0.0.31`
+- 2020-08-26 -- `@blocto/flow-sdk` VSN `0.0.30` -> `0.0.31`
 - 2020-08-20 -- Adds Authorization Function Documentation
 
 ## 0.0.52 -- 2020-08-18
@@ -1888,7 +1888,7 @@ await fcl.logIn();
 
 ## 0.0.46 -- 2020-07-27
 
-- 2020-07-27 -- VSN `@onflow/sdk` 0.0.28 -> 0.0.30
+- 2020-07-27 -- VSN `@blocto/flow-sdk` 0.0.28 -> 0.0.30
 
 ## 0.0.45 -- 2020-07-22
 
@@ -1901,7 +1901,7 @@ await fcl.logIn();
 
 ## 0.0.43 -- 2020-07-21
 
-- 2020-07-21 -- VSN `@onflow/sdk` 0.0.27 -> 0.0.28
+- 2020-07-21 -- VSN `@blocto/flow-sdk` 0.0.27 -> 0.0.28
 
 ## 0.0.42 -- 2020-07-20
 
@@ -1909,7 +1909,7 @@ await fcl.logIn();
 
 ## 0.0.41 -- 2020-07-13
 
-- 2020-07-13 -- VSN `@onflow/sdk` 0.0.26 -> 0.0.27
+- 2020-07-13 -- VSN `@blocto/flow-sdk` 0.0.26 -> 0.0.27
 
 ## 0.0.40 -- 2020-07-09
 
@@ -1920,7 +1920,7 @@ await fcl.logIn();
 - 2020-07-09 -- Expose `fcl.args` and `fcl.arg`
 - 2020-07-09 -- Bring in resolveSignatures fix from SDK that deals with signatures better
 - 2020-07-08 -- Updates FCL's resolve implementation according to the new resolvers available in the SDK.
-- 2020-07-08 -- VSN `@onflow/sdk` 0.0.23 -> 0.0.24
+- 2020-07-08 -- VSN `@blocto/flow-sdk` 0.0.23 -> 0.0.24
 
 ## 0.0.38
 
@@ -1928,11 +1928,11 @@ await fcl.logIn();
 
 ## 0.0.37 -- 2020-06-04
 
-- 2020-06-04 -- VSN `@onflow/sdk` 0.0.22 -> 0.0.23
+- 2020-06-04 -- VSN `@blocto/flow-sdk` 0.0.22 -> 0.0.23
 
 ## 0.0.36 -- 2020-06-03
 
-- 2020-06-03 -- VSN `@onflow/sdk` 0.0.21 -> 0.0.22
+- 2020-06-03 -- VSN `@blocto/flow-sdk` 0.0.21 -> 0.0.22
 
 ## 0.0.35 -- 2020-05-15
 
@@ -1940,11 +1940,11 @@ await fcl.logIn();
 
 ## 0.0.34 -- 2020-05-15
 
-- 2020-05-15 -- VSN `@onflow/sdk` 0.0.20 -> 0.0.21
+- 2020-05-15 -- VSN `@blocto/flow-sdk` 0.0.20 -> 0.0.21
 
 ## 0.0.33 -- 2020-05-07
 
-- 2020-05-07 -- VSN `@onflow/sdk` 0.0.19 -> 0.0.20
+- 2020-05-07 -- VSN `@blocto/flow-sdk` 0.0.19 -> 0.0.20
 
 ## 0.0.32 -- 2020-05-07
 
@@ -1952,7 +1952,7 @@ await fcl.logIn();
 
 ## 0.0.31 -- 2020-05-07
 
-- 2020-05-07 -- VSN `@onflow/sdk` 0.0.17 -> 0.0.19
+- 2020-05-07 -- VSN `@blocto/flow-sdk` 0.0.17 -> 0.0.19
 
 ## 0.0.30 -- 2020-05-07
 
@@ -1965,19 +1965,19 @@ await fcl.logIn();
 
 - 2020-05-06 -- Fixed an issue with custom decoders
 - 2020-05-06 -- Leverage named imports to enable better tree shaking
-- 2020-05-06 -- Proxy `@onflow/sdk` through fcl to enable single import
-- 2020-05-06 -- VSN `@onflow/sdk` 0.0.16 -> 0.0.17
-- 2020-05-05 -- VSN `@onflow/sdk` 0.0.15 -> 0.0.16
+- 2020-05-06 -- Proxy `@blocto/flow-sdk` through fcl to enable single import
+- 2020-05-06 -- VSN `@blocto/flow-sdk` 0.0.16 -> 0.0.17
+- 2020-05-05 -- VSN `@blocto/flow-sdk` 0.0.15 -> 0.0.16
 - 2020-05-05 -- Update resolvers based on sdk update
-- 2020-05-05 -- VSN `@onflow/sdk` 0.0.14 -> 0.0.15 Breaking Change
+- 2020-05-05 -- VSN `@blocto/flow-sdk` 0.0.14 -> 0.0.15 Breaking Change
 - 2020-04-29 -- authn challenge response no longer locks to handshake origin
 - 2020-04-28 -- `fcl.user(addr).info()` does a `send([getAccount(addr)])` returning the `account`
 - 2020-04-23 -- `fcl.authenticate()` renders iframe for config: `challenge.handshake`
 
 ## 0.0.28 -- 2020-04-20
 
-- 2020-04-20 -- VSN `@onflow/sdk` 0.0.12 -> 0.0.14
-- 2020-04-20 -- Remove `@onflow/send` in favour of `@onflow/sdk`
+- 2020-04-20 -- VSN `@blocto/flow-sdk` 0.0.12 -> 0.0.14
+- 2020-04-20 -- Remove `@onflow/send` in favour of `@blocto/flow-sdk`
 
 ## 0.0.27 -- 2020-04-18
 

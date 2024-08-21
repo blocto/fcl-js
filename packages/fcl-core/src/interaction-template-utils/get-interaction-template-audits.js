@@ -1,4 +1,4 @@
-import {config, invariant} from "@onflow/sdk"
+import {config, invariant} from "@blocto/flow-sdk"
 import {log, LEVELS} from "@onflow/util-logger"
 import {query} from "../exec/query.js"
 import {generateTemplateId} from "./generate-template-id/generate-template-id.js"

@@ -1,5 +1,5 @@
 {
-  "name": "@onflow/sdk",
+  "name": "@blocto/flow-sdk",
   "version": "1.5.1",
   "description": "Flow SDK",
   "license": "Apache-2.0",

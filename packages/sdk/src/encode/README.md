@@ -14,7 +14,7 @@ As we propogate some of the terms used in this module to other things they might
 # Install
 
 ```bash
-npm install --save @onflow/sdk
+npm install --save @blocto/flow-sdk
 ```
 
 # Usage
