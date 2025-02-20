@@ -9,7 +9,7 @@ import {
   SUBSCRIBE,
   UNSUBSCRIBE,
 } from "@onflow/util-actor"
-import {send as fclSend, decode, getTransactionStatus} from "@onflow/sdk"
+import {send as fclSend, decode, getTransactionStatus} from "@blocto/flow-sdk"
 import {HTTPRequestError} from "@onflow/transport-http"
 import {grpc} from "@improbable-eng/grpc-web"
 import {TransactionError} from "./transaction-error"
@@ -118,8 +118,8 @@ const spawnTransaction =
  *
  * @param {string} transactionId - The transaction ID
  * @param {object} [opts] - Optional parameters
- * @param {number} [opts.pollRate=1000] - Polling rate in milliseconds
- * @param {number} [opts.txNotFoundTimeout=12500] - Timeout in milliseconds for ignoring transaction not found errors (do not modify unless you know what you are doing)
+ * @param {number} [opts.pollRate] - Polling rate in milliseconds
+ * @param {number} [opts.txNotFoundTimeout] - Timeout in milliseconds for ignoring transaction not found errors (do not modify unless you know what you are doing)
  * @returns {{
  *    snapshot: function(): Promise<TransactionStatus>,
  *    subscribe: function(SubscriptionCallback): function(): void,

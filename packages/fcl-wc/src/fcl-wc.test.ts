@@ -1,14 +1,14 @@
 import {init} from "./fcl-wc"
-import * as fcl from "@onflow/fcl"
+import * as fcl from "@blocto/fcl"
 
 jest.mock("@walletconnect/modal", () => {})
 jest.mock("@walletconnect/sign-client", () => {})
 jest.mock("@walletconnect/utils", () => {})
 
-jest.mock("@onflow/fcl", () => {
+jest.mock("@blocto/fcl", () => {
   return {
     __esModule: true,
-    ...jest.requireActual("@onflow/fcl"),
+    ...jest.requireActual("@blocto/fcl"),
   }
 })
 

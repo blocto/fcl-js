@@ -249,7 +249,7 @@ pub contract interface FungibleToken {
   code: null,
 }
 
-jest.mock("@onflow/sdk", () => ({
+jest.mock("@blocto/flow-sdk", () => ({
   send: jest.fn().mockImplementation(({}) => {
     // Adjusted mock implementation
     const sanitized = returnedAccount.contracts.FungibleToken.replace(/\\/g, "")

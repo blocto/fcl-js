@@ -6,7 +6,7 @@ import {
   getTransactionStatus,
   resolve,
   response as responseADT,
-} from "@onflow/sdk"
+} from "@blocto/flow-sdk"
 
 const jsonToUInt8Array = json => {
   var str = JSON.stringify(json, null, 0)

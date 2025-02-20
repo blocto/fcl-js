@@ -1,5 +1,5 @@
 import {generateDependencyPin} from "./generate-dependency-pin/generate-dependency-pin.js"
-import {invariant, block} from "@onflow/sdk"
+import {invariant, block} from "@blocto/flow-sdk"
 import {log, LEVELS} from "@onflow/util-logger"
 
 /**

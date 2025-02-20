@@ -17,7 +17,7 @@ Other than the known upcoming change listed below this package might be ready fo
 # Install
 
 ```bash
-npm install --save @onflow/sdk
+npm install --save @blocto/flow-sdk
 ```
 
 # Usage

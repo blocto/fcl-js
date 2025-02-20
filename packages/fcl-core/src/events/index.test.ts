@@ -1,8 +1,8 @@
 import {EventStream} from "@onflow/typedefs"
 import {events} from "."
-import {send, decode, subscribeEvents} from "@onflow/sdk"
+import {send, decode, subscribeEvents} from "@blocto/flow-sdk"
 
-jest.mock("@onflow/sdk")
+jest.mock("@blocto/flow-sdk")
 
 describe("events", () => {
   let sendSpy

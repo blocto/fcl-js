@@ -1,7 +1,7 @@
 import {AccessAPI} from "@onflow/protobuf"
 import {sendPing} from "./send-ping.js"
 import {Buffer} from "@onflow/rlp"
-import {build, ping, resolve, response as responseADT} from "@onflow/sdk"
+import {build, ping, resolve, response as responseADT} from "@blocto/flow-sdk"
 
 describe("Ping", () => {
   test("Ping", async () => {

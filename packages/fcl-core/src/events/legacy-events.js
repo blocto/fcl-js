@@ -5,7 +5,7 @@ import {
   getEventsAtBlockHeightRange,
   send,
   decode,
-} from "@onflow/sdk"
+} from "@blocto/flow-sdk"
 
 const RATE = 10000
 const UPDATED = "UPDATED"

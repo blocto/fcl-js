@@ -1,5 +1,5 @@
 import {invariant} from "@onflow/util-invariant"
-import * as sdk from "@onflow/sdk"
+import * as sdk from "@blocto/flow-sdk"
 import {isRequired, isObject, isString} from "../../utils/is"
 
 async function pre(type, opts) {

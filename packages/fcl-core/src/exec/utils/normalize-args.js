@@ -1,5 +1,5 @@
 import {isFunc} from "../../utils/is"
-import * as sdk from "@onflow/sdk"
+import * as sdk from "@blocto/flow-sdk"
 import * as t from "@onflow/types"
 
 export function normalizeArgs(ax) {

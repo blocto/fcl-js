@@ -1,6 +1,6 @@
 import {connectSubscribeEvents} from "./connect-subscribe-events"
 import {Buffer} from "@onflow/rlp"
-import {response as responseADT} from "@onflow/sdk"
+import {response as responseADT} from "@blocto/flow-sdk"
 import {StreamConnection} from "@onflow/typedefs"
 import EventEmitter from "events"
 

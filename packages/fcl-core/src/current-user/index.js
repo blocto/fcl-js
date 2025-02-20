@@ -1,6 +1,6 @@
 import "../default-config"
 import * as t from "@onflow/types"
-import {arg} from "@onflow/sdk"
+import {arg} from "@blocto/flow-sdk"
 import {config} from "@onflow/config"
 import {spawn, send, INIT, SUBSCRIBE, UNSUBSCRIBE} from "@onflow/util-actor"
 import {withPrefix, sansPrefix} from "@onflow/util-address"
@@ -315,7 +315,7 @@ const getAuthorization =
    *
    * @param {object} account - Account object
    * @returns {Promise<object>} - Account object with signing function
-   * */
+   */
   async account => {
     spawnCurrentUser(config)
 
@@ -486,7 +486,7 @@ const getSignUserMessage =
  * Creates the Current User object
  *
  * @param {CurrentUserConfig} config - Current User Configuration
- *  */
+ */
 const getCurrentUser = config => {
   const currentUser = {
     authenticate: getAuthenticate(config),

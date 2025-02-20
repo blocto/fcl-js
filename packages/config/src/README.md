@@ -22,7 +22,7 @@ Reactive configuration for Flow JS SDK and FCL
 # Usage
 
 ```javascript
-import {config} from "@onflow/sdk"
+import {config} from "@blocto/flow-sdk"
 
 // Reactively subscribe to config changes
 config().subscribe(configData => console.log("CONFIG", configData))

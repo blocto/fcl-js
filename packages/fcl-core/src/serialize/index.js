@@ -1,6 +1,6 @@
-import {interaction, pipe} from "@onflow/sdk"
-import {resolve as defaultResolve} from "@onflow/sdk"
-import {config, createSignableVoucher} from "@onflow/sdk"
+import {interaction, pipe} from "@blocto/flow-sdk"
+import {resolve as defaultResolve} from "@blocto/flow-sdk"
+import {config, createSignableVoucher} from "@blocto/flow-sdk"
 
 export const serialize = async (args = [], opts = {}) => {
   const resolveFunction = await config.first(

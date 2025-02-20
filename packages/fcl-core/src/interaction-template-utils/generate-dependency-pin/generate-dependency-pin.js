@@ -1,4 +1,4 @@
-import {block, invariant} from "@onflow/sdk"
+import {block, invariant} from "@blocto/flow-sdk"
 import {generateDependencyPin110} from "./generate-dependency-pin-1.1.0.js"
 import {generateDependencyPin100} from "./generate-dependency-pin-1.0.0.js"
 

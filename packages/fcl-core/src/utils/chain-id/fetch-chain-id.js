@@ -1,4 +1,4 @@
-import * as sdk from "@onflow/sdk"
+import * as sdk from "@blocto/flow-sdk"
 
 export async function fetchChainId(opts = {}) {
   const response = await sdk
